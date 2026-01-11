@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /js/
+Disallow: /data/
+Disallow: /assets/
+
+Sitemap: https://zoyfk.co.in/sitemap.xml

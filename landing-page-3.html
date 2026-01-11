@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Connections | Premium Adult Companionship</title>
+    <meta name="description" content="Discreet, premium adult companionship services with verified professionals across major cities. Experience elegance, privacy, and excellence.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #0a0a0a;
+            --secondary-dark: #111111;
+            --accent-red: #c2182b;
+            --accent-gold: #d4af37;
+            --text-light: #f5f5f5;
+            --text-gray: #a0a0a0;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            overflow-x: hidden;
+        }
+        
+        .heading {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        
+        .elegant-border {
+            position: relative;
+            border: 1px solid rgba(196, 24, 43, 0.2);
+        }
+        
+        .elegant-border::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: 20px;
+            right: 20px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent-red), transparent);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--accent-red) 0%, var(--accent-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-glow {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: linear-gradient(145deg, #111111, #0d0d0d);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .card-glow:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(196, 24, 43, 0.2);
+            border-color: rgba(196, 24, 43, 0.4);
+        }
+        
+        .profile-image-placeholder {
+            background: linear-gradient(135deg, #1a1a1a, #2a1a2a);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .profile-image-placeholder::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 40%, rgba(196, 24, 43, 0.1) 50%, transparent 60%);
+            animation: shimmer 2s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .btn-premium {
+            background: linear-gradient(135deg, var(--accent-red), #a51221);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn-premium:hover::before {
+            left: 100%;
+        }
+        
+        .btn-premium:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(196, 24, 43, 0.4);
+        }
+        
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25D366, #1da851);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+        }
+        
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(196, 24, 43, 0.3), transparent);
+            margin: 0 auto;
+            max-width: 800px;
+        }
+        
+        .sticky-cta {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .feature-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, #111111, #1a1a1a);
+            border: 1px solid rgba(196, 24, 43, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 16px;
+            position: relative;
+        }
+        
+        .feature-icon::after {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            border-radius: 16px;
+            padding: 1px;
+            background: linear-gradient(135deg, var(--accent-red), transparent);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+        }
+        
+        .nav-link {
+            position: relative;
+            padding: 8px 0;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent-red), var(--accent-gold));
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .text-glow {
+            text-shadow: 0 0 30px rgba(196, 24, 43, 0.3);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-black/90 backdrop-blur-sm border-b border-gray-900">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-red-900 to-red-700 flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">E</span>
+                    </div>
+                    <div>
+                        <h1 class="heading text-xl">EliteConnections</h1>
+                        <p class="text-xs text-gray-400">Premium Companionship</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-300 hover:text-white">Home</a>
+                    <a href="#profiles" class="nav-link text-gray-300 hover:text-white">Profiles</a>
+                    <a href="#cities" class="nav-link text-gray-300 hover:text-white">Cities</a>
+                    <a href="#premium" class="nav-link text-gray-300 hover:text-white">Premium</a>
+                    <a href="#contact" class="btn-premium text-white px-6 py-2 rounded-lg font-medium">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0" style="background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMwLTIuMjA5LTEuNzkxLTQtNC00cy00IDEuNzkxLTQgNCAxLjc5MSA0IDQgNCA0LTEuNzkxIDQtNHptMCAyNGMwLTIuMjA5LTEuNzkxLTQtNC00cy00IDEuNzkxLTQgNCAxLjc5MSA0IDQgNCA0LTEuNzkxIDQtNHpNMjQgNDJjMC0yLjIwOS0xLjc5MS00LTQtNHMtNCAxLjc5MS00IDQgMS43OTEgNCA0IDQgNC0xLjc5MSA0LTR6IiBmaWxsPSIjQzIxOEJCIiBmaWxsLW9wYWNpdHk9Ii4xIi8+PC9nPjwvc3ZnPg==');"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="min-h-screen flex flex-col justify-center items-center text-center py-20">
+                <div class="max-w-4xl mx-auto">
+                    <!-- Badge -->
+                    <div class="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-900/20 to-red-700/10 border border-red-900/30 mb-8">
+                        <span class="w-2 h-2 rounded-full bg-red-500 mr-2 animate-pulse"></span>
+                        <span class="text-sm text-red-300">Premium Service Available</span>
+                    </div>
+                    
+                    <!-- Main Headline -->
+                    <h1 class="heading text-5xl md:text-7xl lg:text-8xl mb-6 text-glow">
+                        <span class="block">Experience</span>
+                        <span class="gradient-text">Elegant</span>
+                        <span class="block">Companionship</span>
+                    </h1>
+                    
+                    <!-- Subheadline -->
+                    <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+                        Where discretion meets excellence. Premium adult companionship with verified professionals in major cities.
+                    </p>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                        <a href="https://wa.me/919999999999" class="btn-whatsapp text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center justify-center gap-3 w-full sm:w-auto">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.226 1.36.194 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.288.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                            </svg>
+                            Start Private Chat
+                        </a>
+                        
+                        <a href="#profiles" class="bg-transparent border-2 border-gray-800 hover:border-red-800 text-gray-300 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg w-full sm:w-auto transition-all duration-300 flex items-center justify-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                            </svg>
+                            Browse Profiles
+                        </a>
+                    </div>
+                    
+                    <!-- Trust Indicators -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
+                        <div class="text-center p-4">
+                            <div class="text-2xl font-bold text-red-400 mb-1">24/7</div>
+                            <div class="text-xs text-gray-400">Availability</div>
+                        </div>
+                        <div class="text-center p-4">
+                            <div class="text-2xl font-bold text-red-400 mb-1">100%</div>
+                            <div class="text-xs text-gray-400">Discretion</div>
+                        </div>
+                        <div class="text-center p-4">
+                            <div class="text-2xl font-bold text-red-400 mb-1">VIP</div>
+                            <div class="text-xs text-gray-400">Service</div>
+                        </div>
+                        <div class="text-center p-4">
+                            <div class="text-2xl font-bold text-red-400 mb-1">✓</div>
+                            <div class="text-xs text-gray-400">Verified</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Premium Features -->
+    <section class="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="heading text-4xl md:text-5xl mb-6">Why We Stand Apart</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Experience the difference with our premium service standards</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="elegant-border rounded-xl p-8 card-glow fade-in-up">
+                    <div class="feature-icon mx-auto mb-6">
+                        <svg class="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-center">Verified Excellence</h3>
+                    <p class="text-gray-400 text-center text-sm leading-relaxed">
+                        Every companion undergoes thorough verification, ensuring quality, professionalism, and safety.
+                    </p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="elegant-border rounded-xl p-8 card-glow fade-in-up" style="animation-delay: 0.2s">
+                    <div class="feature-icon mx-auto mb-6">
+                        <svg class="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-center">Absolute Privacy</h3>
+                    <p class="text-gray-400 text-center text-sm leading-relaxed">
+                        Your confidentiality is our priority. All interactions are handled with the utmost discretion.
+                    </p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="elegant-border rounded-xl p-8 card-glow fade-in-up" style="animation-delay: 0.4s">
+                    <div class="feature-icon mx-auto mb-6">
+                        <svg class="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-center">Premium Experience</h3>
+                    <p class="text-gray-400 text-center text-sm leading-relaxed">
+                        From first contact to meeting, experience unparalleled service quality and attention to detail.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Profiles -->
+    <section id="profiles" class="py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="heading text-4xl md:text-5xl mb-6">Featured Companions</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Meet our elite selection of premium companions</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Profile 1 -->
+                <div class="elegant-border rounded-2xl overflow-hidden card-glow group fade-in-up">
+                    <div class="profile-image-placeholder h-72 relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-gray-900 to-red-900/30 border-4 border-red-900/30 flex items-center justify-center group-hover:border-red-700/50 transition-all duration-300">
+                                    <span class="text-3xl font-bold text-white">A</span>
+                                </div>
+                                <div class="bg-black/50 backdrop-blur-sm px-4 py-2 rounded-full inline-block">
+                                    <span class="text-red-300 text-sm">Premium Elite</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-2">Amara</h3>
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-gray-400 text-sm">28 • Elite Companion</span>
+                                    <span class="w-1 h-1 rounded-full bg-red-500"></span>
+                                    <span class="text-red-400 text-sm font-medium">VIP</span>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-lg font-bold text-red-400">★★★★★</div>
+                                <div class="text-xs text-gray-500">Premium Rated</div>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-300 mb-6 leading-relaxed text-sm">
+                            Sophisticated companion with expertise in premium adult entertainment. Focus on discretion and personalized experiences.
+                        </p>
+                        
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <div class="text-xs text-gray-500 mb-1">Available in</div>
+                                <div class="flex items-center space-x-1">
+                                    <span class="px-2 py-1 bg-gray-900 rounded text-xs">Delhi</span>
+                                    <span class="px-2 py-1 bg-gray-900 rounded text-xs">Mumbai</span>
+                                </div>
+                            </div>
+                            <a href="profile.html?id=amara-28" class="btn-premium text-white px-6 py-2 rounded-lg font-medium text-sm">
+                                View Profile
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Profile 2 -->
+                <div class="elegant-border rounded-2xl overflow-hidden card-glow group fade-in-up" style="animation-delay: 0.2s">
+                    <div class="profile-image-placeholder h-72 relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-gray-900 to-red-900/30 border-4 border-red-900/30 flex items-center justify-center group-hover:border-red-700/50 transition-all duration-300">
+                                    <span class="text-3xl font-bold text-white">S</span>
+                                </div>
+                                <div class="bg-black/50 backdrop-blur-sm px-4 py-2 rounded-full inline-block">
+                                    <span class="text-red-300 text-sm">Luxury Companion</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-2">Sophia</h3>
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-gray-400 text-sm">26 • Luxury Escort</span>
+                                    <span class="w-1 h-1 rounded-full bg-red-500"></span>
+                                    <span class="text-red-400 text-sm font-medium">Elite</span>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-lg font-bold text-red-400">★★★★★</div>
+                                <div class="text-xs text-gray-500">Top Rated</div>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-300 mb-6 leading-relaxed text-sm">
+                            Professional escort specializing in high-end companionship. Known for elegance, discretion, and premium service.
+                        </p>
+                        
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <div class="text-xs text-gray-500 mb-1">Available in</div>
+                                <div class="flex items-center space-x-1">
+                                    <span class="px-2 py-1 bg-gray-900 rounded text-xs">Mumbai</span>
+                                    <span class="px-2 py-1 bg-gray-900 rounded text-xs">Goa</span>
+                                </div>
+                            </div>
+                            <a href="profile.html?id=sophia-26" class="btn-premium text-white px-6 py-2 rounded-lg font-medium text-sm">
+                                View Profile
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Profile 3 -->
+                <div class="elegant-border rounded-2xl overflow-hidden card-glow group fade-in-up" style="animation-delay: 0.4s">
+                    <div class="profile-image-placeholder h-72 relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-gray-900 to-red-900/30 border-4 border-red-900/30 flex items-center justify-center group-hover:border-red-700/50 transition-all duration-300">
+                                    <span class="text-3xl font-bold text-white">I</span>
+                                </div>
+                                <div class="bg-black/50 backdrop-blur-sm px-4 py-2 rounded-full inline-block">
+                                    <span class="text-red-300 text-sm">Independent</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-2">Isabella</h3>
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-gray-400 text-sm">29 • Independent</span>
+                                    <span class="w-1 h-1 rounded-full bg-red-500"></span>
+                                    <span class="text-red-400 text-sm font-medium">VIP+</span>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-lg font-bold text-red-400">★★★★★</div>
+                                <div class="text-xs text-gray-500">Premium</div>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-300 mb-6 leading-relaxed text-sm">
+                            Independent professional offering premium adult companionship with focus on mutual respect and satisfaction.
+                        </p>
+                        
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <div class="text-xs text-gray-500 mb-1">Available in</div>
+                                <div class="flex items-center space-x-1">
+                                    <span class="px-2 py-1 bg-gray-900 rounded text-xs">Bangalore</span>
+                                    <span class="px-2 py-1 bg-gray-900 rounded text-xs">Chennai</span>
+                                </div>
+                            </div>
+                            <a href="profile.html?id=isabella-29" class="btn-premium text-white px-6 py-2 rounded-lg font-medium text-sm">
+                                View Profile
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#premium" class="inline-flex items-center text-red-400 hover:text-red-300 font-medium">
+                    <span>View All Premium Profiles</span>
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cities Section -->
+    <section id="cities" class="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="heading text-4xl md:text-5xl mb-6">Premium Cities</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Find elite companionship in major cities across India</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- City 1 -->
+                <a href="#" class="elegant-border rounded-xl p-6 card-glow group fade-in-up">
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-red-900/20 to-gray-900 flex items-center justify-center group-hover:from-red-900/30 transition-all duration-300">
+                            <span class="text-2xl font-bold text-red-400">D</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Delhi</h3>
+                        <p class="text-gray-500 text-sm">Premium companions</p>
+                        <div class="mt-3">
+                            <span class="text-xs px-3 py-1 bg-gray-900 rounded-full">25+ Profiles</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- City 2 -->
+                <a href="#" class="elegant-border rounded-xl p-6 card-glow group fade-in-up" style="animation-delay: 0.1s">
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-red-900/20 to-gray-900 flex items-center justify-center group-hover:from-red-900/30 transition-all duration-300">
+                            <span class="text-2xl font-bold text-red-400">M</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Mumbai</h3>
+                        <p class="text-gray-500 text-sm">Luxury escorts</p>
+                        <div class="mt-3">
+                            <span class="text-xs px-3 py-1 bg-gray-900 rounded-full">22+ Profiles</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- City 3 -->
+                <a href="#" class="elegant-border rounded-xl p-6 card-glow group fade-in-up" style="animation-delay: 0.2s">
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-red-900/20 to-gray-900 flex items-center justify-center group-hover:from-red-900/30 transition-all duration-300">
+                            <span class="text-2xl font-bold text-red-400">B</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Bangalore</h3>
+                        <p class="text-gray-500 text-sm">Independent elite</p>
+                        <div class="mt-3">
+                            <span class="text-xs px-3 py-1 bg-gray-900 rounded-full">18+ Profiles</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- City 4 -->
+                <a href="#" class="elegant-border rounded-xl p-6 card-glow group fade-in-up" style="animation-delay: 0.3s">
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-red-900/20 to-gray-900 flex items-center justify-center group-hover:from-red-900/30 transition-all duration-300">
+                            <span class="text-2xl font-bold text-red-400">H</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Hyderabad</h3>
+                        <p class="text-gray-500 text-sm">Premium service</p>
+                        <div class="mt-3">
+                            <span class="text-xs px-3 py-1 bg-gray-900 rounded-full">15+ Profiles</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section id="contact" class="py-20 bg-black relative overflow-hidden">
+        <!-- Background Effect -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0" style="background: radial-gradient(circle at 30% 50%, rgba(196, 24, 43, 0.1), transparent 50%)"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <div class="mb-10">
+                    <h2 class="heading text-4xl md:text-5xl mb-6">Ready for an<br><span class="gradient-text">Extraordinary Experience?</span></h2>
+                    <p class="text-gray-400 text-lg">Connect with premium companions who understand discretion and excellence</p>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                    <a href="https://wa.me/919999999999" class="btn-whatsapp text-white px-10 py-4 rounded-lg font-semibold text-lg flex items-center justify-center gap-3 w-full sm:w-auto sticky-cta">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.226 1.36.194 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.288.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                        </svg>
+                        Start WhatsApp Conversation
+                    </a>
+                    
+                    <a href="tel:+919999999999" class="bg-transparent border-2 border-gray-800 hover:border-red-800 text-gray-300 hover:text-white px-10 py-4 rounded-lg font-semibold text-lg w-full sm:w-auto transition-all duration-300 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                        </svg>
+                        Call Now
+                    </a>
+                </div>
+                
+                <p class="text-gray-500 text-sm">
+                    <span class="text-red-400">✓</span> 24/7 Availability • 
+                    <span class="text-red-400">✓</span> 100% Discreet • 
+                    <span class="text-red-400">✓</span> Verified Companions
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-900 py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <!-- Footer Logo -->
+                <div class="flex items-center justify-center space-x-3 mb-8">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-red-900 to-red-700 flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">E</span>
+                    </div>
+                    <div>
+                        <h3 class="heading text-xl">EliteConnections</h3>
+                        <p class="text-xs text-gray-500">Premium Adult Companionship</p>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="flex flex-wrap justify-center gap-6 mb-8">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Safety Guidelines</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Contact Support</a>
+                </div>
+                
+                <!-- City Links -->
+                <div class="flex flex-wrap justify-center gap-4 mb-8">
+                    <span class="text-gray-600 text-sm">Premium Cities:</span>
+                    <a href="#" class="text-gray-400 hover:text-red-400 text-sm transition-colors">Delhi</a>
+                    <a href="#" class="text-gray-400 hover:text-red-400 text-sm transition-colors">Mumbai</a>
+                    <a href="#" class="text-gray-400 hover:text-red-400 text-sm transition-colors">Bangalore</a>
+                    <a href="#" class="text-gray-400 hover:text-red-400 text-sm transition-colors">Hyderabad</a>
+                    <a href="#" class="text-gray-400 hover:text-red-400 text-sm transition-colors">Chennai</a>
+                    <a href="#" class="text-gray-400 hover:text-red-400 text-sm transition-colors">Goa</a>
+                </div>
+                
+                <!-- Copyright -->
+                <div class="border-t border-gray-900 pt-8">
+                    <p class="text-gray-600 text-sm">
+                        © 2024 EliteConnections. Premium adult companionship services. Must be 18+.
+                    </p>
+                    <p class="text-gray-700 text-xs mt-2">
+                        All interactions are private and confidential. Discretion guaranteed.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky CTA -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/919999999999" class="btn-whatsapp text-white p-4 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110">
+            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.226 1.36.194 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.288.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            </svg>
+        </a>
+    </div>
+
+    <script>
+        // Scroll animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in-up');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const delay = entry.target.style.animationDelay || '0s';
+                        entry.target.style.animation = `fadeInUp 0.8s ease-out ${delay} forwards`;
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            fadeElements.forEach(el => {
+                observer.observe(el);
+            });
+            
+            // Mobile menu toggle
+            const menuButton = document.querySelector('button.md\\:hidden');
+            const navLinks = document.querySelector('.hidden.md\\:flex');
+            
+            if (menuButton) {
+                menuButton.addEventListener('click', () => {
+                    navLinks.classList.toggle('hidden');
+                    navLinks.classList.toggle('flex');
+                    navLinks.classList.toggle('flex-col');
+                    navLinks.classList.toggle('absolute');
+                    navLinks.classList.toggle('top-full');
+                    navLinks.classList.toggle('left-0');
+                    navLinks.classList.toggle('right-0');
+                    navLinks.classList.toggle('bg-black');
+                    navLinks.classList.toggle('p-4');
+                    navLinks.classList.toggle('space-y-4');
+                    navLinks.classList.toggle('border-t');
+                    navLinks.classList.toggle('border-gray-900');
+                });
+            }
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
