@@ -652,7 +652,6 @@ fetch('data/profiles.json')
         setupSearch();
         setupViewSwitch();
         setupBackToTop();
-        applyContactLinks();
     })
     .catch(err => {
         console.error('Failed to load profiles.json', err);
@@ -854,19 +853,6 @@ function setupBackToTop() {
     btn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-/* ===============================
-   CONTACT LINKS
-================================ */
-function applyContactLinks() {
-    document.querySelectorAll('[data-whatsapp]').forEach(el => {
-        el.href = `https://wa.me/${CONTACT_CONFIG.whatsapp}`;
-        el.target = '_blank';
-    });
-
-    document.querySelectorAll('[data-call]').forEach(el => {
-        el.href = `tel:${CONTACT_CONFIG.call}`;
-    });
-}
 </script>
 
 </body>
