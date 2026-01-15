@@ -286,178 +286,6 @@
         </div>
     </section>
 
-    <!-- Filters Section -->
-    <section class="bg-white py-6 shadow-sm sticky top-16 z-30">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                <div class="flex items-center gap-3">
-                    <span class="text-gray-600 font-medium">Filters:</span>
-                    <button id="clearFilters" class="text-primary hover:text-purple-700 text-sm font-medium">
-                        Clear All
-                    </button>
-                </div>
-                
-                <div class="flex-1 overflow-x-auto filter-scroll">
-                    <div class="flex gap-2 pb-2">
-                        <!-- City Filter -->
-                        <div class="relative group">
-                            <button id="cityFilterBtn" class="filter-pill bg-gray-100 text-gray-700 px-4 py-2 rounded-full border border-gray-200 text-sm font-medium flex items-center gap-2">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-                                </svg>
-                                City
-                                <span id="cityFilterCount" class="bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
-                            </button>
-                            <div id="cityFilterDropdown" class="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-lg border border-gray-200 p-4 z-50 hidden group-hover:block">
-                                <div class="space-y-2 max-h-60 overflow-y-auto">
-                                    <label class="flex items-center gap-2 cursor-pointer">
-                                        <input type="checkbox" class="city-filter" value="delhi" data-count="25">
-                                        <span>Delhi (25)</span>
-                                    </label>
-                                    <label class="flex items-center gap-2 cursor-pointer">
-                                        <input type="checkbox" class="city-filter" value="mumbai" data-count="20">
-                                        <span>Mumbai (20)</span>
-                                    </label>
-                                    <label class="flex items-center gap-2 cursor-pointer">
-                                        <input type="checkbox" class="city-filter" value="bangalore" data-count="18">
-                                        <span>Bangalore (18)</span>
-                                    </label>
-                                    <label class="flex items-center gap-2 cursor-pointer">
-                                        <input type="checkbox" class="city-filter" value="hyderabad" data-count="15">
-                                        <span>Hyderabad (15)</span>
-                                    </label>
-                                    <label class="flex items-center gap-2 cursor-pointer">
-                                        <input type="checkbox" class="city-filter" value="chennai" data-count="12">
-                                        <span>Chennai (12)</span>
-                                    </label>
-                                    <label class="flex items-center gap-2 cursor-pointer">
-                                        <input type="checkbox" class="city-filter" value="kolkata" data-count="10">
-                                        <span>Kolkata (10)</span>
-                                    </label>
-                                    <label class="flex items-center gap-2 cursor-pointer">
-                                        <input type="checkbox" class="city-filter" value="pune" data-count="14">
-                                        <span>Pune (14)</span>
-                                    </label>
-                                    <label class="flex items-center gap-2 cursor-pointer">
-                                        <input type="checkbox" class="city-filter" value="goa" data-count="8">
-                                        <span>Goa (8)</span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Price Filter -->
-                        <div class="relative group">
-                            <button id="priceFilterBtn" class="filter-pill bg-gray-100 text-gray-700 px-4 py-2 rounded-full border border-gray-200 text-sm font-medium flex items-center gap-2">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                </svg>
-                                Price
-                                <span id="priceFilterCount" class="bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
-                            </button>
-                            <div id="priceFilterDropdown" class="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-lg border border-gray-200 p-4 z-50 hidden group-hover:block">
-                                <div class="space-y-3">
-                                    <div>
-                                        <label class="flex items-center gap-2 cursor-pointer">
-                                            <input type="checkbox" class="price-filter" value="0-5000">
-                                            <span>Under ₹5,000/hr</span>
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <label class="flex items-center gap-2 cursor-pointer">
-                                            <input type="checkbox" class="price-filter" value="5000-10000">
-                                            <span>₹5,000 - ₹10,000/hr</span>
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <label class="flex items-center gap-2 cursor-pointer">
-                                            <input type="checkbox" class="price-filter" value="10000-20000">
-                                            <span>₹10,000 - ₹20,000/hr</span>
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <label class="flex items-center gap-2 cursor-pointer">
-                                            <input type="checkbox" class="price-filter" value="20000+">
-                                            <span>Above ₹20,000/hr</span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Age Filter -->
-                        <div class="relative group">
-                            <button id="ageFilterBtn" class="filter-pill bg-gray-100 text-gray-700 px-4 py-2 rounded-full border border-gray-200 text-sm font-medium flex items-center gap-2">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                </svg>
-                                Age
-                                <span id="ageFilterCount" class="bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
-                            </button>
-                            <div id="ageFilterDropdown" class="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-lg border border-gray-200 p-4 z-50 hidden group-hover:block">
-                                <div class="space-y-2">
-                                    <label class="flex items-center gap-2 cursor-pointer">
-                                        <input type="checkbox" class="age-filter" value="18-22">
-                                        <span>18-22 Years</span>
-                                    </label>
-                                    <label class="flex items-center gap-2 cursor-pointer">
-                                        <input type="checkbox" class="age-filter" value="23-27">
-                                        <span>23-27 Years</span>
-                                    </label>
-                                    <label class="flex items-center gap-2 cursor-pointer">
-                                        <input type="checkbox" class="age-filter" value="28-35">
-                                        <span>28-35 Years</span>
-                                    </label>
-                                    <label class="flex items-center gap-2 cursor-pointer">
-                                        <input type="checkbox" class="age-filter" value="35+">
-                                        <span>35+ Years</span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Status Filter -->
-                        <button id="statusFilter" class="filter-pill bg-gray-100 text-gray-700 px-4 py-2 rounded-full border border-gray-200 text-sm font-medium flex items-center gap-2" data-filter="online">
-                            <div class="w-2 h-2 rounded-full status-online"></div>
-                            Available Now
-                        </button>
-                        
-                        <!-- Verified Filter -->
-                        <button id="verifiedFilter" class="filter-pill bg-gray-100 text-gray-700 px-4 py-2 rounded-full border border-gray-200 text-sm font-medium flex items-center gap-2" data-filter="verified">
-                            <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            Verified Only
-                        </button>
-                        
-                        <!-- VIP Filter -->
-                        <button id="vipFilter" class="filter-pill bg-gray-100 text-gray-700 px-4 py-2 rounded-full border border-gray-200 text-sm font-medium flex items-center gap-2" data-filter="vip">
-                            <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                            </svg>
-                            VIP Only
-                        </button>
-                    </div>
-                </div>
-                
-                <div class="flex items-center gap-3">
-                    <span class="text-gray-600 text-sm">Sort by:</span>
-                    <select id="sortBy" class="bg-gray-100 border border-gray-200 rounded-full px-4 py-2 text-sm focus:outline-none focus:border-primary">
-                        <option value="featured">Featured</option>
-                        <option value="newest">Newest First</option>
-                        <option value="price_low">Price: Low to High</option>
-                        <option value="price_high">Price: High to Low</option>
-                        <option value="rating">Highest Rated</option>
-                    </select>
-                </div>
-            </div>
-            
-            <!-- Active Filters -->
-            <div id="activeFilters" class="mt-4 flex flex-wrap gap-2 hidden">
-                <!-- Active filters will appear here -->
-            </div>
-        </div>
-    </section>
 
     <!-- All Profiles Grid -->
     <section class="py-12 bg-gray-50">
@@ -583,17 +411,28 @@
                                 View Profile
                             </a>
                             <div class="flex items-center gap-3">
-                                <a href="https://wa.me/919999999999" class="text-green-600 hover:text-green-700">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.226 1.36.194 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.288.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.126.549 4.125 1.517 5.874L0 24l6.335-1.652A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/>
-                                    </svg>
+                                <a href="" data-whatsapp
+                                class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform">
+                                    <img
+                                        src="assets/icons/whatsapp-icon.svg"
+                                        alt="WhatsApp"
+                                        class="w-6 h-6"
+                                        loading="lazy"
+                                    />
                                 </a>
-                                <a href="tel:+919999999999" class="text-primary hover:text-purple-700">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                                    </svg>
+
+                                <!-- Call -->
+                                <a href="" data-call
+                                class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform">
+                                    <img
+                                        src="assets/icons/phone.svg"
+                                        alt="Call"
+                                        class="w-6 h-6"
+                                        loading="lazy"
+                                    />
                                 </a>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -631,15 +470,26 @@
                                 View Profile
                             </a>
                             <div class="flex items-center gap-3">
-                                <a href="https://wa.me/919999999999" class="text-green-600 hover:text-green-700">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.226 1.36.194 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.288.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.126.549 4.125 1.517 5.874L0 24l6.335-1.652A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/>
-                                    </svg>
+                                <!-- WhatsApp -->
+                                <a href="" data-whatsapp
+                                class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform">
+                                    <img
+                                        src="assets/icons/whatsapp-icon.svg"
+                                        alt="WhatsApp"
+                                        class="w-6 h-6"
+                                        loading="lazy"
+                                    />
                                 </a>
-                                <a href="tel:+919999999999" class="text-primary hover:text-purple-700">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                                    </svg>
+
+                                <!-- Call -->
+                                <a href="" data-call
+                                class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform">
+                                    <img
+                                        src="assets/icons/phone.svg"
+                                        alt="Call"
+                                        class="w-6 h-6"
+                                        loading="lazy"
+                                    />
                                 </a>
                             </div>
                         </div>
@@ -679,15 +529,26 @@
                                 View Profile
                             </a>
                             <div class="flex items-center gap-3">
-                                <a href="https://wa.me/919999999999" class="text-green-600 hover:text-green-700">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.226 1.36.194 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.288.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.126.549 4.125 1.517 5.874L0 24l6.335-1.652A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/>
-                                    </svg>
+                                <!-- WhatsApp -->
+                                <a href="" data-whatsapp
+                                class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform">
+                                    <img
+                                        src="assets/icons/whatsapp-icon.svg"
+                                        alt="WhatsApp"
+                                        class="w-6 h-6"
+                                        loading="lazy"
+                                    />
                                 </a>
-                                <a href="tel:+919999999999" class="text-primary hover:text-purple-700">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                                    </svg>
+
+                                <!-- Call -->
+                                <a href="" data-call
+                                class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform">
+                                    <img
+                                        src="assets/icons/phone.svg"
+                                        alt="Call"
+                                        class="w-6 h-6"
+                                        loading="lazy"
+                                    />
                                 </a>
                             </div>
                         </div>
@@ -727,15 +588,26 @@
                                 View Profile
                             </a>
                             <div class="flex items-center gap-3">
-                                <a href="https://wa.me/919999999999" class="text-green-600 hover:text-green-700">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.226 1.36.194 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.288.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.126.549 4.125 1.517 5.874L0 24l6.335-1.652A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/>
-                                    </svg>
+                                <!-- WhatsApp -->
+                                <a href="" data-whatsapp
+                                class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform">
+                                    <img
+                                        src="assets/icons/whatsapp-icon.svg"
+                                        alt="WhatsApp"
+                                        class="w-6 h-6"
+                                        loading="lazy"
+                                    />
                                 </a>
-                                <a href="tel:+919999999999" class="text-primary hover:text-purple-700">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                                    </svg>
+
+                                <!-- Call -->
+                                <a href="" data-call
+                                class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform">
+                                    <img
+                                        src="assets/icons/phone.svg"
+                                        alt="Call"
+                                        class="w-6 h-6"
+                                        loading="lazy"
+                                    />
                                 </a>
                             </div>
                         </div>
@@ -746,11 +618,11 @@
     </section>
 
     <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top">
+    <!-- <button id="backToTop" class="back-to-top">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
         </svg>
-    </button>
+    </button> -->
 
     <!-- Footer -->
     <div id="footer-container"></div>
@@ -758,893 +630,244 @@
     <script src="js/layout.js" defer></script>
     
     <script>
-        // Sample profile data (in real app, this would come from an API)
-        const profilesData = [
-            {
-                id: 1,
-                name: "Riya",
-                age: 24,
-                city: "Delhi",
-                price: 8000,
-                rating: 4.8,
-                reviews: 24,
-                status: "online",
-                verified: true,
-                vip: true,
-                category: "Independent Call Girl",
-                description: "Premium independent escort offering discreet and personalized companionship services in Delhi.",
-                image: "gradient-to-r from-purple-400 to-pink-400"
-            },
-            {
-                id: 2,
-                name: "Sophia",
-                age: 26,
-                city: "Mumbai",
-                price: 10000,
-                rating: 4.9,
-                reviews: 18,
-                status: "online",
-                verified: true,
-                vip: true,
-                category: "Luxury Escort",
-                description: "High-class companion offering luxury escort services in Mumbai for discerning clients.",
-                image: "gradient-to-r from-blue-400 to-cyan-400"
-            },
-            {
-                id: 3,
-                name: "Ananya",
-                age: 23,
-                city: "Bangalore",
-                price: 7000,
-                rating: 4.5,
-                reviews: 12,
-                status: "offline",
-                verified: true,
-                vip: false,
-                category: "Independent Escort",
-                description: "Young and vibrant independent escort providing companionship services in Bangalore.",
-                image: "gradient-to-r from-green-400 to-emerald-400"
-            },
-            {
-                id: 4,
-                name: "Priya",
-                age: 25,
-                city: "Hyderabad",
-                price: 9000,
-                rating: 4.7,
-                reviews: 16,
-                status: "busy",
-                verified: true,
-                vip: true,
-                category: "Premium Companion",
-                description: "Sophisticated companion offering premium services in Hyderabad.",
-                image: "gradient-to-r from-orange-400 to-red-400"
-            },
-            {
-                id: 5,
-                name: "Meera",
-                age: 22,
-                city: "Delhi",
-                price: 6000,
-                rating: 4.6,
-                reviews: 8,
-                status: "online",
-                verified: true,
-                vip: false,
-                category: "New Escort",
-                description: "New and enthusiastic escort ready to provide memorable companionship.",
-                image: "gradient-to-r from-pink-400 to-rose-400"
-            },
-            {
-                id: 6,
-                name: "Kavya",
-                age: 28,
-                city: "Mumbai",
-                price: 12000,
-                rating: 4.9,
-                reviews: 22,
-                status: "online",
-                verified: true,
-                vip: true,
-                category: "Elite Companion",
-                description: "Experienced elite companion for high-profile clients in Mumbai.",
-                image: "gradient-to-r from-purple-400 to-indigo-400"
-            },
-            {
-                id: 7,
-                name: "Simran",
-                age: 21,
-                city: "Bangalore",
-                price: 5500,
-                rating: 4.4,
-                reviews: 6,
-                status: "offline",
-                verified: false,
-                vip: false,
-                category: "Student Escort",
-                description: "College student offering part-time companionship services.",
-                image: "gradient-to-r from-teal-400 to-cyan-400"
-            },
-            {
-                id: 8,
-                name: "Neha",
-                age: 27,
-                city: "Chennai",
-                price: 8500,
-                rating: 4.7,
-                reviews: 14,
-                status: "online",
-                verified: true,
-                vip: false,
-                category: "Professional Escort",
-                description: "Professional escort with corporate background, discreet services.",
-                image: "gradient-to-r from-yellow-400 to-orange-400"
-            },
-            {
-                id: 9,
-                name: "Tanya",
-                age: 24,
-                city: "Pune",
-                price: 7500,
-                rating: 4.5,
-                reviews: 10,
-                status: "busy",
-                verified: true,
-                vip: false,
-                category: "Model Escort",
-                description: "Former model offering premium escort services in Pune.",
-                image: "gradient-to-r from-red-400 to-pink-400"
-            },
-            {
-                id: 10,
-                name: "Ishita",
-                age: 30,
-                city: "Delhi",
-                price: 15000,
-                rating: 4.9,
-                reviews: 28,
-                status: "online",
-                verified: true,
-                vip: true,
-                category: "MILF Escort",
-                description: "Mature and experienced escort for sophisticated clients.",
-                image: "gradient-to-r from-gray-400 to-blue-400"
-            },
-            {
-                id: 11,
-                name: "Pooja",
-                age: 22,
-                city: "Goa",
-                price: 8000,
-                rating: 4.6,
-                reviews: 9,
-                status: "online",
-                verified: true,
-                vip: false,
-                category: "Beach Companion",
-                description: "Beach-loving escort perfect for Goa vacations and parties.",
-                image: "gradient-to-r from-blue-400 to-teal-400"
-            },
-            {
-                id: 12,
-                name: "Radhika",
-                age: 26,
-                city: "Kolkata",
-                price: 7000,
-                rating: 4.7,
-                reviews: 13,
-                status: "offline",
-                verified: true,
-                vip: false,
-                category: "Traditional Escort",
-                description: "Traditional Bengali beauty offering cultured companionship.",
-                image: "gradient-to-r from-purple-400 to-pink-400"
-            }
-        ];
+/* ===============================
+   STATE
+================================ */
+let profilesData = [];
+let filteredProfiles = [];
+let currentView = 'grid';
+let currentPage = 1;
+const profilesPerPage = 12;
 
-        // State management
-        let currentView = 'grid';
-        let currentPage = 1;
-        const profilesPerPage = 12;
-        let filteredProfiles = [...profilesData];
-        let activeFilters = {
-            cities: [],
-            priceRanges: [],
-            ageRanges: [],
-            status: null,
-            verified: false,
-            vip: false,
-            search: '',
-            sortBy: 'featured'
-        };
+/* ===============================
+   INIT
+================================ */
+fetch('data/profiles.json')
+    .then(res => res.json())
+    .then(data => {
+        profilesData = data;
+        filteredProfiles = [...profilesData];
 
-        // Initialize page
-        document.addEventListener('DOMContentLoaded', function() {
-            initializeFilters();
-            renderProfiles();
-            setupEventListeners();
-            setupBackToTop();
-        });
+        renderProfiles();
+        setupSearch();
+        setupViewSwitch();
+        setupBackToTop();
+        applyContactLinks();
+    })
+    .catch(err => {
+        console.error('Failed to load profiles.json', err);
+    });
 
-        function initializeFilters() {
-            // Set initial counts
-            updateFilterCounts();
-            
-            // Set initial view
-            document.getElementById('gridView').addEventListener('click', () => switchView('grid'));
-            document.getElementById('listView').addEventListener('click', () => switchView('list'));
-        }
+/* ===============================
+   SEARCH
+================================ */
+function setupSearch() {
+    const searchInput = document.getElementById('profileSearch');
+    const clearBtn = document.getElementById('clearSearch');
 
-        function setupEventListeners() {
-            // Search functionality
-            const searchInput = document.getElementById('profileSearch');
-            const clearSearchBtn = document.getElementById('clearSearch');
-            
-            searchInput.addEventListener('input', (e) => {
-                activeFilters.search = e.target.value.toLowerCase();
-                if (activeFilters.search.length > 0) {
-                    clearSearchBtn.classList.remove('hidden');
-                } else {
-                    clearSearchBtn.classList.add('hidden');
-                }
-                filterAndRender();
-            });
-            
-            clearSearchBtn.addEventListener('click', () => {
-                searchInput.value = '';
-                activeFilters.search = '';
-                clearSearchBtn.classList.add('hidden');
-                filterAndRender();
-            });
+    searchInput.addEventListener('input', e => {
+        const q = e.target.value.toLowerCase();
 
-            // City filter
-            document.querySelectorAll('.city-filter').forEach(checkbox => {
-                checkbox.addEventListener('change', (e) => {
-                    const city = e.target.value;
-                    if (e.target.checked) {
-                        activeFilters.cities.push(city);
-                    } else {
-                        activeFilters.cities = activeFilters.cities.filter(c => c !== city);
-                    }
-                    updateFilterCounts();
-                    filterAndRender();
-                });
-            });
+        filteredProfiles = profilesData.filter(p =>
+            p.name.toLowerCase().includes(q) ||
+            p.city.toLowerCase().includes(q) ||
+            p.description.toLowerCase().includes(q)
+        );
 
-            // Price filter
-            document.querySelectorAll('.price-filter').forEach(checkbox => {
-                checkbox.addEventListener('change', (e) => {
-                    const range = e.target.value;
-                    if (e.target.checked) {
-                        activeFilters.priceRanges.push(range);
-                    } else {
-                        activeFilters.priceRanges = activeFilters.priceRanges.filter(r => r !== range);
-                    }
-                    updateFilterCounts();
-                    filterAndRender();
-                });
-            });
+        clearBtn.classList.toggle('hidden', q.length === 0);
+        currentPage = 1;
+        renderProfiles();
+    });
 
-            // Age filter
-            document.querySelectorAll('.age-filter').forEach(checkbox => {
-                checkbox.addEventListener('change', (e) => {
-                    const range = e.target.value;
-                    if (e.target.checked) {
-                        activeFilters.ageRanges.push(range);
-                    } else {
-                        activeFilters.ageRanges = activeFilters.ageRanges.filter(r => r !== range);
-                    }
-                    updateFilterCounts();
-                    filterAndRender();
-                });
-            });
+    clearBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        clearBtn.classList.add('hidden');
+        filteredProfiles = [...profilesData];
+        currentPage = 1;
+        renderProfiles();
+    });
+}
 
-            // Status filter
-            document.getElementById('statusFilter').addEventListener('click', (e) => {
-                const btn = e.target.closest('button');
-                if (activeFilters.status === 'online') {
-                    activeFilters.status = null;
-                    btn.classList.remove('active');
-                } else {
-                    activeFilters.status = 'online';
-                    btn.classList.add('active');
-                }
-                filterAndRender();
-            });
+/* ===============================
+   VIEW SWITCH
+================================ */
+function setupViewSwitch() {
+    document.getElementById('gridView').onclick = () => switchView('grid');
+    document.getElementById('listView').onclick = () => switchView('list');
+}
 
-            // Verified filter
-            document.getElementById('verifiedFilter').addEventListener('click', (e) => {
-                const btn = e.target.closest('button');
-                activeFilters.verified = !activeFilters.verified;
-                btn.classList.toggle('active', activeFilters.verified);
-                filterAndRender();
-            });
+function switchView(view) {
+    currentView = view;
 
-            // VIP filter
-            document.getElementById('vipFilter').addEventListener('click', (e) => {
-                const btn = e.target.closest('button');
-                activeFilters.vip = !activeFilters.vip;
-                btn.classList.toggle('active', activeFilters.vip);
-                filterAndRender();
-            });
+    document.getElementById('gridView').classList.toggle('bg-primary', view === 'grid');
+    document.getElementById('gridView').classList.toggle('text-white', view === 'grid');
 
-            // Sort by
-            document.getElementById('sortBy').addEventListener('change', (e) => {
-                activeFilters.sortBy = e.target.value;
-                filterAndRender();
-            });
+    document.getElementById('listView').classList.toggle('bg-primary', view === 'list');
+    document.getElementById('listView').classList.toggle('text-white', view === 'list');
 
-            // Clear all filters
-            document.getElementById('clearFilters').addEventListener('click', clearAllFilters);
-            document.getElementById('resetAll').addEventListener('click', clearAllFilters);
+    renderProfiles();
+}
 
-            // Load more
-            document.getElementById('loadMoreBtn').addEventListener('click', loadMoreProfiles);
-        }
+/* ===============================
+   RENDER
+================================ */
+function renderProfiles() {
+    const start = (currentPage - 1) * profilesPerPage;
+    const end = start + profilesPerPage;
+    const currentProfiles = filteredProfiles.slice(start, end);
 
-        function updateFilterCounts() {
-            // Update city filter count
-            const cityCount = activeFilters.cities.length;
-            document.getElementById('cityFilterCount').textContent = cityCount;
-            
-            // Update price filter count
-            const priceCount = activeFilters.priceRanges.length;
-            document.getElementById('priceFilterCount').textContent = priceCount;
-            
-            // Update age filter count
-            const ageCount = activeFilters.ageRanges.length;
-            document.getElementById('ageFilterCount').textContent = ageCount;
-            
-            // Update active filters display
-            updateActiveFiltersDisplay();
-        }
+    document.getElementById('showingCount').textContent = Math.min(end, filteredProfiles.length);
+    document.getElementById('totalCount').textContent = filteredProfiles.length;
 
-        function updateActiveFiltersDisplay() {
-            const activeFiltersContainer = document.getElementById('activeFilters');
-            const hasActiveFilters = activeFilters.cities.length > 0 || 
-                                   activeFilters.priceRanges.length > 0 || 
-                                   activeFilters.ageRanges.length > 0 ||
-                                   activeFilters.status ||
-                                   activeFilters.verified ||
-                                   activeFilters.vip;
-            
-            if (hasActiveFilters) {
-                let html = '';
-                
-                // City filters
-                activeFilters.cities.forEach(city => {
-                    html += `<div class="active-filter bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm flex items-center gap-2">
-                        <span>${city.charAt(0).toUpperCase() + city.slice(1)}</span>
-                        <button class="remove-filter" data-type="city" data-value="${city}">×</button>
-                    </div>`;
-                });
-                
-                // Price filters
-                activeFilters.priceRanges.forEach(range => {
-                    let label = '';
-                    switch(range) {
-                        case '0-5000': label = 'Under ₹5K'; break;
-                        case '5000-10000': label = '₹5K-10K'; break;
-                        case '10000-20000': label = '₹10K-20K'; break;
-                        case '20000+': label = 'Above ₹20K'; break;
-                    }
-                    html += `<div class="active-filter bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm flex items-center gap-2">
-                        <span>${label}</span>
-                        <button class="remove-filter" data-type="price" data-value="${range}">×</button>
-                    </div>`;
-                });
-                
-                // Age filters
-                activeFilters.ageRanges.forEach(range => {
-                    html += `<div class="active-filter bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm flex items-center gap-2">
-                        <span>${range}</span>
-                        <button class="remove-filter" data-type="age" data-value="${range}">×</button>
-                    </div>`;
-                });
-                
-                // Status filter
-                if (activeFilters.status) {
-                    html += `<div class="active-filter bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm flex items-center gap-2">
-                        <span>Available Now</span>
-                        <button class="remove-filter" data-type="status">×</button>
-                    </div>`;
-                }
-                
-                // Verified filter
-                if (activeFilters.verified) {
-                    html += `<div class="active-filter bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm flex items-center gap-2">
-                        <span>Verified Only</span>
-                        <button class="remove-filter" data-type="verified">×</button>
-                    </div>`;
-                }
-                
-                // VIP filter
-                if (activeFilters.vip) {
-                    html += `<div class="active-filter bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm flex items-center gap-2">
-                        <span>VIP Only</span>
-                        <button class="remove-filter" data-type="vip">×</button>
-                    </div>`;
-                }
-                
-                activeFiltersContainer.innerHTML = html;
-                activeFiltersContainer.classList.remove('hidden');
-                
-                // Add event listeners to remove buttons
-                document.querySelectorAll('.remove-filter').forEach(btn => {
-                    btn.addEventListener('click', (e) => {
-                        const type = e.target.getAttribute('data-type');
-                        const value = e.target.getAttribute('data-value');
-                        removeFilter(type, value);
-                    });
-                });
-            } else {
-                activeFiltersContainer.classList.add('hidden');
-            }
-        }
+    document.getElementById('loadingState').classList.add('hidden');
 
-        function removeFilter(type, value) {
-            switch(type) {
-                case 'city':
-                    activeFilters.cities = activeFilters.cities.filter(c => c !== value);
-                    document.querySelector(`.city-filter[value="${value}"]`).checked = false;
-                    break;
-                case 'price':
-                    activeFilters.priceRanges = activeFilters.priceRanges.filter(r => r !== value);
-                    document.querySelector(`.price-filter[value="${value}"]`).checked = false;
-                    break;
-                case 'age':
-                    activeFilters.ageRanges = activeFilters.ageRanges.filter(r => r !== value);
-                    document.querySelector(`.age-filter[value="${value}"]`).checked = false;
-                    break;
-                case 'status':
-                    activeFilters.status = null;
-                    document.getElementById('statusFilter').classList.remove('active');
-                    break;
-                case 'verified':
-                    activeFilters.verified = false;
-                    document.getElementById('verifiedFilter').classList.remove('active');
-                    break;
-                case 'vip':
-                    activeFilters.vip = false;
-                    document.getElementById('vipFilter').classList.remove('active');
-                    break;
-            }
-            updateFilterCounts();
-            filterAndRender();
-        }
+    if (!currentProfiles.length) {
+        document.getElementById('noResults').classList.remove('hidden');
+        document.getElementById('gridViewContainer').classList.add('hidden');
+        document.getElementById('listViewContainer').classList.add('hidden');
+        return;
+    }
 
-        function clearAllFilters() {
-            // Reset all filters
-            activeFilters = {
-                cities: [],
-                priceRanges: [],
-                ageRanges: [],
-                status: null,
-                verified: false,
-                vip: false,
-                search: '',
-                sortBy: 'featured'
-            };
-            
-            // Uncheck all checkboxes
-            document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
-            
-            // Remove active classes from buttons
-            document.getElementById('statusFilter').classList.remove('active');
-            document.getElementById('verifiedFilter').classList.remove('active');
-            document.getElementById('vipFilter').classList.remove('active');
-            
-            // Reset search
-            document.getElementById('profileSearch').value = '';
-            document.getElementById('clearSearch').classList.add('hidden');
-            
-            // Reset sort
-            document.getElementById('sortBy').value = 'featured';
-            
-            // Update UI
-            updateFilterCounts();
-            filterAndRender();
-        }
+    document.getElementById('noResults').classList.add('hidden');
 
-        function filterAndRender() {
-            // Filter profiles
-            filteredProfiles = profilesData.filter(profile => {
-                // Search filter
-                if (activeFilters.search && !profile.name.toLowerCase().includes(activeFilters.search) && 
-                    !profile.city.toLowerCase().includes(activeFilters.search) && 
-                    !profile.description.toLowerCase().includes(activeFilters.search)) {
-                    return false;
-                }
-                
-                // City filter
-                if (activeFilters.cities.length > 0 && !activeFilters.cities.includes(profile.city.toLowerCase())) {
-                    return false;
-                }
-                
-                // Price filter
-                if (activeFilters.priceRanges.length > 0) {
-                    let priceMatch = false;
-                    activeFilters.priceRanges.forEach(range => {
-                        const [min, max] = range === '20000+' ? [20000, Infinity] : range.split('-').map(Number);
-                        if (profile.price >= min && profile.price <= max) {
-                            priceMatch = true;
-                        }
-                    });
-                    if (!priceMatch) return false;
-                }
-                
-                // Age filter
-                if (activeFilters.ageRanges.length > 0) {
-                    let ageMatch = false;
-                    activeFilters.ageRanges.forEach(range => {
-                        const [min, max] = range === '35+' ? [35, Infinity] : range.split('-').map(Number);
-                        if (profile.age >= min && profile.age <= max) {
-                            ageMatch = true;
-                        }
-                    });
-                    if (!ageMatch) return false;
-                }
-                
-                // Status filter
-                if (activeFilters.status && profile.status !== activeFilters.status) {
-                    return false;
-                }
-                
-                // Verified filter
-                if (activeFilters.verified && !profile.verified) {
-                    return false;
-                }
-                
-                // VIP filter
-                if (activeFilters.vip && !profile.vip) {
-                    return false;
-                }
-                
-                return true;
-            });
-            
-            // Sort profiles
-            sortProfiles();
-            
-            // Reset to page 1
-            currentPage = 1;
-            
-            // Render
-            renderProfiles();
-        }
+    currentView === 'grid'
+        ? renderGridView(currentProfiles)
+        : renderListView(currentProfiles);
 
-        function sortProfiles() {
-            switch(activeFilters.sortBy) {
-                case 'newest':
-                    filteredProfiles.sort((a, b) => b.id - a.id);
-                    break;
-                case 'price_low':
-                    filteredProfiles.sort((a, b) => a.price - b.price);
-                    break;
-                case 'price_high':
-                    filteredProfiles.sort((a, b) => b.price - a.price);
-                    break;
-                case 'rating':
-                    filteredProfiles.sort((a, b) => b.rating - a.rating);
-                    break;
-                default: // featured
-                    // VIP first, then online, then by rating
-                    filteredProfiles.sort((a, b) => {
-                        if (a.vip !== b.vip) return b.vip - a.vip;
-                        if (a.status !== b.status) {
-                            const statusOrder = { online: 3, busy: 2, offline: 1 };
-                            return statusOrder[b.status] - statusOrder[a.status];
-                        }
-                        return b.rating - a.rating;
-                    });
-            }
-        }
+    applyContactLinks();
+}
 
-        function renderProfiles() {
-            const startIndex = (currentPage - 1) * profilesPerPage;
-            const endIndex = startIndex + profilesPerPage;
-            const currentProfiles = filteredProfiles.slice(startIndex, endIndex);
-            
-            // Update counts
-            document.getElementById('showingCount').textContent = Math.min(endIndex, filteredProfiles.length);
-            document.getElementById('totalCount').textContent = filteredProfiles.length;
-            
-            // Update results title
-            const resultsCount = document.getElementById('resultsCount');
-            if (filteredProfiles.length === profilesData.length) {
-                resultsCount.textContent = 'All Profiles';
-                document.getElementById('resultsSubtitle').classList.remove('hidden');
-            } else {
-                resultsCount.textContent = `${filteredProfiles.length} Profiles Found`;
-                document.getElementById('resultsSubtitle').classList.add('hidden');
-            }
-            
-            // Hide loading state
-            document.getElementById('loadingState').classList.add('hidden');
-            
-            if (currentProfiles.length === 0) {
-                // Show no results
-                document.getElementById('noResults').classList.remove('hidden');
-                document.getElementById('gridViewContainer').classList.add('hidden');
-                document.getElementById('listViewContainer').classList.add('hidden');
-                document.getElementById('loadMoreContainer').classList.add('hidden');
-                document.getElementById('pagination').classList.add('hidden');
-                return;
-            }
-            
-            // Hide no results
-            document.getElementById('noResults').classList.add('hidden');
-            
-            // Render grid view
-            if (currentView === 'grid') {
-                renderGridView(currentProfiles);
-            } else {
-                renderListView(currentProfiles);
-            }
-            
-            // Show/hide load more button
-            if (filteredProfiles.length > endIndex) {
-                document.getElementById('loadMoreContainer').classList.remove('hidden');
-                document.getElementById('remainingCount').textContent = `${filteredProfiles.length - endIndex} more profiles`;
-            } else {
-                document.getElementById('loadMoreContainer').classList.add('hidden');
-            }
-            
-            // Show/hide pagination (alternative)
-            // document.getElementById('pagination').classList.toggle('hidden', filteredProfiles.length <= profilesPerPage);
-        }
+/* ===============================
+   GRID VIEW
+================================ */
+function renderGridView(profiles) {
+    const container = document.getElementById('gridViewContainer');
+    container.classList.remove('hidden');
+    document.getElementById('listViewContainer').classList.add('hidden');
 
-        function renderGridView(profiles) {
-            const container = document.getElementById('gridViewContainer');
-            container.classList.remove('hidden');
-            document.getElementById('listViewContainer').classList.add('hidden');
-            
-            let html = '';
-            
-            profiles.forEach(profile => {
-                // Determine status color
-                let statusColor = 'status-offline';
-                if (profile.status === 'online') statusColor = 'status-online';
-                if (profile.status === 'busy') statusColor = 'status-busy';
-                
-                // Format price
-                const priceFormatted = profile.price >= 10000 
-                    ? `₹${(profile.price/1000)}K/hr` 
-                    : `₹${profile.price.toLocaleString()}/hr`;
-                
-                // Get city display name
-                const cityDisplay = profile.city.charAt(0).toUpperCase() + profile.city.slice(1);
-                
-                // Generate stars
-                const stars = '★'.repeat(Math.floor(profile.rating)) + '☆'.repeat(5 - Math.floor(profile.rating));
-                
-                html += `
-                <div class="grid-item profile-card bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div class="relative">
-                        <div class="profile-image bg-${profile.image}"></div>
-                        <div class="age-badge">${profile.age}</div>
-                        <div class="price-tag">${priceFormatted}</div>
-                        <div class="absolute bottom-4 left-4">
-                            <span class="city-badge">${cityDisplay}</span>
-                        </div>
-                        <div class="absolute top-4 right-12">
-                            <div class="w-3 h-3 rounded-full ${statusColor}"></div>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-4">
-                            <div>
-                                <h3 class="text-xl font-semibold">${profile.name}</h3>
-                                <p class="text-gray-500 text-sm">${profile.category}</p>
-                            </div>
-                            ${profile.vip ? '<span class="bg-accent text-white text-xs px-3 py-1 rounded-full font-semibold">VIP</span>' : 
-                              profile.verified ? '<span class="bg-green-100 text-green-600 text-xs px-3 py-1 rounded-full font-semibold">Verified</span>' : ''}
-                        </div>
-                        <div class="flex items-center gap-2 mb-4">
-                            <div class="rating-star">${stars}</div>
-                            <span class="text-gray-600 text-sm">${profile.rating} (${profile.reviews})</span>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-6">${profile.description}</p>
-                        <div class="flex justify-between items-center">
-                            <a href="profile.html?id=${profile.id}" class="btn-primary text-white px-6 py-2 rounded-full text-sm font-medium">
-                                View Profile
-                            </a>
-                            <div class="flex items-center gap-3">
-                                <a href="https://wa.me/919999999999" class="text-green-600 hover:text-green-700">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.226 1.36.194 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.288.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.126.549 4.125 1.517 5.874L0 24l6.335-1.652A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/>
-                                    </svg>
-                                </a>
-                                <a href="tel:+919999999999" class="text-primary hover:text-purple-700">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+    container.innerHTML = profiles.map(p => {
+        const status =
+            p.status === 'online' ? 'status-online' :
+            p.status === 'busy' ? 'status-busy' : 'status-offline';
+
+        const price =
+            p.price >= 10000 ? `₹${p.price / 1000}K/hr` : `₹${p.price.toLocaleString()}/hr`;
+
+        const stars =
+            '★'.repeat(Math.floor(p.rating)) +
+            '☆'.repeat(5 - Math.floor(p.rating));
+
+        return `
+        <div class="profile-card bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="relative">
+                <div class="profile-image bg-${p.image}"></div>
+                <div class="age-badge">${p.age}</div>
+                <div class="price-tag">${price}</div>
+                <div class="absolute bottom-4 left-4">
+                    <span class="city-badge">${p.city}</span>
                 </div>
-                `;
-            });
-            
-            container.innerHTML = html;
-        }
-
-        function renderListView(profiles) {
-            const container = document.getElementById('listViewContainer');
-            container.classList.remove('hidden');
-            document.getElementById('gridViewContainer').classList.add('hidden');
-            
-            let html = '';
-            
-            profiles.forEach(profile => {
-                // Determine status color
-                let statusColor = 'status-offline';
-                if (profile.status === 'online') statusColor = 'status-online';
-                if (profile.status === 'busy') statusColor = 'status-busy';
-                
-                // Format price
-                const priceFormatted = profile.price >= 10000 
-                    ? `₹${(profile.price/1000)}K/hr` 
-                    : `₹${profile.price.toLocaleString()}/hr`;
-                
-                // Get city display name
-                const cityDisplay = profile.city.charAt(0).toUpperCase() + profile.city.slice(1);
-                
-                html += `
-                <div class="profile-card bg-white rounded-xl shadow-lg p-6">
-                    <div class="flex flex-col md:flex-row md:items-center gap-6">
-                        <div class="flex-shrink-0">
-                            <div class="relative w-32 h-32 rounded-xl overflow-hidden bg-${profile.image}">
-                                <div class="absolute top-2 left-2">
-                                    <span class="bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded-full">${profile.age}</span>
-                                </div>
-                                <div class="absolute top-2 right-2">
-                                    <div class="w-3 h-3 rounded-full ${statusColor}"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex-1">
-                            <div class="flex flex-col md:flex-row md:items-start justify-between gap-4">
-                                <div>
-                                    <div class="flex items-center gap-3 mb-2">
-                                        <h3 class="text-xl font-semibold">${profile.name}</h3>
-                                        ${profile.vip ? '<span class="bg-accent text-white text-xs px-3 py-1 rounded-full font-semibold">VIP</span>' : 
-                                          profile.verified ? '<span class="bg-green-100 text-green-600 text-xs px-3 py-1 rounded-full font-semibold">Verified</span>' : ''}
-                                    </div>
-                                    <div class="flex items-center gap-4 mb-3">
-                                        <span class="text-gray-600 flex items-center gap-1">
-                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                                            </svg>
-                                            ${cityDisplay}
-                                        </span>
-                                        <span class="text-gray-600 flex items-center gap-1">
-                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                            </svg>
-                                            ${profile.age} Years
-                                        </span>
-                                    </div>
-                                    <p class="text-gray-600 text-sm mb-4">${profile.description}</p>
-                                </div>
-                                <div class="text-right">
-                                    <div class="text-2xl font-bold text-primary mb-2">${priceFormatted}</div>
-                                    <div class="flex items-center justify-end gap-2 mb-3">
-                                        <div class="rating-star">★★★★☆</div>
-                                        <span class="text-gray-600 text-sm">${profile.rating}</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex justify-between items-center mt-4 pt-4 border-t">
-                                <a href="profile.html?id=${profile.id}" class="text-primary hover:text-purple-700 font-medium flex items-center gap-2">
-                                    View Full Profile
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                                    </svg>
-                                </a>
-                                <div class="flex items-center gap-4">
-                                    <a href="https://wa.me/919999999999" class="flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-green-600">
-                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.226 1.36.194 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.288.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.126.549 4.125 1.517 5.874L0 24l6.335-1.652A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/>
-                                        </svg>
-                                        WhatsApp
-                                    </a>
-                                    <a href="tel:+919999999999" class="flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-full text-sm font-medium">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                                        </svg>
-                                        Call Now
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="absolute top-4 right-12">
+                    <div class="w-3 h-3 rounded-full ${status}"></div>
                 </div>
-                `;
-            });
-            
-            container.innerHTML = html;
-        }
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-semibold">${p.name}</h3>
+                <p class="text-gray-500 text-sm">${p.category}</p>
 
-        function switchView(view) {
-            currentView = view;
-            
-            // Update button states
-            if (view === 'grid') {
-                document.getElementById('gridView').classList.add('bg-primary', 'text-white');
-                document.getElementById('gridView').classList.remove('bg-white', 'text-gray-600');
-                document.getElementById('listView').classList.remove('bg-primary', 'text-white');
-                document.getElementById('listView').classList.add('bg-white', 'text-gray-600');
-                renderProfiles();
-            } else {
-                document.getElementById('listView').classList.add('bg-primary', 'text-white');
-                document.getElementById('listView').classList.remove('bg-white', 'text-gray-600');
-                document.getElementById('gridView').classList.remove('bg-primary', 'text-white');
-                document.getElementById('gridView').classList.add('bg-white', 'text-gray-600');
-                renderProfiles();
-            }
-        }
+                <div class="rating-star my-2">${stars}</div>
+                <p class="text-gray-600 text-sm mb-4">${p.description}</p>
 
-        function loadMoreProfiles() {
-            currentPage++;
-            const startIndex = (currentPage - 1) * profilesPerPage;
-            const endIndex = startIndex + profilesPerPage;
-            const currentProfiles = filteredProfiles.slice(startIndex, endIndex);
-            
-            if (currentView === 'grid') {
-                renderMoreGridView(currentProfiles);
-            } else {
-                renderMoreListView(currentProfiles);
-            }
-            
-            // Update remaining count
-            const remaining = filteredProfiles.length - endIndex;
-            document.getElementById('remainingCount').textContent = `${remaining} more profiles`;
-            
-            // Hide load more button if no more profiles
-            if (remaining <= 0) {
-                document.getElementById('loadMoreContainer').classList.add('hidden');
-            }
-            
-            // Scroll to newly loaded profiles
-            document.querySelector('.grid-item:last-child')?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }
+                <div class="flex justify-between items-center">
+                    <a href="profile.html?id=${p.id}" class="btn-primary text-white px-6 py-2 rounded-full text-sm">
+                        View Profile
+                    </a>
+                    <div class="flex gap-3">
+                        <!-- WhatsApp -->
+                        <a href="" data-whatsapp
+                        class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform">
+                            <img
+                                src="assets/icons/whatsapp-icon.svg"
+                                alt="WhatsApp"
+                                class="w-6 h-6"
+                                loading="lazy"
+                            />
+                        </a>
 
-        function renderMoreGridView(profiles) {
-            const container = document.getElementById('gridViewContainer');
-            
-            profiles.forEach(profile => {
-                // Similar rendering logic as in renderGridView
-                // ... (implementation would be similar to renderGridView but appending instead of replacing)
-            });
-        }
+                        <!-- Call -->
+                        <a href="" data-call
+                        class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform">
+                            <img
+                                src="assets/icons/phone.svg"
+                                alt="Call"
+                                class="w-6 h-6"
+                                loading="lazy"
+                            />
+                        </a>
+                </div>
+                </div>
+            </div>
+        </div>`;
+    }).join('');
+}
 
-        function renderMoreListView(profiles) {
-            const container = document.getElementById('listViewContainer');
-            
-            profiles.forEach(profile => {
-                // Similar rendering logic as in renderListView
-                // ... (implementation would be similar to renderListView but appending instead of replacing)
-            });
-        }
+/* ===============================
+   LIST VIEW
+================================ */
+function renderListView(profiles) {
+    const container = document.getElementById('listViewContainer');
+    container.classList.remove('hidden');
+    document.getElementById('gridViewContainer').classList.add('hidden');
 
-        function setupBackToTop() {
-            const backToTopBtn = document.getElementById('backToTop');
-            
-            window.addEventListener('scroll', () => {
-                if (window.pageYOffset > 300) {
-                    backToTopBtn.classList.add('visible');
-                } else {
-                    backToTopBtn.classList.remove('visible');
-                }
-            });
-            
-            backToTopBtn.addEventListener('click', () => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        }
-    </script>
+    container.innerHTML = profiles.map(p => {
+        const price =
+            p.price >= 10000 ? `₹${p.price / 1000}K/hr` : `₹${p.price.toLocaleString()}/hr`;
+
+        return `
+        <div class="profile-card bg-white rounded-xl shadow-lg p-6">
+            <div class="flex justify-between">
+                <div>
+                    <h3 class="text-xl font-semibold">${p.name}</h3>
+                    <p class="text-gray-500">${p.city} • ${p.age} yrs</p>
+                    <p class="text-gray-600 mt-2">${p.description}</p>
+                </div>
+                <div class="text-right">
+                    <div class="text-2xl font-bold text-primary">${price}</div>
+                    <a href="profile.html?id=${p.id}" class="text-primary block mt-2">
+                        View Profile →
+                    </a>
+                </div>
+            </div>
+        </div>`;
+    }).join('');
+}
+
+/* ===============================
+   BACK TO TOP
+================================ */
+function setupBackToTop() {
+    const btn = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+        btn.classList.toggle('visible', window.scrollY > 300);
+    });
+
+    btn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ===============================
+   CONTACT LINKS
+================================ */
+function applyContactLinks() {
+    document.querySelectorAll('[data-whatsapp]').forEach(el => {
+        el.href = `https://wa.me/${CONTACT_CONFIG.whatsapp}`;
+        el.target = '_blank';
+    });
+
+    document.querySelectorAll('[data-call]').forEach(el => {
+        el.href = `tel:${CONTACT_CONFIG.call}`;
+    });
+}
+</script>
+
 </body>
 </html>
