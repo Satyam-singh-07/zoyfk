@@ -95,10 +95,10 @@ function loadLayout() {
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Top Cities</h4>
                     <ul class="space-y-2">
-                        <li><a href="pages/delhi-escorts.html" class="text-gray-400 hover:text-white transition">Delhi Escorts</a></li>
-                        <li><a href="pages/mumbai-escorts.html" class="text-gray-400 hover:text-white transition">Mumbai Call Girls</a></li>
-                        <li><a href="pages/bangalore-escorts.html" class="text-gray-400 hover:text-white transition">Bangalore Escorts</a></li>
-                        <li><a href="pages/hyderabad-escorts.html" class="text-gray-400 hover:text-white transition">Hyderabad Call Girls</a></li>
+                        <li><a href="delhi-escorts.html" class="text-gray-400 hover:text-white transition">Delhi Escorts</a></li>
+                        <li><a href="mumbai-escorts.html" class="text-gray-400 hover:text-white transition">Mumbai Call Girls</a></li>
+                        <li><a href="bangalore-escorts.html" class="text-gray-400 hover:text-white transition">Bangalore Escorts</a></li>
+                        <li><a href="hyderabad-escorts.html" class="text-gray-400 hover:text-white transition">Hyderabad Call Girls</a></li>
                     </ul>
                 </div>
                 
