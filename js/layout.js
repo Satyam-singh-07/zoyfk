@@ -1,16 +1,23 @@
-const CONTACT_CONFIG = {
-    whatsapp: "919625724273",
-    call: "919625724273"
-};
-
 function applyContactLinks() {
+    // Default fallback (for pages that forget config)
+    const defaultConfig = {
+        whatsapp: "919000000000",
+        call: "919000000000",
+        whatsappMessage: "Hi, I am interested in your service."
+    };
+
+    // Page-level override
+    const pageConfig = window.CONTACT_CONFIG || defaultConfig;
+    const encodedMessage = encodeURIComponent(pageConfig.whatsappMessage);
+
     document.querySelectorAll('[data-whatsapp]').forEach(el => {
-        el.href = `https://wa.me/${CONTACT_CONFIG.whatsapp}`;
-        el.target = '_blank';
+        el.href = `https://wa.me/${pageConfig.whatsapp}?text=${encodedMessage}`;
+        el.target = "_blank";
+        el.rel = "noopener noreferrer";
     });
 
     document.querySelectorAll('[data-call]').forEach(el => {
-        el.href = `tel:${CONTACT_CONFIG.call}`;
+        el.href = `tel:${pageConfig.call}`;
     });
 }
 
@@ -127,7 +134,8 @@ function loadLayout() {
 
         <!-- WhatsApp -->
         <a
-            href="https://wa.me/${CONTACT_CONFIG.whatsapp}"
+            href="#"
+            data-whatsapp
             target="_blank"
             aria-label="Chat on WhatsApp"
             class="w-14 h-14 rounded-full bg-green-500 flex items-center justify-center shadow-lg hover:scale-110 transition"
@@ -142,7 +150,8 @@ function loadLayout() {
 
         <!-- Call -->
         <a
-            href="tel:${CONTACT_CONFIG.call}"
+            href="#"
+            data-call
             aria-label="Call Now"
             class="w-14 h-14 rounded-full bg-blue-600 flex items-center justify-center shadow-lg hover:scale-110 transition"
         >
