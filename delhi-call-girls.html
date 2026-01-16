@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Delhi Call Girls | Independent Call Girls in Delhi | Zoyfk</title>
+
+    <meta
+      name="description"
+      content="Discover elite, premium & VIP Delhi call girls for exclusive companionship. Instant booking, 24/7 available, same-day service. Independent call girls in Connaught Place, Saket, Gurgaon, South Delhi."
+    />
+
+    <meta
+      name="keywords"
+      content="Delhi call girls, delhi call girl, call girls in delhi, call girl in delhi, call girls delhi, call girl delhi, delhi call girls service"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Colors & Styling -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#8B5CF6",
+              secondary: "#EC4899",
+              dark: "#1F2937",
+              light: "#F8FAFC",
+              accent: "#10B981",
+            },
+            fontFamily: {
+              sans: ["Inter", "system-ui", "sans-serif"],
+              display: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <style>
+      /* Custom CSS for enhanced styling */
+      .gradient-bg {
+        background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+      }
+
+      .profile-card {
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+      }
+
+      .profile-card:hover {
+        transform: translateY(-5px);
+        border-color: #8b5cf6;
+        box-shadow: 0 20px 25px -5px rgba(139, 92, 246, 0.1),
+          0 10px 10px -5px rgba(139, 92, 246, 0.04);
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 25px -5px rgba(139, 92, 246, 0.4);
+      }
+
+      .profile-image {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 12px 12px 0 0;
+      }
+
+      .city-badge {
+        background: rgba(139, 92, 246, 0.1);
+        color: #8b5cf6;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.875rem;
+        font-weight: 500;
+      }
+
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Custom animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fadeIn {
+        animation: fadeIn 0.6s ease-out;
+      }
+
+      /* Filter styles */
+      .filter-pill {
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .filter-pill.active {
+        background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+        color: white;
+        border-color: transparent;
+      }
+
+      /* Status indicators */
+      .status-online {
+        background-color: #10b981;
+        animation: pulse 2s infinite;
+      }
+
+      .status-offline {
+        background-color: #6b7280;
+      }
+
+      .status-busy {
+        background-color: #ef4444;
+      }
+
+      @keyframes pulse {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      /* Load more button animation */
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .loading-spinner {
+        animation: spin 1s linear infinite;
+      }
+
+      /* Back to top button */
+      .back-to-top {
+        position: fixed;
+        bottom: 100px;
+        right: 24px;
+        background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+        transition: all 0.3s ease;
+        z-index: 40;
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      .back-to-top.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Custom scrollbar for filters */
+      .filter-scroll::-webkit-scrollbar {
+        height: 4px;
+      }
+
+      .filter-scroll::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 4px;
+      }
+
+      .filter-scroll::-webkit-scrollbar-thumb {
+        background: #8b5cf6;
+        border-radius: 4px;
+      }
+
+      /* Grid animation for cards */
+      .grid-item {
+        animation: fadeIn 0.5s ease-out;
+      }
+
+      /* Price tag styling */
+      .price-tag {
+        background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+        color: white;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 0.875rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Age badge */
+      .age-badge {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 0.875rem;
+      }
+
+      /* Rating stars */
+      .rating-star {
+        color: #fbbf24;
+      }
+
+      /* No results animation */
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-10px);
+        }
+        60% {
+          transform: translateY(-5px);
+        }
+      }
+
+      .bounce-animation {
+        animation: bounce 2s infinite;
+      }
+    </style>
+  </head>
+  <body class="font-sans bg-light text-dark">
+    <!-- Header -->
+    <div id="header-container"></div>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-16 md:py-20">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1
+            class="text-4xl md:text-5xl font-display font-bold mb-6 animate-fadeIn"
+          >
+            Delhi Call Girls – Independent & VIP Call Girls in Delhi
+          </h1>
+          <p
+            class="text-xl mb-8 opacity-90 animate-fadeIn"
+            style="animation-delay: 0.2s"
+          >
+            Elite, Premium & VIP Companionship with Instant Booking
+          </p>
+
+          <!-- Quick Stats -->
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 animate-fadeIn"
+            style="animation-delay: 0.4s"
+          >
+            <div class="bg-white bg-opacity-20 rounded-xl p-4">
+              <div class="text-2xl font-bold mb-1">100+</div>
+              <div class="text-sm opacity-90">Verified Profiles</div>
+            </div>
+            <div class="bg-white bg-opacity-20 rounded-xl p-4">
+              <div class="text-2xl font-bold mb-1">24/7</div>
+              <div class="text-sm opacity-90">Available</div>
+            </div>
+            <div class="bg-white bg-opacity-20 rounded-xl p-4">
+              <div class="text-2xl font-bold mb-1">VIP</div>
+              <div class="text-sm opacity-90">High-Class Escorts</div>
+            </div>
+            <div class="bg-white bg-opacity-20 rounded-xl p-4">
+              <div class="text-2xl font-bold mb-1">Same-Day</div>
+              <div class="text-sm opacity-90">Booking Service</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Profile Cards Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-display font-bold mb-8 text-center">
+          Premium Delhi Call Girls
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Profile 1 -->
+          <div
+            class="profile-card bg-white rounded-xl shadow-lg overflow-hidden"
+          >
+            <div class="relative">
+              <div
+                class="profile-image bg-gradient-to-r from-pink-400 to-rose-400"
+              ></div>
+              <div class="age-badge">24</div>
+              <div class="price-tag">₹8,000/hr</div>
+
+              <div class="absolute bottom-4 left-4">
+                <span class="city-badge">Delhi</span>
+              </div>
+
+              <div class="absolute top-4 right-12">
+                <div class="w-3 h-3 rounded-full status-online"></div>
+              </div>
+            </div>
+
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <div>
+                  <h3 class="text-xl font-semibold">Priya</h3>
+                  <p class="text-gray-500 text-sm">Independent Call Girl</p>
+                </div>
+                <span
+                  class="bg-accent text-white text-xs px-3 py-1 rounded-full font-semibold"
+                >
+                  Popular
+                </span>
+              </div>
+
+              <p class="text-gray-600 text-sm mb-6">
+                Elegant and sophisticated companion for premium experiences in
+                Delhi.
+              </p>
+
+              <div class="flex justify-between items-center">
+                <a
+                  href="profile.html?id=delhi-priya-24"
+                  class="btn-primary text-white px-6 py-2 rounded-full text-sm font-medium"
+                >
+                  View Profile
+                </a>
+
+                <div class="flex items-center gap-3">
+                  <!-- WhatsApp -->
+                  <a
+                    href=""
+                    data-whatsapp
+                    class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform"
+                  >
+                    <img
+                      src="assets/icons/whatsapp-icon.svg"
+                      alt="WhatsApp"
+                      class="w-6 h-6"
+                      loading="lazy"
+                    />
+                  </a>
+
+                  <!-- Call -->
+                  <a
+                    href=""
+                    data-call
+                    class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform"
+                  >
+                    <img
+                      src="assets/icons/phone.svg"
+                      alt="Call"
+                      class="w-6 h-6"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Profile 2 -->
+          <div
+            class="profile-card bg-white rounded-xl shadow-lg overflow-hidden"
+          >
+            <div class="relative">
+              <div
+                class="profile-image bg-gradient-to-r from-indigo-400 to-purple-500"
+              ></div>
+              <div class="age-badge">26</div>
+              <div class="price-tag">₹15,000/hr</div>
+
+              <div class="absolute bottom-4 left-4">
+                <span class="city-badge">Delhi</span>
+              </div>
+
+              <div class="absolute top-4 right-12">
+                <div class="w-3 h-3 rounded-full status-online"></div>
+              </div>
+            </div>
+
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <div>
+                  <h3 class="text-xl font-semibold">Neha</h3>
+                  <p class="text-gray-500 text-sm">VIP Escort</p>
+                </div>
+                <span
+                  class="bg-yellow-100 text-yellow-600 text-xs px-3 py-1 rounded-full font-semibold"
+                >
+                  Elite
+                </span>
+              </div>
+
+              <p class="text-gray-600 text-sm mb-6">
+                Confident and professional high-class companion for exclusive
+                Delhi events.
+              </p>
+
+              <div class="flex justify-between items-center">
+                <a
+                  href="profile.html?id=delhi-neha-26"
+                  class="btn-primary text-white px-6 py-2 rounded-full text-sm font-medium"
+                >
+                  View Profile
+                </a>
+
+                <div class="flex items-center gap-3">
+                  <a
+                    href=""
+                    data-whatsapp
+                    class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform"
+                  >
+                    <img
+                      src="assets/icons/whatsapp-icon.svg"
+                      alt="WhatsApp"
+                      class="w-6 h-6"
+                      loading="lazy"
+                    />
+                  </a>
+
+                  <a
+                    href=""
+                    data-call
+                    class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform"
+                  >
+                    <img
+                      src="assets/icons/phone.svg"
+                      alt="Call"
+                      class="w-6 h-6"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Profile 3 -->
+          <div
+            class="profile-card bg-white rounded-xl shadow-lg overflow-hidden"
+          >
+            <div class="relative">
+              <div
+                class="profile-image bg-gradient-to-r from-teal-400 to-green-500"
+              ></div>
+              <div class="age-badge">23</div>
+              <div class="price-tag">₹7,500/hr</div>
+
+              <div class="absolute bottom-4 left-4">
+                <span class="city-badge">Delhi</span>
+              </div>
+
+              <div class="absolute top-4 right-12">
+                <div class="w-3 h-3 rounded-full status-busy"></div>
+              </div>
+            </div>
+
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <div>
+                  <h3 class="text-xl font-semibold">Simran</h3>
+                  <p class="text-gray-500 text-sm">Independent Call Girl</p>
+                </div>
+                <span
+                  class="bg-blue-100 text-blue-600 text-xs px-3 py-1 rounded-full font-semibold"
+                >
+                  New
+                </span>
+              </div>
+
+              <p class="text-gray-600 text-sm mb-6">
+                Romantic and charming companion for intimate moments in Delhi.
+              </p>
+
+              <div class="flex justify-between items-center">
+                <a
+                  href="profile.html?id=delhi-simran-23"
+                  class="btn-primary text-white px-6 py-2 rounded-full text-sm font-medium"
+                >
+                  View Profile
+                </a>
+
+                <div class="flex items-center gap-3">
+                  <a
+                    href=""
+                    data-whatsapp
+                    class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform"
+                  >
+                    <img
+                      src="assets/icons/whatsapp-icon.svg"
+                      alt="WhatsApp"
+                      class="w-6 h-6"
+                      loading="lazy"
+                    />
+                  </a>
+
+                  <a
+                    href=""
+                    data-call
+                    class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform"
+                  >
+                    <img
+                      src="assets/icons/phone.svg"
+                      alt="Call"
+                      class="w-6 h-6"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Profile 4 -->
+          <div
+            class="profile-card bg-white rounded-xl shadow-lg overflow-hidden"
+          >
+            <div class="relative">
+              <div
+                class="profile-image bg-gradient-to-r from-red-400 to-pink-500"
+              ></div>
+              <div class="age-badge">27</div>
+              <div class="price-tag">₹18,000/hr</div>
+
+              <div class="absolute bottom-4 left-4">
+                <span class="city-badge">Delhi</span>
+              </div>
+
+              <div class="absolute top-4 right-12">
+                <div class="w-3 h-3 rounded-full status-online"></div>
+              </div>
+            </div>
+
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <div>
+                  <h3 class="text-xl font-semibold">Anjali</h3>
+                  <p class="text-gray-500 text-sm">Luxury Companion</p>
+                </div>
+                <span
+                  class="bg-accent text-white text-xs px-3 py-1 rounded-full font-semibold"
+                >
+                  VIP
+                </span>
+              </div>
+
+              <p class="text-gray-600 text-sm mb-6">
+                Classy and discreet companion for sophisticated experiences in
+                South Delhi.
+              </p>
+
+              <div class="flex justify-between items-center">
+                <a
+                  href="profile.html?id=delhi-anjali-27"
+                  class="btn-primary text-white px-6 py-2 rounded-full text-sm font-medium"
+                >
+                  View Profile
+                </a>
+
+                <div class="flex items-center gap-3">
+                  <a
+                    href=""
+                    data-whatsapp
+                    class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform"
+                  >
+                    <img
+                      src="assets/icons/whatsapp-icon.svg"
+                      alt="WhatsApp"
+                      class="w-6 h-6"
+                      loading="lazy"
+                    />
+                  </a>
+
+                  <a
+                    href=""
+                    data-call
+                    class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform"
+                  >
+                    <img
+                      src="assets/icons/phone.svg"
+                      alt="Call"
+                      class="w-6 h-6"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="py-12 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl font-display font-bold mb-6 text-center">
+            Premium Delhi Call Girls – Your Ultimate Companion Experience
+          </h2>
+          <div class="prose prose-lg max-w-none">
+            <p class="text-gray-700 mb-6">
+              Delhi, the capital city of India, is a bustling metropolis known
+              for its rich history, vibrant culture, and modern lifestyle. For
+              those seeking refined company, Delhi call girls offer an
+              exceptional mix of charm, sophistication, and premium
+              companionship. Whether you're a business executive, a tourist, or
+              a local resident looking for memorable experiences, hiring the
+              right call girl in Delhi can transform your time into something
+              truly special.
+            </p>
+            <p class="text-gray-700 mb-6">
+              The demand for call girls in Delhi reflects the city's
+              cosmopolitan nature and fast-paced lifestyle. Today's discerning
+              individuals seek personalized, stress-free companionship that
+              aligns with their busy schedules. From dinner dates and social
+              events to intimate moments and relaxed conversations, Delhi call
+              girl services prioritize comfort, discretion, and mutual respect.
+            </p>
+            <p class="text-gray-700 mb-8">
+              With instant booking, quick response times, and 24/7 availability,
+              connecting with call girls in Delhi has never been easier. Whether
+              you're planning ahead or need last-minute companionship, premium
+              services are accessible anytime, anywhere, offering an erotic and
+              on-demand luxurious experience.
+            </p>
+
+            <h3 class="text-2xl font-display font-semibold mt-10 mb-4">
+              Meet Our Elite Delhi Call Girls
+            </h3>
+
+            <div class="space-y-8 mb-12">
+              <div>
+                <h4 class="text-xl font-semibold mb-2">
+                  1. Priya – Elegant & Sophisticated
+                </h4>
+                <p class="text-gray-700">
+                  Priya embodies the grace and sophistication of Delhi's elite
+                  call girls. With her polished manners and charming
+                  personality, she's perfect for high-profile events, dinner
+                  dates, or intimate conversations. As a premium companion,
+                  Priya offers personalized attention and memorable experiences
+                  through Delhi call girl services, with quick response and
+                  same-day booking options.
+                </p>
+              </div>
+              <div>
+                <h4 class="text-xl font-semibold mb-2">
+                  2. Neha – Confident & Professional
+                </h4>
+                <p class="text-gray-700">
+                  Neha is a high-class, elite choice among call girls in Delhi.
+                  Known for her confidence and professional approach, she excels
+                  in both social and private settings. Whether you need a
+                  companion for corporate events or personal time, Neha delivers
+                  an ultimate experience with intelligence and warmth. She is
+                  24/7 available and ideal for clients seeking luxury and
+                  exclusive companionship.
+                </p>
+              </div>
+              <div>
+                <h4 class="text-xl font-semibold mb-2">
+                  3. Simran – Romantic & Charming
+                </h4>
+                <p class="text-gray-700">
+                  Simran brings a warm, positive energy that defines quality
+                  companionship in Delhi. She enjoys meaningful conversations,
+                  exploring the city's attractions, and creating intimate
+                  moments. Her romantic and passionate personality ensures a
+                  deeply satisfying experience. As part of Delhi call girl
+                  services, Simran offers on-demand availability and instant
+                  booking for memorable engagements.
+                </p>
+              </div>
+              <div>
+                <h4 class="text-xl font-semibold mb-2">
+                  4. Anjali – Classy & Discreet
+                </h4>
+                <p class="text-gray-700">
+                  Anjali is respected among Delhi call girls for her composed
+                  nature and refined communication skills. She's perfect for
+                  clients who appreciate sophisticated companionship with
+                  complete discretion. Offering luxury experiences in areas like
+                  South Delhi and Connaught Place, Anjali focuses on comfort and
+                  personalized service. With anytime availability and quick
+                  response, she's a trusted choice for repeat clients.
+                </p>
+              </div>
+            </div>
+
+            <h3 class="text-2xl font-display font-semibold mt-10 mb-4">
+              Why Choose Delhi Call Girls for Premium Companionship?
+            </h3>
+            <p class="text-gray-700 mb-6">
+              Delhi call girls are renowned for their beauty, intelligence, and
+              professional approach to companionship. Each companion understands
+              the importance of safety, discretion, and emotional intelligence,
+              ensuring comfortable and natural interactions.
+            </p>
+            <p class="text-gray-700 mb-6">
+              What sets Delhi call girl services apart is the focus on elite,
+              high-class experiences rather than transactional encounters.
+              Clients value meaningful connections, warmth, and the ability to
+              relax without pressure.
+            </p>
+            <p class="text-gray-700 mb-8">
+              Key reasons people prefer call girls in Delhi include top-rated
+              professionalism, exclusive and respectful companionship,
+              personalized treatment tailored to individual preferences, and
+              premium experiences without judgment. Whether you seek romantic,
+              intimate, or social companionship, Delhi call girl services ensure
+              every moment feels special and refined.
+            </p>
+
+            <h3 class="text-2xl font-display font-semibold mt-10 mb-4">
+              Services Offered by Delhi Call Girls
+            </h3>
+            <p class="text-gray-700 mb-6">
+              The range of services provided by Delhi call girls is designed to
+              suit diverse lifestyles and expectations. These services emphasize
+              comfort, connection, and emotional presence.
+            </p>
+            <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+              <li>Dinner dates and social outings</li>
+              <li>Event and party companionship</li>
+              <li>Travel companionship within the city</li>
+              <li>Private conversations and relaxation time</li>
+              <li>Hotel and home visits</li>
+            </ul>
+            <p class="text-gray-700 mb-8">
+              Each call girl in Delhi offers a personalized approach, adapting
+              to your preferences to create the ultimate experience. The focus
+              remains on building comfort, trust, and memorable connections.
+              With same-day service, fast connections, and on-demand
+              availability, Delhi call girls ensure flexibility for both planned
+              and spontaneous engagements.
+            </p>
+
+            <h3 class="text-2xl font-display font-semibold mt-10 mb-4">
+              Elite, VIP & Luxury Experience with Delhi Call Girls
+            </h3>
+            <p class="text-gray-700 mb-6">
+              For clients who value refinement and exclusivity, Delhi offers
+              elite and luxury companionship options. Delhi call girls providing
+              VIP services are well-spoken, stylish, and socially confident.
+            </p>
+            <p class="text-gray-700 mb-8">
+              These high-class services are ideal for business professionals,
+              corporate travelers, high-profile social events, and clients
+              seeking exclusive companionship. Companions appreciate the
+              sophisticated demeanor and polished presence of Delhi call girls,
+              ensuring experiences feel natural and upscale rather than
+              transactional.
+            </p>
+
+            <h3 class="text-2xl font-display font-semibold mt-10 mb-4">
+              How to Book Call Girls in Delhi – Simple & Secure
+            </h3>
+            <p class="text-gray-700 mb-6">
+              Booking a Delhi call girl is designed to be easy, secure, and
+              discreet. Most Delhi call girl service providers focus on quick
+              responses and smooth communication.
+            </p>
+            <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+              <li>
+                <strong>Online Booking:</strong> Browse verified profiles to
+                explore preferences and availability, making instant booking
+                convenient and transparent.
+              </li>
+              <li>
+                <strong>Direct Contact:</strong> Many clients prefer direct
+                communication for clarity and comfort, ensuring fast connection
+                experiences.
+              </li>
+              <li>
+                <strong>Agency Assistance:</strong> Reputable agencies offer
+                verified, elite companions for premium satisfaction, ideal for
+                first-time clients seeking quality experiences.
+              </li>
+            </ul>
+            <p class="text-gray-700 mb-8">
+              With 24/7 support and same-day booking services, you can arrange
+              your desired companionship whenever needed, regardless of location
+              or time.
+            </p>
+
+            <h3 class="text-2xl font-display font-semibold mt-10 mb-4">
+              Independent Delhi Call Girls vs Agencies
+            </h3>
+            <p class="text-gray-700 mb-6">
+              Choosing between independent companions and agency services
+              depends on personal preferences and requirements.
+            </p>
+            <p class="text-gray-700 mb-6">
+              <strong>Independent Call Girls in Delhi:</strong> Independent
+              companions offer more personalized interactions. Many clients
+              appreciate direct communication and scheduling flexibility. These
+              call girls often provide customized experiences tailored to
+              individual preferences.
+            </p>
+            <p class="text-gray-700 mb-8">
+              <strong>Agency-Based Services:</strong> Reputable agencies offer
+              structured, professional services with added reliability. Ideal
+              for clients seeking luxury, exclusive, and professionally managed
+              experiences. Both options ensure discretion and comfort when
+              chosen responsibly.
+            </p>
+
+            <h3 class="text-2xl font-display font-semibold mt-10 mb-4">
+              FAQ – Delhi Call Girls Service
+            </h3>
+            <div class="space-y-4 mb-8">
+              <div>
+                <h4 class="text-lg font-semibold">
+                  Are Delhi call girls safe for companionship?
+                </h4>
+                <p class="text-gray-700">
+                  Yes, privacy and safety are top priorities. Our call girls are
+                  trained to maintain discretion and protect client
+                  confidentiality.
+                </p>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold">
+                  Can I book a call girl the same day?
+                </h4>
+                <p class="text-gray-700">
+                  Absolutely. Many services offer same-day booking with quick
+                  confirmation.
+                </p>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold">
+                  Are these services available 24/7?
+                </h4>
+                <p class="text-gray-700">
+                  Yes, 24/7 availability ensures companionship whenever you need
+                  it.
+                </p>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold">
+                  What kind of experience can I expect?
+                </h4>
+                <p class="text-gray-700">
+                  A personalized, respectful, and memorable companionship
+                  focused on comfort and genuine connection.
+                </p>
+              </div>
+            </div>
+
+            <h3 class="text-2xl font-display font-semibold mt-10 mb-4">
+              Conclusion
+            </h3>
+            <p class="text-gray-700 mb-6">
+              Choosing Delhi call girls means selecting refinement, respect, and
+              premium companionship. Whether you prefer elite, luxury, or
+              personalized experiences, Delhi call girl services are designed to
+              deliver exceptional moments with professionalism and discretion.
+            </p>
+            <p class="text-gray-700">
+              With instant booking, fast connections, and on-demand
+              availability, finding the right call girl in Delhi has never been
+              more seamless. When approached responsibly, these services offer
+              warm, romantic, and emotionally fulfilling ways to enjoy life in
+              India's dynamic capital city.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <!-- Layout JavaScript -->
+    <script src="js/layout.js" defer></script>
+  </body>
+</html>
