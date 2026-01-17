@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "delhi-riya-24",
     "name": "Riya",
     "age": 24,
     "city": "Delhi",
@@ -12,10 +12,32 @@
     "vip": true,
     "category": "Independent Call Girl",
     "description": "Premium independent escort offering discreet and personalized companionship services in Delhi.",
-    "image": "gradient-to-r from-purple-400 to-pink-400"
+    "about": [
+      "Hello! I'm Riya, a premium independent escort based in Delhi.",
+      "I offer discreet, professional, and personalized companionship services.",
+      "Perfect for dinner dates, social events, or private meetings."
+    ],
+    "physical": {
+      "height": "5'6\" (168 cm)",
+      "weight": "55 kg",
+      "bodyType": "Slim & Curvy",
+      "hairColor": "Black",
+      "eyeColor": "Brown"
+    },
+    "features": [
+      "GFE (Girlfriend Experience)",
+      "Dinner Dates",
+      "Overnight Stays",
+      "Travel Companion",
+      "Discreet & Professional"
+    ],
+    "image": "from-purple-400 to-pink-400",
+    "phone": "919811112222",
+    "whatsapp": "919811112222"
   },
+
   {
-    "id": 2,
+    "id": "mumbai-sophia-26",
     "name": "Sophia",
     "age": 26,
     "city": "Mumbai",
@@ -27,10 +49,31 @@
     "vip": true,
     "category": "Luxury Escort",
     "description": "High-class companion offering luxury escort services in Mumbai for discerning clients.",
-    "image": "gradient-to-r from-blue-400 to-cyan-400"
+    "about": [
+      "Sophia is a luxury escort based in Mumbai.",
+      "Known for elegance, confidence, and high-class companionship.",
+      "Ideal for business dinners, events, and elite clientele."
+    ],
+    "physical": {
+      "height": "5'7\" (170 cm)",
+      "weight": "57 kg",
+      "bodyType": "Athletic & Elegant",
+      "hairColor": "Dark Brown",
+      "eyeColor": "Hazel"
+    },
+    "features": [
+      "Luxury Dates",
+      "Elite Events",
+      "5-Star Hotel Companion",
+      "Travel Companion"
+    ],
+    "image": "from-blue-400 to-cyan-400",
+    "phone": "919822223333",
+    "whatsapp": "919822223333"
   },
+
   {
-    "id": 3,
+    "id": "bangalore-ananya-23",
     "name": "Ananya",
     "age": 23,
     "city": "Bangalore",
@@ -42,10 +85,27 @@
     "vip": false,
     "category": "Independent Escort",
     "description": "Young and vibrant independent escort providing companionship services in Bangalore.",
-    "image": "gradient-to-r from-green-400 to-emerald-400"
+    "about": [
+      "Ananya is a young, energetic independent escort in Bangalore.",
+      "She enjoys meaningful conversations and relaxed companionship.",
+      "Perfect for casual meetups and social outings."
+    ],
+    "physical": {
+      "height": "5'4\" (163 cm)",
+      "weight": "52 kg",
+      "bodyType": "Petite",
+      "hairColor": "Black",
+      "eyeColor": "Brown"
+    },
+    "features": ["Casual Dates", "Coffee Meetups", "Friendly Companion"],
+    "imageUrl": "assets/images/profiles/ananya.jpg",
+    "imageGradient": "from-green-400 to-emerald-400",
+    "phone": "919833334444",
+    "whatsapp": "919833334444"
   },
+
   {
-    "id": 4,
+    "id": "hyderabad-priya-25",
     "name": "Priya",
     "age": 25,
     "city": "Hyderabad",
@@ -57,10 +117,26 @@
     "vip": true,
     "category": "Premium Companion",
     "description": "Sophisticated companion offering premium services in Hyderabad.",
-    "image": "gradient-to-r from-orange-400 to-red-400"
+    "about": [
+      "Priya is a premium companion known for sophistication.",
+      "She offers calm, refined, and discreet companionship.",
+      "Perfect for long conversations and classy evenings."
+    ],
+    "physical": {
+      "height": "5'5\" (165 cm)",
+      "weight": "56 kg",
+      "bodyType": "Curvy",
+      "hairColor": "Brown",
+      "eyeColor": "Brown"
+    },
+    "features": ["Premium Dates", "Overnight Stays", "Discreet Meetings"],
+    "image": "from-orange-400 to-red-400",
+    "phone": "919844445555",
+    "whatsapp": "919844445555"
   },
+
   {
-    "id": 5,
+    "id": "delhi-meera-22",
     "name": "Meera",
     "age": 22,
     "city": "Delhi",
@@ -72,10 +148,26 @@
     "vip": false,
     "category": "New Escort",
     "description": "New and enthusiastic escort ready to provide memorable companionship.",
-    "image": "gradient-to-r from-pink-400 to-rose-400"
+    "about": [
+      "Meera is new, energetic, and enthusiastic.",
+      "She offers a warm, friendly, and relaxed experience.",
+      "Ideal for first-time clients."
+    ],
+    "physical": {
+      "height": "5'3\" (160 cm)",
+      "weight": "50 kg",
+      "bodyType": "Slim",
+      "hairColor": "Black",
+      "eyeColor": "Brown"
+    },
+    "features": ["Friendly Companion", "First-Time Friendly", "Casual Dates"],
+    "image": "from-pink-400 to-rose-400",
+    "phone": "919855556666",
+    "whatsapp": "919855556666"
   },
+
   {
-    "id": 6,
+    "id": "mumbai-kavya-28",
     "name": "Kavya",
     "age": 28,
     "city": "Mumbai",
@@ -87,10 +179,31 @@
     "vip": true,
     "category": "Elite Companion",
     "description": "Experienced elite companion for high-profile clients in Mumbai.",
-    "image": "gradient-to-r from-purple-400 to-indigo-400"
+    "about": [
+      "Kavya is an elite, experienced companion in Mumbai.",
+      "She caters to high-profile and corporate clients.",
+      "Luxury, discretion, and professionalism guaranteed."
+    ],
+    "physical": {
+      "height": "5'8\" (173 cm)",
+      "weight": "60 kg",
+      "bodyType": "Tall & Elegant",
+      "hairColor": "Dark Brown",
+      "eyeColor": "Hazel"
+    },
+    "features": [
+      "Elite Events",
+      "Luxury Companion",
+      "Business Dinners",
+      "Travel Companion"
+    ],
+    "image": "from-purple-400 to-indigo-400",
+    "phone": "919866667777",
+    "whatsapp": "919866667777"
   },
+
   {
-    "id": 7,
+    "id": "bangalore-simran-21",
     "name": "Simran",
     "age": 21,
     "city": "Bangalore",
@@ -102,40 +215,26 @@
     "vip": false,
     "category": "Student Escort",
     "description": "College student offering part-time companionship services.",
-    "image": "gradient-to-r from-teal-400 to-cyan-400"
+    "about": [
+      "Simran is a student offering part-time companionship.",
+      "Friendly, youthful, and easygoing personality.",
+      "Best for casual meetups."
+    ],
+    "physical": {
+      "height": "5'2\" (158 cm)",
+      "weight": "48 kg",
+      "bodyType": "Petite",
+      "hairColor": "Black",
+      "eyeColor": "Brown"
+    },
+    "features": ["Casual Dates", "Student Companion"],
+    "image": "from-teal-400 to-cyan-400",
+    "phone": "919877778888",
+    "whatsapp": "919877778888"
   },
+
   {
-    "id": 8,
-    "name": "Neha",
-    "age": 27,
-    "city": "Chennai",
-    "price": 8500,
-    "rating": 4.7,
-    "reviews": 14,
-    "status": "online",
-    "verified": true,
-    "vip": false,
-    "category": "Professional Escort",
-    "description": "Professional escort with corporate background, discreet services.",
-    "image": "gradient-to-r from-yellow-400 to-orange-400"
-  },
-  {
-    "id": 9,
-    "name": "Tanya",
-    "age": 24,
-    "city": "Pune",
-    "price": 7500,
-    "rating": 4.5,
-    "reviews": 10,
-    "status": "busy",
-    "verified": true,
-    "vip": false,
-    "category": "Model Escort",
-    "description": "Former model offering premium escort services in Pune.",
-    "image": "gradient-to-r from-red-400 to-pink-400"
-  },
-  {
-    "id": 10,
+    "id": "delhi-ishita-30",
     "name": "Ishita",
     "age": 30,
     "city": "Delhi",
@@ -147,36 +246,21 @@
     "vip": true,
     "category": "MILF Escort",
     "description": "Mature and experienced escort for sophisticated clients.",
-    "image": "gradient-to-r from-gray-400 to-blue-400"
-  },
-  {
-    "id": 11,
-    "name": "Pooja",
-    "age": 22,
-    "city": "Goa",
-    "price": 8000,
-    "rating": 4.6,
-    "reviews": 9,
-    "status": "online",
-    "verified": true,
-    "vip": false,
-    "category": "Beach Companion",
-    "description": "Beach-loving escort perfect for Goa vacations and parties.",
-    "image": "gradient-to-r from-blue-400 to-teal-400"
-  },
-  {
-    "id": 12,
-    "name": "Radhika",
-    "age": 26,
-    "city": "Kolkata",
-    "price": 7000,
-    "rating": 4.7,
-    "reviews": 13,
-    "status": "offline",
-    "verified": true,
-    "vip": false,
-    "category": "Traditional Escort",
-    "description": "Traditional Bengali beauty offering cultured companionship.",
-    "image": "gradient-to-r from-purple-400 to-pink-400"
+    "about": [
+      "Ishita is mature, confident, and highly experienced.",
+      "She offers refined and emotionally engaging companionship.",
+      "Ideal for sophisticated clients."
+    ],
+    "physical": {
+      "height": "5'6\" (168 cm)",
+      "weight": "62 kg",
+      "bodyType": "Curvy",
+      "hairColor": "Dark Brown",
+      "eyeColor": "Brown"
+    },
+    "features": ["MILF Experience", "Overnight Stays", "Luxury Companion"],
+    "image": "from-gray-400 to-blue-400",
+    "phone": "919900001111",
+    "whatsapp": "919900001111"
   }
 ]

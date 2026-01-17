@@ -50,7 +50,7 @@ function loadLayout() {
                     <a href="cities.html" class="text-gray-600 hover:text-primary font-medium transition">Cities</a>
                     <a href="services.html" class="text-gray-600 hover:text-primary font-medium transition">Services</a>
                     <a href="profiles.html" class="text-gray-600 hover:text-primary font-medium transition">Profiles</a>
-                    <a href="#contact" class="btn-primary text-white px-6 py-2 rounded-full font-medium">Contact</a>
+                    <a href="#" data-call class="btn-primary text-white px-6 py-2 rounded-full font-medium">Contact</a>
                 </div>
                 
                 <!-- Mobile Menu Button -->
@@ -67,7 +67,7 @@ function loadLayout() {
                 <a href="cities.html" class="block text-gray-600 hover:text-primary font-medium">Cities</a>
                 <a href="services.html" class="block text-gray-600 hover:text-primary font-medium">Services</a>
                 <a href="profiles.html" class="block text-gray-600 hover:text-primary font-medium">Profiles</a>
-                <a href="#contact" class="block btn-primary text-white px-6 py-2 rounded-full font-medium text-center">Contact</a>
+                <a href="#" data-call class="block btn-primary text-white px-6 py-2 rounded-full font-medium text-center">Contact</a>
             </div>
         </div>
     </nav>
@@ -123,7 +123,7 @@ function loadLayout() {
                         <li><a href="cities.html" class="text-gray-400 hover:text-white transition">All Cities</a></li>
                         <li><a href="profiles.html" class="text-gray-400 hover:text-white transition">Featured Profiles</a></li>
                         <li><a href="services.html" class="text-gray-400 hover:text-white transition">Our Services</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                        <li><a href="#" data-call class="text-gray-400 hover:text-white transition">Contact</a></li>
                     </ul>
                 </div>
                 
@@ -131,7 +131,7 @@ function loadLayout() {
                     <h4 class="text-lg font-semibold mb-4">Contact</h4>
                     <ul class="space-y-2">
                         <li class="text-gray-400">24/7 Support</li>
-                        <li class="text-gray-400">WhatsApp Available</li>
+                        <a href="#" data-whatsapp ><li class="text-gray-400">WhatsApp Available</li></a>
                         <li class="text-gray-400">Discreet Service</li>
                     </ul>
                 </div>
