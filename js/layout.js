@@ -1,33 +1,33 @@
 function applyContactLinks() {
-    // Default fallback (for pages that forget config)
-    const defaultConfig = {
-        whatsapp: "919000000000",
-        call: "919000000000",
-        whatsappMessage: "Hi, I am interested in your service."
-    };
+  // Default fallback (for pages that forget config)
+  const defaultConfig = {
+    whatsapp: "919000000000",
+    call: "919000000000",
+    whatsappMessage: "Hi, I am interested in your service.",
+  };
 
-    // Page-level override
-    const pageConfig = window.CONTACT_CONFIG || defaultConfig;
-    const encodedMessage = encodeURIComponent(pageConfig.whatsappMessage);
+  // Page-level override
+  const pageConfig = window.CONTACT_CONFIG || defaultConfig;
+  const encodedMessage = encodeURIComponent(pageConfig.whatsappMessage);
 
-    document.querySelectorAll('[data-whatsapp]').forEach(el => {
-        el.href = `https://wa.me/${pageConfig.whatsapp}?text=${encodedMessage}`;
-        el.target = "_blank";
-        el.rel = "noopener noreferrer";
-    });
+  document.querySelectorAll("[data-whatsapp]").forEach((el) => {
+    el.href = `https://wa.me/${pageConfig.whatsapp}?text=${encodedMessage}`;
+    el.target = "_blank";
+    el.rel = "noopener noreferrer";
+  });
 
-    document.querySelectorAll('[data-call]').forEach(el => {
-        el.href = `tel:${pageConfig.call}`;
-    });
+  document.querySelectorAll("[data-call]").forEach((el) => {
+    el.href = `tel:${pageConfig.call}`;
+  });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    loadLayout();
+  loadLayout();
+  showAgeDisclaimer();
 });
 
 function loadLayout() {
-
-    const headerHTML = `
+  const headerHTML = `
      <nav class="bg-white shadow-lg sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
@@ -71,9 +71,24 @@ function loadLayout() {
             </div>
         </div>
     </nav>
+    <!-- Disclaimer Ticker -->
+    <div class="bg-black text-yellow-400 overflow-hidden">
+    <div class="relative whitespace-nowrap">
+        <div class="inline-block animate-marquee px-4 py-2 text-sm font-medium">
+        ⚠️ Zoyfk does not intervene in relationships between end users and advertisers.
+        <span class="mx-8">•</span>
+        Never make any advance payments.
+        <span class="mx-8">•</span>
+        Zoyfk does not intervene in relationships between end users and advertisers.
+        <span class="mx-8">•</span>
+        Never make any advance payments.
+        </div>
+    </div>
+    </div>
+
     `;
 
-    const footerHTML = `
+  const footerHTML = `
     <footer class="bg-dark text-white py-12">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -129,7 +144,7 @@ function loadLayout() {
     </footer>
     `;
 
-    const floatingActionsHTML = `
+  const floatingActionsHTML = `
     <div id="floating-actions" class="fixed bottom-5 right-5 z-50 flex flex-col gap-3">
 
         <!-- WhatsApp -->
@@ -166,26 +181,82 @@ function loadLayout() {
     </div>
     `;
 
-    document.getElementById("header-container").innerHTML = headerHTML;
-    document.getElementById("footer-container").innerHTML = footerHTML;
-    document.body.insertAdjacentHTML("beforeend", floatingActionsHTML);
-    applyContactLinks();
+  document.getElementById("header-container").innerHTML = headerHTML;
+  document.getElementById("footer-container").innerHTML = footerHTML;
+  document.body.insertAdjacentHTML("beforeend", floatingActionsHTML);
+  applyContactLinks();
 
-    // Mobile menu toggle (SAFE)
-    const btn = document.getElementById("mobile-menu-button");
-    const menu = document.getElementById("mobile-menu");
+  // Mobile menu toggle (SAFE)
+  const btn = document.getElementById("mobile-menu-button");
+  const menu = document.getElementById("mobile-menu");
 
-    if (btn && menu) {
-        btn.addEventListener("click", (e) => {
-            e.stopPropagation(); // VERY IMPORTANT
-            menu.classList.toggle("hidden");
-        });
+  if (btn && menu) {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation(); // VERY IMPORTANT
+      menu.classList.toggle("hidden");
+    });
 
-        document.addEventListener("click", (e) => {
-            if (!menu.contains(e.target) && !btn.contains(e.target)) {
-                menu.classList.add("hidden");
-            }
-        });
-    }
+    document.addEventListener("click", (e) => {
+      if (!menu.contains(e.target) && !btn.contains(e.target)) {
+        menu.classList.add("hidden");
+      }
+    });
+  }
+}
 
+function showAgeDisclaimer() {
+  // Only show once
+  if (localStorage.getItem("zoyfk_age_verified")) return;
+
+  const modalHTML = `
+    <div id="age-modal" class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 px-4">
+        <div class="bg-white max-w-lg w-full rounded-xl shadow-2xl p-6 text-center animate-fadeIn">
+            <h2 class="text-xl font-bold mb-4 text-gray-900">
+                PLEASE READ BEFORE CONTINUING
+            </h2>
+
+            <p class="text-gray-700 text-sm mb-4">
+                This website contains adult-oriented content and is intended only for users who are
+                <strong>18 years of age or older</strong>.
+            </p>
+
+            <p class="text-gray-700 text-sm mb-4">
+                By continuing, you confirm that you are legally allowed to view adult content in your location.
+            </p>
+
+            <div class="bg-yellow-50 border border-yellow-300 rounded-lg p-3 text-sm text-yellow-800 mb-5">
+                <strong>Important:</strong> Do not pay any advance fees.
+                Any request for advance payment may be fraudulent.
+                Zoyfk will not be held liable for third-party interactions.
+            </div>
+
+            <div class="flex gap-4 justify-center">
+                <button
+                    id="accept-age"
+                    class="btn-primary text-white px-6 py-2 rounded-full font-medium"
+                >
+                    Accept & Continue
+                </button>
+
+                <button
+                    id="decline-age"
+                    class="border border-gray-300 px-6 py-2 rounded-full font-medium text-gray-700 hover:bg-gray-100"
+                >
+                    Leave
+                </button>
+            </div>
+        </div>
+    </div>
+    `;
+
+  document.body.insertAdjacentHTML("beforeend", modalHTML);
+
+  document.getElementById("accept-age").addEventListener("click", () => {
+    localStorage.setItem("zoyfk_age_verified", "true");
+    document.getElementById("age-modal").remove();
+  });
+
+  document.getElementById("decline-age").addEventListener("click", () => {
+    window.location.href = "https://www.google.com";
+  });
 }

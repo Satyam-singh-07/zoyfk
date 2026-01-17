@@ -1,731 +1,1246 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>All Cities - Premium Escorts & Call Girls in India | Zoyfk</title>
-    <meta name="description" content="Browse all cities where Zoyfk offers premium escort and call girl services. Find independent escorts in Delhi, Mumbai, Bangalore, Hyderabad, Pune, Chennai, Kolkata, and more.">
-    <meta name="keywords" content="escorts in all cities, call girls across India, escorts by city, Delhi, Mumbai, Bangalore, Hyderabad, Pune, Chennai, Kolkata, Goa">
-    
+    <meta
+      name="description"
+      content="Browse all cities where Zoyfk offers premium escort and call girl services. Find independent escorts in Delhi, Mumbai, Bangalore, Hyderabad, Pune, Chennai, Kolkata, and more."
+    />
+    <meta
+      name="keywords"
+      content="escorts in all cities, call girls across India, escorts by city, Delhi, Mumbai, Bangalore, Hyderabad, Pune, Chennai, Kolkata, Goa"
+    />
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+    <link rel="stylesheet" href="style.css" />
+
     <!-- Custom Colors & Styling -->
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#8B5CF6',
-                        secondary: '#EC4899',
-                        dark: '#1F2937',
-                        light: '#F8FAFC',
-                        accent: '#10B981'
-                    },
-                    fontFamily: {
-                        'sans': ['Inter', 'system-ui', 'sans-serif'],
-                        'display': ['Poppins', 'sans-serif']
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#8B5CF6",
+              secondary: "#EC4899",
+              dark: "#1F2937",
+              light: "#F8FAFC",
+              accent: "#10B981",
+            },
+            fontFamily: {
+              sans: ["Inter", "system-ui", "sans-serif"],
+              display: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
     </script>
-    
+
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
     <style>
-        /* Custom CSS for enhanced styling */
-        .gradient-bg {
-            background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+      /* Custom CSS for enhanced styling */
+      .gradient-bg {
+        background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+      }
+
+      .card-hover {
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+      }
+
+      .card-hover:hover {
+        transform: translateY(-5px);
+        border-color: #8b5cf6;
+        box-shadow:
+          0 20px 25px -5px rgba(139, 92, 246, 0.1),
+          0 10px 10px -5px rgba(139, 92, 246, 0.04);
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 25px -5px rgba(139, 92, 246, 0.4);
+      }
+
+      .city-badge {
+        background: rgba(139, 92, 246, 0.1);
+        color: #8b5cf6;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.875rem;
+        font-weight: 500;
+      }
+
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Custom animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
         }
-        
-        .card-hover {
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
-        
-        .card-hover:hover {
-            transform: translateY(-5px);
-            border-color: #8B5CF6;
-            box-shadow: 0 20px 25px -5px rgba(139, 92, 246, 0.1), 0 10px 10px -5px rgba(139, 92, 246, 0.04);
-        }
-        
-        .btn-primary {
-            background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
-            transition: all 0.3s ease;
-        }
-        
-        .btn-primary:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 25px -5px rgba(139, 92, 246, 0.4);
-        }
-        
-        .city-badge {
-            background: rgba(139, 92, 246, 0.1);
-            color: #8B5CF6;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.875rem;
-            font-weight: 500;
-        }
-        
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        /* Custom animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .animate-fadeIn {
-            animation: fadeIn 0.6s ease-out;
-        }
-        
-        /* Search bar styling */
-        .search-input {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .search-input:focus {
-            border-color: rgba(255, 255, 255, 0.5);
-            outline: none;
-        }
-        
-        /* Filter button */
-        .filter-btn {
-            transition: all 0.3s ease;
-        }
-        
-        .filter-btn.active {
-            background: rgba(255, 255, 255, 0.2);
-        }
-        
-        /* Alphabet navigation */
-        .alphabet-nav {
-            scrollbar-width: thin;
-            scrollbar-color: #8B5CF6 transparent;
-        }
-        
-        .alphabet-nav::-webkit-scrollbar {
-            height: 4px;
-        }
-        
-        .alphabet-nav::-webkit-scrollbar-track {
-            background: transparent;
-        }
-        
-        .alphabet-nav::-webkit-scrollbar-thumb {
-            background: #8B5CF6;
-            border-radius: 2px;
-        }
-        
-        .alphabet-letter {
-            transition: all 0.2s ease;
-        }
-        
-        .alphabet-letter.active {
-            color: #8B5CF6;
-            transform: scale(1.1);
-        }
+      }
+
+      .animate-fadeIn {
+        animation: fadeIn 0.6s ease-out;
+      }
+
+      /* Search bar styling */
+      .search-input {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .search-input:focus {
+        border-color: rgba(255, 255, 255, 0.5);
+        outline: none;
+      }
+
+      /* Filter button */
+      .filter-btn {
+        transition: all 0.3s ease;
+      }
+
+      .filter-btn.active {
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      /* Alphabet navigation */
+      .alphabet-nav {
+        scrollbar-width: thin;
+        scrollbar-color: #8b5cf6 transparent;
+      }
+
+      .alphabet-nav::-webkit-scrollbar {
+        height: 4px;
+      }
+
+      .alphabet-nav::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      .alphabet-nav::-webkit-scrollbar-thumb {
+        background: #8b5cf6;
+        border-radius: 2px;
+      }
+
+      .alphabet-letter {
+        transition: all 0.2s ease;
+      }
+
+      .alphabet-letter.active {
+        color: #8b5cf6;
+        transform: scale(1.1);
+      }
     </style>
-</head>
-<body class="font-sans bg-light text-dark">
+  </head>
+  <body class="font-sans bg-light text-dark">
     <!-- Navigation -->
     <div id="header-container"></div>
 
     <!-- Hero Section for Cities Page -->
     <section class="gradient-bg text-white py-16 md:py-20">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto text-center">
-                <h1 class="text-4xl md:text-5xl font-display font-bold mb-6 animate-fadeIn">
-                    Browse All Cities
-                </h1>
-                <p class="text-xl mb-8 opacity-90 animate-fadeIn" style="animation-delay: 0.2s">
-                    Find premium independent escorts and call girls across India's major cities
-                </p>
-                
-                <!-- Search Bar -->
-                <div class="max-w-2xl mx-auto mb-8 animate-fadeIn" style="animation-delay: 0.4s">
-                    <div class="relative">
-                        <input type="text" id="citySearch" placeholder="Search for a city..." 
-                               class="w-full search-input text-white placeholder-gray-300 rounded-full px-6 py-4 pl-14 focus:outline-none">
-                        <svg class="absolute left-5 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-300" 
-                             fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                        </svg>
-                    </div>
-                </div>
-                
-                <!-- Filter Buttons -->
-                <div class="flex flex-wrap justify-center gap-3 mb-6 animate-fadeIn" style="animation-delay: 0.5s">
-                    <button class="filter-btn text-white px-4 py-2 rounded-full border border-white border-opacity-30 hover:bg-white hover:bg-opacity-10 active" data-filter="all">
-                        All Cities
-                    </button>
-                    <button class="filter-btn text-white px-4 py-2 rounded-full border border-white border-opacity-30 hover:bg-white hover:bg-opacity-10" data-filter="north">
-                        North India
-                    </button>
-                    <button class="filter-btn text-white px-4 py-2 rounded-full border border-white border-opacity-30 hover:bg-white hover:bg-opacity-10" data-filter="south">
-                        South India
-                    </button>
-                    <button class="filter-btn text-white px-4 py-2 rounded-full border border-white border-opacity-30 hover:bg-white hover:bg-opacity-10" data-filter="west">
-                        West India
-                    </button>
-                    <button class="filter-btn text-white px-4 py-2 rounded-full border border-white border-opacity-30 hover:bg-white hover:bg-opacity-10" data-filter="east">
-                        East India
-                    </button>
-                </div>
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1
+            class="text-4xl md:text-5xl font-display font-bold mb-6 animate-fadeIn"
+          >
+            Browse All Cities
+          </h1>
+          <p
+            class="text-xl mb-8 opacity-90 animate-fadeIn"
+            style="animation-delay: 0.2s"
+          >
+            Find premium independent escorts and call girls across India's major
+            cities
+          </p>
+
+          <!-- Search Bar -->
+          <div
+            class="max-w-2xl mx-auto mb-8 animate-fadeIn"
+            style="animation-delay: 0.4s"
+          >
+            <div class="relative">
+              <input
+                type="text"
+                id="citySearch"
+                placeholder="Search for a city..."
+                class="w-full search-input text-white placeholder-gray-300 rounded-full px-6 py-4 pl-14 focus:outline-none"
+              />
+              <svg
+                class="absolute left-5 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-300"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                ></path>
+              </svg>
             </div>
+          </div>
+
+          <!-- Filter Buttons -->
+          <div
+            class="flex flex-wrap justify-center gap-3 mb-6 animate-fadeIn"
+            style="animation-delay: 0.5s"
+          >
+            <button
+              class="filter-btn text-white px-4 py-2 rounded-full border border-white border-opacity-30 hover:bg-white hover:bg-opacity-10 active"
+              data-filter="all"
+            >
+              All Cities
+            </button>
+            <button
+              class="filter-btn text-white px-4 py-2 rounded-full border border-white border-opacity-30 hover:bg-white hover:bg-opacity-10"
+              data-filter="north"
+            >
+              North India
+            </button>
+            <button
+              class="filter-btn text-white px-4 py-2 rounded-full border border-white border-opacity-30 hover:bg-white hover:bg-opacity-10"
+              data-filter="south"
+            >
+              South India
+            </button>
+            <button
+              class="filter-btn text-white px-4 py-2 rounded-full border border-white border-opacity-30 hover:bg-white hover:bg-opacity-10"
+              data-filter="west"
+            >
+              West India
+            </button>
+            <button
+              class="filter-btn text-white px-4 py-2 rounded-full border border-white border-opacity-30 hover:bg-white hover:bg-opacity-10"
+              data-filter="east"
+            >
+              East India
+            </button>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Alphabet Navigation -->
     <section class="bg-white py-4 shadow-sm">
-        <div class="container mx-auto px-4">
-            <div class="alphabet-nav overflow-x-auto flex justify-center space-x-6 md:space-x-8">
-                <a href="#A" class="alphabet-letter text-gray-400 hover:text-primary font-medium">A</a>
-                <a href="#B" class="alphabet-letter text-gray-400 hover:text-primary font-medium">B</a>
-                <a href="#C" class="alphabet-letter text-gray-400 hover:text-primary font-medium">C</a>
-                <a href="#D" class="alphabet-letter text-gray-400 hover:text-primary font-medium">D</a>
-                <a href="#G" class="alphabet-letter text-gray-400 hover:text-primary font-medium">G</a>
-                <a href="#H" class="alphabet-letter text-gray-400 hover:text-primary font-medium">H</a>
-                <a href="#I" class="alphabet-letter text-gray-400 hover:text-primary font-medium">I</a>
-                <a href="#J" class="alphabet-letter text-gray-400 hover:text-primary font-medium">J</a>
-                <a href="#K" class="alphabet-letter text-gray-400 hover:text-primary font-medium">K</a>
-                <a href="#L" class="alphabet-letter text-gray-400 hover:text-primary font-medium">L</a>
-                <a href="#M" class="alphabet-letter text-gray-400 hover:text-primary font-medium">M</a>
-                <a href="#N" class="alphabet-letter text-gray-400 hover:text-primary font-medium">N</a>
-                <a href="#P" class="alphabet-letter text-gray-400 hover:text-primary font-medium">P</a>
-                <a href="#R" class="alphabet-letter text-gray-400 hover:text-primary font-medium">R</a>
-                <a href="#S" class="alphabet-letter text-gray-400 hover:text-primary font-medium">S</a>
-                <a href="#U" class="alphabet-letter text-gray-400 hover:text-primary font-medium">U</a>
-                <a href="#V" class="alphabet-letter text-gray-400 hover:text-primary font-medium">V</a>
-            </div>
+      <div class="container mx-auto px-4">
+        <div
+          class="alphabet-nav overflow-x-auto flex justify-center space-x-6 md:space-x-8"
+        >
+          <a
+            href="#A"
+            class="alphabet-letter text-gray-400 hover:text-primary font-medium"
+            >A</a
+          >
+          <a
+            href="#B"
+            class="alphabet-letter text-gray-400 hover:text-primary font-medium"
+            >B</a
+          >
+          <a
+            href="#C"
+            class="alphabet-letter text-gray-400 hover:text-primary font-medium"
+            >C</a
+          >
+          <a
+            href="#D"
+            class="alphabet-letter text-gray-400 hover:text-primary font-medium"
+            >D</a
+          >
+          <a
+            href="#G"
+            class="alphabet-letter text-gray-400 hover:text-primary font-medium"
+            >G</a
+          >
+          <a
+            href="#H"
+            class="alphabet-letter text-gray-400 hover:text-primary font-medium"
+            >H</a
+          >
+          <a
+            href="#I"
+            class="alphabet-letter text-gray-400 hover:text-primary font-medium"
+            >I</a
+          >
+          <a
+            href="#J"
+            class="alphabet-letter text-gray-400 hover:text-primary font-medium"
+            >J</a
+          >
+          <a
+            href="#K"
+            class="alphabet-letter text-gray-400 hover:text-primary font-medium"
+            >K</a
+          >
+          <a
+            href="#L"
+            class="alphabet-letter text-gray-400 hover:text-primary font-medium"
+            >L</a
+          >
+          <a
+            href="#M"
+            class="alphabet-letter text-gray-400 hover:text-primary font-medium"
+            >M</a
+          >
+          <a
+            href="#N"
+            class="alphabet-letter text-gray-400 hover:text-primary font-medium"
+            >N</a
+          >
+          <a
+            href="#P"
+            class="alphabet-letter text-gray-400 hover:text-primary font-medium"
+            >P</a
+          >
+          <a
+            href="#R"
+            class="alphabet-letter text-gray-400 hover:text-primary font-medium"
+            >R</a
+          >
+          <a
+            href="#S"
+            class="alphabet-letter text-gray-400 hover:text-primary font-medium"
+            >S</a
+          >
+          <a
+            href="#U"
+            class="alphabet-letter text-gray-400 hover:text-primary font-medium"
+            >U</a
+          >
+          <a
+            href="#V"
+            class="alphabet-letter text-gray-400 hover:text-primary font-medium"
+            >V</a
+          >
         </div>
+      </div>
     </section>
 
     <!-- All Cities Section -->
     <section id="cities" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <!-- Stats Overview -->
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
-                <div class="bg-white rounded-xl shadow p-6 text-center">
-                    <div class="text-3xl font-bold text-primary mb-2">24</div>
-                    <div class="text-gray-600">Cities</div>
-                </div>
-                <div class="bg-white rounded-xl shadow p-6 text-center">
-                    <div class="text-3xl font-bold text-secondary mb-2">200+</div>
-                    <div class="text-gray-600">Total Profiles</div>
-                </div>
-                <div class="bg-white rounded-xl shadow p-6 text-center">
-                    <div class="text-3xl font-bold text-accent mb-2">50+</div>
-                    <div class="text-gray-600">VIP Escorts</div>
-                </div>
-                <div class="bg-white rounded-xl shadow p-6 text-center">
-                    <div class="text-3xl font-bold text-purple-600 mb-2">24/7</div>
-                    <div class="text-gray-600">Availability</div>
-                </div>
-            </div>
-
-            <!-- Popular Cities -->
-            <div class="mb-16">
-                <h2 class="text-2xl font-display font-bold mb-8 text-center">Most Popular Cities</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Delhi -->
-                    <a href="delhi-escorts.html" class="card-hover bg-white rounded-xl shadow-lg overflow-hidden group" data-region="north">
-                        <div class="relative h-48 overflow-hidden">
-                            <div class="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600"></div>
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <span class="text-white text-4xl font-display font-bold">Delhi</span>
-                            </div>
-                            <div class="absolute bottom-4 left-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm">
-                                Capital City
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2 group-hover:text-primary transition">Delhi Escorts</h3>
-                            <p class="text-gray-600 text-sm mb-4">India's capital with premium independent escorts and call girls in Delhi/NCR</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary font-medium">25+ Profiles →</span>
-                                <span class="bg-purple-100 text-purple-600 text-xs px-3 py-1 rounded-full">Featured</span>
-                            </div>
-                        </div>
-                    </a>
-                    
-                    <!-- Mumbai -->
-                    <a href="mumbai-escorts.html" class="card-hover bg-white rounded-xl shadow-lg overflow-hidden group" data-region="west">
-                        <div class="relative h-48 overflow-hidden">
-                            <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600"></div>
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <span class="text-white text-4xl font-display font-bold">Mumbai</span>
-                            </div>
-                            <div class="absolute bottom-4 left-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm">
-                                Financial Capital
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2 group-hover:text-primary transition">Mumbai Call Girls</h3>
-                            <p class="text-gray-600 text-sm mb-4">Luxury escorts and high-profile companions in India's financial capital</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary font-medium">20+ Profiles →</span>
-                                <span class="bg-blue-100 text-blue-600 text-xs px-3 py-1 rounded-full">Popular</span>
-                            </div>
-                        </div>
-                    </a>
-                    
-                    <!-- Bangalore -->
-                    <a href="bangalore-escorts.html" class="card-hover bg-white rounded-xl shadow-lg overflow-hidden group" data-region="south">
-                        <div class="relative h-48 overflow-hidden">
-                            <div class="absolute inset-0 bg-gradient-to-r from-green-600 to-emerald-600"></div>
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <span class="text-white text-4xl font-display font-bold">Bangalore</span>
-                            </div>
-                            <div class="absolute bottom-4 left-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm">
-                                Silicon Valley
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2 group-hover:text-primary transition">Bangalore Escorts</h3>
-                            <p class="text-gray-600 text-sm mb-4">Tech hub with sophisticated independent escorts and call girls</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary font-medium">18+ Profiles →</span>
-                                <span class="bg-green-100 text-green-600 text-xs px-3 py-1 rounded-full">Trending</span>
-                            </div>
-                        </div>
-                    </a>
-                    
-                    <!-- Hyderabad -->
-                    <a href="hyderabad-escorts.html" class="card-hover bg-white rounded-xl shadow-lg overflow-hidden group" data-region="south">
-                        <div class="relative h-48 overflow-hidden">
-                            <div class="absolute inset-0 bg-gradient-to-r from-orange-600 to-red-600"></div>
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <span class="text-white text-4xl font-display font-bold">Hyderabad</span>
-                            </div>
-                            <div class="absolute bottom-4 left-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm">
-                                Pearl City
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2 group-hover:text-primary transition">Hyderabad Call Girls</h3>
-                            <p class="text-gray-600 text-sm mb-4">Royal city with premium companions and luxury escorts</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary font-medium">15+ Profiles →</span>
-                                <span class="bg-orange-100 text-orange-600 text-xs px-3 py-1 rounded-full">Growing</span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <!-- All Cities Alphabetically -->
-            <div id="all-cities-list">
-                <!-- A Section -->
-                <div id="A" class="mb-12">
-                    <h2 class="text-2xl font-display font-bold mb-6 pb-2 border-b">A</h2>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <!-- Ahmedabad -->
-                        <a href="ahmedabad-escorts.html" class="card-hover bg-white rounded-xl shadow p-6 group" data-region="west">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-lg font-semibold group-hover:text-primary transition">Ahmedabad Escorts</h3>
-                                <span class="city-badge">Gujarat</span>
-                            </div>
-                            <p class="text-gray-600 text-sm mb-4">Premium independent call girls and escorts in Ahmedabad</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary text-sm font-medium">12+ Profiles →</span>
-                                <span class="text-gray-500 text-xs">West India</span>
-                            </div>
-                        </a>
-                        
-                        <!-- Agra -->
-                        <a href="agra-escorts.html" class="card-hover bg-white rounded-xl shadow p-6 group" data-region="north">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-lg font-semibold group-hover:text-primary transition">Agra Call Girls</h3>
-                                <span class="city-badge">Uttar Pradesh</span>
-                            </div>
-                            <p class="text-gray-600 text-sm mb-4">Independent escorts and companions near Taj Mahal</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary text-sm font-medium">8+ Profiles →</span>
-                                <span class="text-gray-500 text-xs">North India</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- B Section -->
-                <div id="B" class="mb-12">
-                    <h2 class="text-2xl font-display font-bold mb-6 pb-2 border-b">B</h2>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <!-- Bangalore (already in popular) -->
-                        <!-- Bhopal -->
-                        <a href="bhopal-escorts.html" class="card-hover bg-white rounded-xl shadow p-6 group" data-region="north">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-lg font-semibold group-hover:text-primary transition">Bhopal Call Girls</h3>
-                                <span class="city-badge">Madhya Pradesh</span>
-                            </div>
-                            <p class="text-gray-600 text-sm mb-4">Independent escorts and companions in Bhopal</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary text-sm font-medium">7+ Profiles →</span>
-                                <span class="text-gray-500 text-xs">Central India</span>
-                            </div>
-                        </a>
-                        
-                        <!-- Bhubaneswar -->
-                        <a href="bhubaneswar-escorts.html" class="card-hover bg-white rounded-xl shadow p-6 group" data-region="east">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-lg font-semibold group-hover:text-primary transition">Bhubaneswar Escorts</h3>
-                                <span class="city-badge">Odisha</span>
-                            </div>
-                            <p class="text-gray-600 text-sm mb-4">Premium call girls and escorts in Bhubaneswar</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary text-sm font-medium">6+ Profiles →</span>
-                                <span class="text-gray-500 text-xs">East India</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- C Section -->
-                <div id="C" class="mb-12">
-                    <h2 class="text-2xl font-display font-bold mb-6 pb-2 border-b">C</h2>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <!-- Chennai -->
-                        <a href="chennai-escorts.html" class="card-hover bg-white rounded-xl shadow p-6 group" data-region="south">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-lg font-semibold group-hover:text-primary transition">Chennai Call Girls</h3>
-                                <span class="city-badge">Tamil Nadu</span>
-                            </div>
-                            <p class="text-gray-600 text-sm mb-4">Traditional yet modern escorts in Chennai</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary text-sm font-medium">14+ Profiles →</span>
-                                <span class="text-gray-500 text-xs">South India</span>
-                            </div>
-                        </a>
-                        
-                        <!-- Chandigarh -->
-                        <a href="chandigarh-escorts.html" class="card-hover bg-white rounded-xl shadow p-6 group" data-region="north">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-lg font-semibold group-hover:text-primary transition">Chandigarh Escorts</h3>
-                                <span class="city-badge">Punjab</span>
-                            </div>
-                            <p class="text-gray-600 text-sm mb-4">Beautiful escorts in the well-planned city</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary text-sm font-medium">10+ Profiles →</span>
-                                <span class="text-gray-500 text-xs">North India</span>
-                            </div>
-                        </a>
-                        
-                        <!-- Coimbatore -->
-                        <a href="coimbatore-escorts.html" class="card-hover bg-white rounded-xl shadow p-6 group" data-region="south">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-lg font-semibold group-hover:text-primary transition">Coimbatore Call Girls</h3>
-                                <span class="city-badge">Tamil Nadu</span>
-                            </div>
-                            <p class="text-gray-600 text-sm mb-4">Industrial city with quality escort services</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary text-sm font-medium">5+ Profiles →</span>
-                                <span class="text-gray-500 text-xs">South India</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- D Section -->
-                <div id="D" class="mb-12">
-                    <h2 class="text-2xl font-display font-bold mb-6 pb-2 border-b">D</h2>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <!-- Delhi (already in popular) -->
-                        <!-- Dehradun -->
-                        <a href="dehradun-escorts.html" class="card-hover bg-white rounded-xl shadow p-6 group" data-region="north">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-lg font-semibold group-hover:text-primary transition">Dehradun Escorts</h3>
-                                <span class="city-badge">Uttarakhand</span>
-                            </div>
-                            <p class="text-gray-600 text-sm mb-4">Hill station escorts and call girls</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary text-sm font-medium">4+ Profiles →</span>
-                                <span class="text-gray-500 text-xs">North India</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- G Section -->
-                <div id="G" class="mb-12">
-                    <h2 class="text-2xl font-display font-bold mb-6 pb-2 border-b">G</h2>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <!-- Goa -->
-                        <a href="goa-escorts.html" class="card-hover bg-white rounded-xl shadow p-6 group" data-region="west">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-lg font-semibold group-hover:text-primary transition">Goa Call Girls</h3>
-                                <span class="city-badge">Goa</span>
-                            </div>
-                            <p class="text-gray-600 text-sm mb-4">Beach destination with exotic escorts</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary text-sm font-medium">16+ Profiles →</span>
-                                <span class="text-gray-500 text-xs">West India</span>
-                            </div>
-                        </a>
-                        
-                        <!-- Gurgaon -->
-                        <a href="gurgaon-escorts.html" class="card-hover bg-white rounded-xl shadow p-6 group" data-region="north">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-lg font-semibold group-hover:text-primary transition">Gurgaon Escorts</h3>
-                                <span class="city-badge">Haryana</span>
-                            </div>
-                            <p class="text-gray-600 text-sm mb-4">Corporate hub with high-class escorts</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary text-sm font-medium">12+ Profiles →</span>
-                                <span class="text-gray-500 text-xs">North India</span>
-                            </div>
-                        </a>
-                        
-                        <!-- Guwahati -->
-                        <a href="guwahati-escorts.html" class="card-hover bg-white rounded-xl shadow p-6 group" data-region="east">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-lg font-semibold group-hover:text-primary transition">Guwahati Call Girls</h3>
-                                <span class="city-badge">Assam</span>
-                            </div>
-                            <p class="text-gray-600 text-sm mb-4">Gateway to Northeast with beautiful escorts</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary text-sm font-medium">5+ Profiles →</span>
-                                <span class="text-gray-500 text-xs">East India</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- H Section -->
-                <div id="H" class="mb-12">
-                    <h2 class="text-2xl font-display font-bold mb-6 pb-2 border-b">H</h2>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <!-- Hyderabad (already in popular) -->
-                        <!-- Haridwar -->
-                        <a href="haridwar-escorts.html" class="card-hover bg-white rounded-xl shadow p-6 group" data-region="north">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-lg font-semibold group-hover:text-primary transition">Haridwar Escorts</h3>
-                                <span class="city-badge">Uttarakhand</span>
-                            </div>
-                            <p class="text-gray-600 text-sm mb-4">Spiritual city with discreet services</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary text-sm font-medium">3+ Profiles →</span>
-                                <span class="text-gray-500 text-xs">North India</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- J Section -->
-                <div id="J" class="mb-12">
-                    <h2 class="text-2xl font-display font-bold mb-6 pb-2 border-b">J</h2>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <!-- Jaipur -->
-                        <a href="jaipur-escorts.html" class="card-hover bg-white rounded-xl shadow p-6 group" data-region="north">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-lg font-semibold group-hover:text-primary transition">Jaipur Call Girls</h3>
-                                <span class="city-badge">Rajasthan</span>
-                            </div>
-                            <p class="text-gray-600 text-sm mb-4">Royal escorts in the Pink City</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary text-sm font-medium">11+ Profiles →</span>
-                                <span class="text-gray-500 text-xs">North India</span>
-                            </div>
-                        </a>
-                        
-                        <!-- Jodhpur -->
-                        <a href="jodhpur-escorts.html" class="card-hover bg-white rounded-xl shadow p-6 group" data-region="north">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-lg font-semibold group-hover:text-primary transition">Jodhpur Escorts</h3>
-                                <span class="city-badge">Rajasthan</span>
-                            </div>
-                            <p class="text-gray-600 text-sm mb-4">Blue City with traditional escorts</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary text-sm font-medium">5+ Profiles →</span>
-                                <span class="text-gray-500 text-xs">North India</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- K Section -->
-                <div id="K" class="mb-12">
-                    <h2 class="text-2xl font-display font-bold mb-6 pb-2 border-b">K</h2>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <!-- Kolkata -->
-                        <a href="kolkata-escorts.html" class="card-hover bg-white rounded-xl shadow p-6 group" data-region="east">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-lg font-semibold group-hover:text-primary transition">Kolkata Call Girls</h3>
-                                <span class="city-badge">West Bengal</span>
-                            </div>
-                            <p class="text-gray-600 text-sm mb-4">Cultural capital with sophisticated escorts</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary text-sm font-medium">17+ Profiles →</span>
-                                <span class="text-gray-500 text-xs">East India</span>
-                            </div>
-                        </a>
-                        
-                        <!-- Kochi -->
-                        <a href="kochi-escorts.html" class="card-hover bg-white rounded-xl shadow p-6 group" data-region="south">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-lg font-semibold group-hover:text-primary transition">Kochi Escorts</h3>
-                                <span class="city-badge">Kerala</span>
-                            </div>
-                            <p class="text-gray-600 text-sm mb-4">Port city with beautiful companions</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary text-sm font-medium">8+ Profiles →</span>
-                                <span class="text-gray-500 text-xs">South India</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- L Section -->
-                <div id="L" class="mb-12">
-                    <h2 class="text-2xl font-display font-bold mb-6 pb-2 border-b">L</h2>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <!-- Lucknow -->
-                        <a href="lucknow-escorts.html" class="card-hover bg-white rounded-xl shadow p-6 group" data-region="north">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-lg font-semibold group-hover:text-primary transition">Lucknow Call Girls</h3>
-                                <span class="city-badge">Uttar Pradesh</span>
-                            </div>
-                            <p class="text-gray-600 text-sm mb-4">City of Nawabs with elegant escorts</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary text-sm font-medium">9+ Profiles →</span>
-                                <span class="text-gray-500 text-xs">North India</span>
-                            </div>
-                        </a>
-                        
-                        <!-- Ludhiana -->
-                        <a href="ludhiana-escorts.html" class="card-hover bg-white rounded-xl shadow p-6 group" data-region="north">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-lg font-semibold group-hover:text-primary transition">Ludhiana Escorts</h3>
-                                <span class="city-badge">Punjab</span>
-                            </div>
-                            <p class="text-gray-600 text-sm mb-4">Industrial city with premium services</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary text-sm font-medium">6+ Profiles →</span>
-                                <span class="text-gray-500 text-xs">North India</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- M Section -->
-                <div id="M" class="mb-12">
-                    <h2 class="text-2xl font-display font-bold mb-6 pb-2 border-b">M</h2>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <!-- Mumbai (already in popular) -->
-                        <!-- Mysore -->
-                        <a href="mysore-escorts.html" class="card-hover bg-white rounded-xl shadow p-6 group" data-region="south">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-lg font-semibold group-hover:text-primary transition">Mysore Call Girls</h3>
-                                <span class="city-badge">Karnataka</span>
-                            </div>
-                            <p class="text-gray-600 text-sm mb-4">Royal city with traditional escorts</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary text-sm font-medium">5+ Profiles →</span>
-                                <span class="text-gray-500 text-xs">South India</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- N Section -->
-                <div id="N" class="mb-12">
-                    <h2 class="text-2xl font-display font-bold mb-6 pb-2 border-b">N</h2>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <!-- Noida -->
-                        <a href="noida-escorts.html" class="card-hover bg-white rounded-xl shadow p-6 group" data-region="north">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-lg font-semibold group-hover:text-primary transition">Noida Escorts</h3>
-                                <span class="city-badge">Uttar Pradesh</span>
-                            </div>
-                            <p class="text-gray-600 text-sm mb-4">Part of Delhi NCR with corporate escorts</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary text-sm font-medium">14+ Profiles →</span>
-                                <span class="text-gray-500 text-xs">North India</span>
-                            </div>
-                        </a>
-                        
-                        <!-- Nagpur -->
-                        <a href="nagpur-escorts.html" class="card-hover bg-white rounded-xl shadow p-6 group" data-region="west">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-lg font-semibold group-hover:text-primary transition">Nagpur Call Girls</h3>
-                                <span class="city-badge">Maharashtra</span>
-                            </div>
-                            <p class="text-gray-600 text-sm mb-4">Orange city with independent escorts</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary text-sm font-medium">7+ Profiles →</span>
-                                <span class="text-gray-500 text-xs">West India</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- P Section -->
-                <div id="P" class="mb-12">
-                    <h2 class="text-2xl font-display font-bold mb-6 pb-2 border-b">P</h2>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <!-- Pune -->
-                        <a href="pune-escorts.html" class="card-hover bg-white rounded-xl shadow p-6 group" data-region="west">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-lg font-semibold group-hover:text-primary transition">Pune Call Girls</h3>
-                                <span class="city-badge">Maharashtra</span>
-                            </div>
-                            <p class="text-gray-600 text-sm mb-4">Oxford of the East with student escorts</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary text-sm font-medium">13+ Profiles →</span>
-                                <span class="text-gray-500 text-xs">West India</span>
-                            </div>
-                        </a>
-                        
-                        <!-- Patna -->
-                        <a href="patna-escorts.html" class="card-hover bg-white rounded-xl shadow p-6 group" data-region="east">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-lg font-semibold group-hover:text-primary transition">Patna Escorts</h3>
-                                <span class="city-badge">Bihar</span>
-                            </div>
-                            <p class="text-gray-600 text-sm mb-4">Historic city with traditional call girls</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary text-sm font-medium">6+ Profiles →</span>
-                                <span class="text-gray-500 text-xs">East India</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- More sections can be added similarly -->
-            </div>
-
-            <!-- No Results Message -->
-            <div id="no-results" class="hidden text-center py-12">
-                <div class="text-5xl mb-4">🔍</div>
-                <h3 class="text-xl font-semibold mb-2">No Cities Found</h3>
-                <p class="text-gray-600">Try searching with different keywords or browse all cities</p>
-            </div>
+      <div class="container mx-auto px-4">
+        <!-- Stats Overview -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+          <div class="bg-white rounded-xl shadow p-6 text-center">
+            <div class="text-3xl font-bold text-primary mb-2">24</div>
+            <div class="text-gray-600">Cities</div>
+          </div>
+          <div class="bg-white rounded-xl shadow p-6 text-center">
+            <div class="text-3xl font-bold text-secondary mb-2">200+</div>
+            <div class="text-gray-600">Total Profiles</div>
+          </div>
+          <div class="bg-white rounded-xl shadow p-6 text-center">
+            <div class="text-3xl font-bold text-accent mb-2">50+</div>
+            <div class="text-gray-600">VIP Escorts</div>
+          </div>
+          <div class="bg-white rounded-xl shadow p-6 text-center">
+            <div class="text-3xl font-bold text-purple-600 mb-2">24/7</div>
+            <div class="text-gray-600">Availability</div>
+          </div>
         </div>
+
+        <!-- Popular Cities -->
+        <div class="mb-16">
+          <h2 class="text-2xl font-display font-bold mb-8 text-center">
+            Most Popular Cities
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Delhi -->
+            <a
+              href="delhi-escorts.html"
+              class="card-hover bg-white rounded-xl shadow-lg overflow-hidden group"
+              data-region="north"
+            >
+              <div class="relative h-48 overflow-hidden">
+                <div
+                  class="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600"
+                ></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <span class="text-white text-4xl font-display font-bold"
+                    >Delhi</span
+                  >
+                </div>
+                <div
+                  class="absolute bottom-4 left-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm"
+                >
+                  Capital City
+                </div>
+              </div>
+              <div class="p-6">
+                <h3
+                  class="text-xl font-semibold mb-2 group-hover:text-primary transition"
+                >
+                  Delhi Escorts
+                </h3>
+                <p class="text-gray-600 text-sm mb-4">
+                  India's capital with premium independent escorts and call
+                  girls in Delhi/NCR
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-primary font-medium">25+ Profiles →</span>
+                  <span
+                    class="bg-purple-100 text-purple-600 text-xs px-3 py-1 rounded-full"
+                    >Featured</span
+                  >
+                </div>
+              </div>
+            </a>
+
+            <!-- Mumbai -->
+            <a
+              href="mumbai-escorts.html"
+              class="card-hover bg-white rounded-xl shadow-lg overflow-hidden group"
+              data-region="west"
+            >
+              <div class="relative h-48 overflow-hidden">
+                <div
+                  class="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600"
+                ></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <span class="text-white text-4xl font-display font-bold"
+                    >Mumbai</span
+                  >
+                </div>
+                <div
+                  class="absolute bottom-4 left-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm"
+                >
+                  Financial Capital
+                </div>
+              </div>
+              <div class="p-6">
+                <h3
+                  class="text-xl font-semibold mb-2 group-hover:text-primary transition"
+                >
+                  Mumbai Call Girls
+                </h3>
+                <p class="text-gray-600 text-sm mb-4">
+                  Luxury escorts and high-profile companions in India's
+                  financial capital
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-primary font-medium">20+ Profiles →</span>
+                  <span
+                    class="bg-blue-100 text-blue-600 text-xs px-3 py-1 rounded-full"
+                    >Popular</span
+                  >
+                </div>
+              </div>
+            </a>
+
+            <!-- Bangalore -->
+            <a
+              href="bangalore-escorts.html"
+              class="card-hover bg-white rounded-xl shadow-lg overflow-hidden group"
+              data-region="south"
+            >
+              <div class="relative h-48 overflow-hidden">
+                <div
+                  class="absolute inset-0 bg-gradient-to-r from-green-600 to-emerald-600"
+                ></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <span class="text-white text-4xl font-display font-bold"
+                    >Bangalore</span
+                  >
+                </div>
+                <div
+                  class="absolute bottom-4 left-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm"
+                >
+                  Silicon Valley
+                </div>
+              </div>
+              <div class="p-6">
+                <h3
+                  class="text-xl font-semibold mb-2 group-hover:text-primary transition"
+                >
+                  Bangalore Escorts
+                </h3>
+                <p class="text-gray-600 text-sm mb-4">
+                  Tech hub with sophisticated independent escorts and call girls
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-primary font-medium">18+ Profiles →</span>
+                  <span
+                    class="bg-green-100 text-green-600 text-xs px-3 py-1 rounded-full"
+                    >Trending</span
+                  >
+                </div>
+              </div>
+            </a>
+
+            <!-- Hyderabad -->
+            <a
+              href="hyderabad-escorts.html"
+              class="card-hover bg-white rounded-xl shadow-lg overflow-hidden group"
+              data-region="south"
+            >
+              <div class="relative h-48 overflow-hidden">
+                <div
+                  class="absolute inset-0 bg-gradient-to-r from-orange-600 to-red-600"
+                ></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <span class="text-white text-4xl font-display font-bold"
+                    >Hyderabad</span
+                  >
+                </div>
+                <div
+                  class="absolute bottom-4 left-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm"
+                >
+                  Pearl City
+                </div>
+              </div>
+              <div class="p-6">
+                <h3
+                  class="text-xl font-semibold mb-2 group-hover:text-primary transition"
+                >
+                  Hyderabad Call Girls
+                </h3>
+                <p class="text-gray-600 text-sm mb-4">
+                  Royal city with premium companions and luxury escorts
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-primary font-medium">15+ Profiles →</span>
+                  <span
+                    class="bg-orange-100 text-orange-600 text-xs px-3 py-1 rounded-full"
+                    >Growing</span
+                  >
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- All Cities Alphabetically -->
+        <div id="all-cities-list">
+          <!-- A Section -->
+          <div id="A" class="mb-12">
+            <h2 class="text-2xl font-display font-bold mb-6 pb-2 border-b">
+              A
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Ahmedabad -->
+              <a
+                href="ahmedabad-escorts.html"
+                class="card-hover bg-white rounded-xl shadow p-6 group"
+                data-region="west"
+              >
+                <div class="flex justify-between items-start mb-3">
+                  <h3
+                    class="text-lg font-semibold group-hover:text-primary transition"
+                  >
+                    Ahmedabad Escorts
+                  </h3>
+                  <span class="city-badge">Gujarat</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">
+                  Premium independent call girls and escorts in Ahmedabad
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-primary text-sm font-medium"
+                    >12+ Profiles →</span
+                  >
+                  <span class="text-gray-500 text-xs">West India</span>
+                </div>
+              </a>
+
+              <!-- Agra -->
+              <a
+                href="agra-escorts.html"
+                class="card-hover bg-white rounded-xl shadow p-6 group"
+                data-region="north"
+              >
+                <div class="flex justify-between items-start mb-3">
+                  <h3
+                    class="text-lg font-semibold group-hover:text-primary transition"
+                  >
+                    Agra Call Girls
+                  </h3>
+                  <span class="city-badge">Uttar Pradesh</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">
+                  Independent escorts and companions near Taj Mahal
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-primary text-sm font-medium"
+                    >8+ Profiles →</span
+                  >
+                  <span class="text-gray-500 text-xs">North India</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- B Section -->
+          <div id="B" class="mb-12">
+            <h2 class="text-2xl font-display font-bold mb-6 pb-2 border-b">
+              B
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Bangalore (already in popular) -->
+              <!-- Bhopal -->
+              <a
+                href="bhopal-escorts.html"
+                class="card-hover bg-white rounded-xl shadow p-6 group"
+                data-region="north"
+              >
+                <div class="flex justify-between items-start mb-3">
+                  <h3
+                    class="text-lg font-semibold group-hover:text-primary transition"
+                  >
+                    Bhopal Call Girls
+                  </h3>
+                  <span class="city-badge">Madhya Pradesh</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">
+                  Independent escorts and companions in Bhopal
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-primary text-sm font-medium"
+                    >7+ Profiles →</span
+                  >
+                  <span class="text-gray-500 text-xs">Central India</span>
+                </div>
+              </a>
+
+              <!-- Bhubaneswar -->
+              <a
+                href="bhubaneswar-escorts.html"
+                class="card-hover bg-white rounded-xl shadow p-6 group"
+                data-region="east"
+              >
+                <div class="flex justify-between items-start mb-3">
+                  <h3
+                    class="text-lg font-semibold group-hover:text-primary transition"
+                  >
+                    Bhubaneswar Escorts
+                  </h3>
+                  <span class="city-badge">Odisha</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">
+                  Premium call girls and escorts in Bhubaneswar
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-primary text-sm font-medium"
+                    >6+ Profiles →</span
+                  >
+                  <span class="text-gray-500 text-xs">East India</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- C Section -->
+          <div id="C" class="mb-12">
+            <h2 class="text-2xl font-display font-bold mb-6 pb-2 border-b">
+              C
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Chennai -->
+              <a
+                href="chennai-escorts.html"
+                class="card-hover bg-white rounded-xl shadow p-6 group"
+                data-region="south"
+              >
+                <div class="flex justify-between items-start mb-3">
+                  <h3
+                    class="text-lg font-semibold group-hover:text-primary transition"
+                  >
+                    Chennai Call Girls
+                  </h3>
+                  <span class="city-badge">Tamil Nadu</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">
+                  Traditional yet modern escorts in Chennai
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-primary text-sm font-medium"
+                    >14+ Profiles →</span
+                  >
+                  <span class="text-gray-500 text-xs">South India</span>
+                </div>
+              </a>
+
+              <!-- Chandigarh -->
+              <a
+                href="chandigarh-escorts.html"
+                class="card-hover bg-white rounded-xl shadow p-6 group"
+                data-region="north"
+              >
+                <div class="flex justify-between items-start mb-3">
+                  <h3
+                    class="text-lg font-semibold group-hover:text-primary transition"
+                  >
+                    Chandigarh Escorts
+                  </h3>
+                  <span class="city-badge">Punjab</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">
+                  Beautiful escorts in the well-planned city
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-primary text-sm font-medium"
+                    >10+ Profiles →</span
+                  >
+                  <span class="text-gray-500 text-xs">North India</span>
+                </div>
+              </a>
+
+              <!-- Coimbatore -->
+              <a
+                href="coimbatore-escorts.html"
+                class="card-hover bg-white rounded-xl shadow p-6 group"
+                data-region="south"
+              >
+                <div class="flex justify-between items-start mb-3">
+                  <h3
+                    class="text-lg font-semibold group-hover:text-primary transition"
+                  >
+                    Coimbatore Call Girls
+                  </h3>
+                  <span class="city-badge">Tamil Nadu</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">
+                  Industrial city with quality escort services
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-primary text-sm font-medium"
+                    >5+ Profiles →</span
+                  >
+                  <span class="text-gray-500 text-xs">South India</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- D Section -->
+          <div id="D" class="mb-12">
+            <h2 class="text-2xl font-display font-bold mb-6 pb-2 border-b">
+              D
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Delhi (already in popular) -->
+              <!-- Dehradun -->
+              <a
+                href="dehradun-escorts.html"
+                class="card-hover bg-white rounded-xl shadow p-6 group"
+                data-region="north"
+              >
+                <div class="flex justify-between items-start mb-3">
+                  <h3
+                    class="text-lg font-semibold group-hover:text-primary transition"
+                  >
+                    Dehradun Escorts
+                  </h3>
+                  <span class="city-badge">Uttarakhand</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">
+                  Hill station escorts and call girls
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-primary text-sm font-medium"
+                    >4+ Profiles →</span
+                  >
+                  <span class="text-gray-500 text-xs">North India</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- G Section -->
+          <div id="G" class="mb-12">
+            <h2 class="text-2xl font-display font-bold mb-6 pb-2 border-b">
+              G
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Goa -->
+              <a
+                href="goa-escorts.html"
+                class="card-hover bg-white rounded-xl shadow p-6 group"
+                data-region="west"
+              >
+                <div class="flex justify-between items-start mb-3">
+                  <h3
+                    class="text-lg font-semibold group-hover:text-primary transition"
+                  >
+                    Goa Call Girls
+                  </h3>
+                  <span class="city-badge">Goa</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">
+                  Beach destination with exotic escorts
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-primary text-sm font-medium"
+                    >16+ Profiles →</span
+                  >
+                  <span class="text-gray-500 text-xs">West India</span>
+                </div>
+              </a>
+
+              <!-- Gurgaon -->
+              <a
+                href="gurgaon-escorts.html"
+                class="card-hover bg-white rounded-xl shadow p-6 group"
+                data-region="north"
+              >
+                <div class="flex justify-between items-start mb-3">
+                  <h3
+                    class="text-lg font-semibold group-hover:text-primary transition"
+                  >
+                    Gurgaon Escorts
+                  </h3>
+                  <span class="city-badge">Haryana</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">
+                  Corporate hub with high-class escorts
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-primary text-sm font-medium"
+                    >12+ Profiles →</span
+                  >
+                  <span class="text-gray-500 text-xs">North India</span>
+                </div>
+              </a>
+
+              <!-- Guwahati -->
+              <a
+                href="guwahati-escorts.html"
+                class="card-hover bg-white rounded-xl shadow p-6 group"
+                data-region="east"
+              >
+                <div class="flex justify-between items-start mb-3">
+                  <h3
+                    class="text-lg font-semibold group-hover:text-primary transition"
+                  >
+                    Guwahati Call Girls
+                  </h3>
+                  <span class="city-badge">Assam</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">
+                  Gateway to Northeast with beautiful escorts
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-primary text-sm font-medium"
+                    >5+ Profiles →</span
+                  >
+                  <span class="text-gray-500 text-xs">East India</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- H Section -->
+          <div id="H" class="mb-12">
+            <h2 class="text-2xl font-display font-bold mb-6 pb-2 border-b">
+              H
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Hyderabad (already in popular) -->
+              <!-- Haridwar -->
+              <a
+                href="haridwar-escorts.html"
+                class="card-hover bg-white rounded-xl shadow p-6 group"
+                data-region="north"
+              >
+                <div class="flex justify-between items-start mb-3">
+                  <h3
+                    class="text-lg font-semibold group-hover:text-primary transition"
+                  >
+                    Haridwar Escorts
+                  </h3>
+                  <span class="city-badge">Uttarakhand</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">
+                  Spiritual city with discreet services
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-primary text-sm font-medium"
+                    >3+ Profiles →</span
+                  >
+                  <span class="text-gray-500 text-xs">North India</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- J Section -->
+          <div id="J" class="mb-12">
+            <h2 class="text-2xl font-display font-bold mb-6 pb-2 border-b">
+              J
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Jaipur -->
+              <a
+                href="jaipur-escorts.html"
+                class="card-hover bg-white rounded-xl shadow p-6 group"
+                data-region="north"
+              >
+                <div class="flex justify-between items-start mb-3">
+                  <h3
+                    class="text-lg font-semibold group-hover:text-primary transition"
+                  >
+                    Jaipur Call Girls
+                  </h3>
+                  <span class="city-badge">Rajasthan</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">
+                  Royal escorts in the Pink City
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-primary text-sm font-medium"
+                    >11+ Profiles →</span
+                  >
+                  <span class="text-gray-500 text-xs">North India</span>
+                </div>
+              </a>
+
+              <!-- Jodhpur -->
+              <a
+                href="jodhpur-escorts.html"
+                class="card-hover bg-white rounded-xl shadow p-6 group"
+                data-region="north"
+              >
+                <div class="flex justify-between items-start mb-3">
+                  <h3
+                    class="text-lg font-semibold group-hover:text-primary transition"
+                  >
+                    Jodhpur Escorts
+                  </h3>
+                  <span class="city-badge">Rajasthan</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">
+                  Blue City with traditional escorts
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-primary text-sm font-medium"
+                    >5+ Profiles →</span
+                  >
+                  <span class="text-gray-500 text-xs">North India</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- K Section -->
+          <div id="K" class="mb-12">
+            <h2 class="text-2xl font-display font-bold mb-6 pb-2 border-b">
+              K
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Kolkata -->
+              <a
+                href="kolkata-escorts.html"
+                class="card-hover bg-white rounded-xl shadow p-6 group"
+                data-region="east"
+              >
+                <div class="flex justify-between items-start mb-3">
+                  <h3
+                    class="text-lg font-semibold group-hover:text-primary transition"
+                  >
+                    Kolkata Call Girls
+                  </h3>
+                  <span class="city-badge">West Bengal</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">
+                  Cultural capital with sophisticated escorts
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-primary text-sm font-medium"
+                    >17+ Profiles →</span
+                  >
+                  <span class="text-gray-500 text-xs">East India</span>
+                </div>
+              </a>
+
+              <!-- Kochi -->
+              <a
+                href="kochi-escorts.html"
+                class="card-hover bg-white rounded-xl shadow p-6 group"
+                data-region="south"
+              >
+                <div class="flex justify-between items-start mb-3">
+                  <h3
+                    class="text-lg font-semibold group-hover:text-primary transition"
+                  >
+                    Kochi Escorts
+                  </h3>
+                  <span class="city-badge">Kerala</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">
+                  Port city with beautiful companions
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-primary text-sm font-medium"
+                    >8+ Profiles →</span
+                  >
+                  <span class="text-gray-500 text-xs">South India</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- L Section -->
+          <div id="L" class="mb-12">
+            <h2 class="text-2xl font-display font-bold mb-6 pb-2 border-b">
+              L
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Lucknow -->
+              <a
+                href="lucknow-escorts.html"
+                class="card-hover bg-white rounded-xl shadow p-6 group"
+                data-region="north"
+              >
+                <div class="flex justify-between items-start mb-3">
+                  <h3
+                    class="text-lg font-semibold group-hover:text-primary transition"
+                  >
+                    Lucknow Call Girls
+                  </h3>
+                  <span class="city-badge">Uttar Pradesh</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">
+                  City of Nawabs with elegant escorts
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-primary text-sm font-medium"
+                    >9+ Profiles →</span
+                  >
+                  <span class="text-gray-500 text-xs">North India</span>
+                </div>
+              </a>
+
+              <!-- Ludhiana -->
+              <a
+                href="ludhiana-escorts.html"
+                class="card-hover bg-white rounded-xl shadow p-6 group"
+                data-region="north"
+              >
+                <div class="flex justify-between items-start mb-3">
+                  <h3
+                    class="text-lg font-semibold group-hover:text-primary transition"
+                  >
+                    Ludhiana Escorts
+                  </h3>
+                  <span class="city-badge">Punjab</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">
+                  Industrial city with premium services
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-primary text-sm font-medium"
+                    >6+ Profiles →</span
+                  >
+                  <span class="text-gray-500 text-xs">North India</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- M Section -->
+          <div id="M" class="mb-12">
+            <h2 class="text-2xl font-display font-bold mb-6 pb-2 border-b">
+              M
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Mumbai (already in popular) -->
+              <!-- Mysore -->
+              <a
+                href="mysore-escorts.html"
+                class="card-hover bg-white rounded-xl shadow p-6 group"
+                data-region="south"
+              >
+                <div class="flex justify-between items-start mb-3">
+                  <h3
+                    class="text-lg font-semibold group-hover:text-primary transition"
+                  >
+                    Mysore Call Girls
+                  </h3>
+                  <span class="city-badge">Karnataka</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">
+                  Royal city with traditional escorts
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-primary text-sm font-medium"
+                    >5+ Profiles →</span
+                  >
+                  <span class="text-gray-500 text-xs">South India</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- N Section -->
+          <div id="N" class="mb-12">
+            <h2 class="text-2xl font-display font-bold mb-6 pb-2 border-b">
+              N
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Noida -->
+              <a
+                href="noida-escorts.html"
+                class="card-hover bg-white rounded-xl shadow p-6 group"
+                data-region="north"
+              >
+                <div class="flex justify-between items-start mb-3">
+                  <h3
+                    class="text-lg font-semibold group-hover:text-primary transition"
+                  >
+                    Noida Escorts
+                  </h3>
+                  <span class="city-badge">Uttar Pradesh</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">
+                  Part of Delhi NCR with corporate escorts
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-primary text-sm font-medium"
+                    >14+ Profiles →</span
+                  >
+                  <span class="text-gray-500 text-xs">North India</span>
+                </div>
+              </a>
+
+              <!-- Nagpur -->
+              <a
+                href="nagpur-escorts.html"
+                class="card-hover bg-white rounded-xl shadow p-6 group"
+                data-region="west"
+              >
+                <div class="flex justify-between items-start mb-3">
+                  <h3
+                    class="text-lg font-semibold group-hover:text-primary transition"
+                  >
+                    Nagpur Call Girls
+                  </h3>
+                  <span class="city-badge">Maharashtra</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">
+                  Orange city with independent escorts
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-primary text-sm font-medium"
+                    >7+ Profiles →</span
+                  >
+                  <span class="text-gray-500 text-xs">West India</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- P Section -->
+          <div id="P" class="mb-12">
+            <h2 class="text-2xl font-display font-bold mb-6 pb-2 border-b">
+              P
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Pune -->
+              <a
+                href="pune-escorts.html"
+                class="card-hover bg-white rounded-xl shadow p-6 group"
+                data-region="west"
+              >
+                <div class="flex justify-between items-start mb-3">
+                  <h3
+                    class="text-lg font-semibold group-hover:text-primary transition"
+                  >
+                    Pune Call Girls
+                  </h3>
+                  <span class="city-badge">Maharashtra</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">
+                  Oxford of the East with student escorts
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-primary text-sm font-medium"
+                    >13+ Profiles →</span
+                  >
+                  <span class="text-gray-500 text-xs">West India</span>
+                </div>
+              </a>
+
+              <!-- Patna -->
+              <a
+                href="patna-escorts.html"
+                class="card-hover bg-white rounded-xl shadow p-6 group"
+                data-region="east"
+              >
+                <div class="flex justify-between items-start mb-3">
+                  <h3
+                    class="text-lg font-semibold group-hover:text-primary transition"
+                  >
+                    Patna Escorts
+                  </h3>
+                  <span class="city-badge">Bihar</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">
+                  Historic city with traditional call girls
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-primary text-sm font-medium"
+                    >6+ Profiles →</span
+                  >
+                  <span class="text-gray-500 text-xs">East India</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- More sections can be added similarly -->
+        </div>
+
+        <!-- No Results Message -->
+        <div id="no-results" class="hidden text-center py-12">
+          <div class="text-5xl mb-4">🔍</div>
+          <h3 class="text-xl font-semibold mb-2">No Cities Found</h3>
+          <p class="text-gray-600">
+            Try searching with different keywords or browse all cities
+          </p>
+        </div>
+      </div>
     </section>
 
     <!-- CTA Section -->
     <section class="gradient-bg text-white py-16">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-display font-bold mb-6">Can't Find Your City?</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-                We're expanding our services to more cities. Contact us to check availability in your city.
-            </p>
-            <a href="../index.html#contact" class="inline-block bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition transform hover:scale-105">
-                Contact Our Team
-            </a>
-        </div>
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-display font-bold mb-6">
+          Can't Find Your City?
+        </h2>
+        <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+          We're expanding our services to more cities. Contact us to check
+          availability in your city.
+        </p>
+        <a
+          href="../index.html#contact"
+          class="inline-block bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition transform hover:scale-105"
+        >
+          Contact Our Team
+        </a>
+      </div>
     </section>
 
     <!-- Footer -->
@@ -733,191 +1248,212 @@
 
     <!-- JavaScript -->
     <script>
+      // City Search Functionality
+      const citySearch = document.getElementById("citySearch");
+      const cityCards = document.querySelectorAll(".card-hover");
+      const noResults = document.getElementById("no-results");
+      const allSections = document.querySelectorAll(
+        '[id^="A"], [id^="B"], [id^="C"], [id^="D"], [id^="G"], [id^="H"], [id^="I"], [id^="J"], [id^="K"], [id^="L"], [id^="M"], [id^="N"], [id^="P"], [id^="R"], [id^="S"], [id^="U"], [id^="V"]',
+      );
+      const alphabetLetters = document.querySelectorAll(".alphabet-letter");
 
-        // City Search Functionality
-        const citySearch = document.getElementById('citySearch');
-        const cityCards = document.querySelectorAll('.card-hover');
-        const noResults = document.getElementById('no-results');
-        const allSections = document.querySelectorAll('[id^="A"], [id^="B"], [id^="C"], [id^="D"], [id^="G"], [id^="H"], [id^="I"], [id^="J"], [id^="K"], [id^="L"], [id^="M"], [id^="N"], [id^="P"], [id^="R"], [id^="S"], [id^="U"], [id^="V"]');
-        const alphabetLetters = document.querySelectorAll('.alphabet-letter');
+      citySearch.addEventListener("input", function () {
+        const searchTerm = this.value.toLowerCase();
+        let hasResults = false;
+        let visibleSections = new Set();
 
-        citySearch.addEventListener('input', function() {
-            const searchTerm = this.value.toLowerCase();
-            let hasResults = false;
-            let visibleSections = new Set();
+        cityCards.forEach((card) => {
+          const cityName = card.querySelector("h3").textContent.toLowerCase();
+          const cityDescription = card
+            .querySelector("p")
+            .textContent.toLowerCase();
 
-            cityCards.forEach(card => {
-                const cityName = card.querySelector('h3').textContent.toLowerCase();
-                const cityDescription = card.querySelector('p').textContent.toLowerCase();
-                
-                if (cityName.includes(searchTerm) || cityDescription.includes(searchTerm)) {
-                    card.style.display = 'block';
-                    hasResults = true;
-                    
-                    // Find which section this card belongs to
-                    let section = card.closest('[id^="A"], [id^="B"], [id^="C"], [id^="D"], [id^="G"], [id^="H"], [id^="I"], [id^="J"], [id^="K"], [id^="L"], [id^="M"], [id^="N"], [id^="P"], [id^="R"], [id^="S"], [id^="U"], [id^="V"]');
-                    if (section) {
-                        visibleSections.add(section.id.charAt(0));
-                    }
-                } else {
-                    card.style.display = 'none';
-                }
+          if (
+            cityName.includes(searchTerm) ||
+            cityDescription.includes(searchTerm)
+          ) {
+            card.style.display = "block";
+            hasResults = true;
+
+            // Find which section this card belongs to
+            let section = card.closest(
+              '[id^="A"], [id^="B"], [id^="C"], [id^="D"], [id^="G"], [id^="H"], [id^="I"], [id^="J"], [id^="K"], [id^="L"], [id^="M"], [id^="N"], [id^="P"], [id^="R"], [id^="S"], [id^="U"], [id^="V"]',
+            );
+            if (section) {
+              visibleSections.add(section.id.charAt(0));
+            }
+          } else {
+            card.style.display = "none";
+          }
+        });
+
+        // Show/hide sections based on visible cards
+        allSections.forEach((section) => {
+          const sectionLetter = section.id.charAt(0);
+          const cardsInSection = section.querySelectorAll(".card-hover");
+          const visibleCards = Array.from(cardsInSection).filter(
+            (card) => card.style.display !== "none",
+          );
+
+          if (visibleCards.length > 0) {
+            section.style.display = "block";
+            visibleSections.add(sectionLetter);
+          } else {
+            section.style.display = "none";
+          }
+        });
+
+        // Update alphabet navigation
+        alphabetLetters.forEach((letter) => {
+          const letterChar = letter.textContent;
+          if (visibleSections.has(letterChar)) {
+            letter.classList.add("text-primary", "font-bold");
+            letter.classList.remove("text-gray-400");
+          } else {
+            letter.classList.remove("text-primary", "font-bold");
+            letter.classList.add("text-gray-400");
+          }
+        });
+
+        // Show/hide no results message
+        if (hasResults || searchTerm === "") {
+          noResults.classList.add("hidden");
+        } else {
+          noResults.classList.remove("hidden");
+
+          // Hide all sections when no results
+          allSections.forEach((section) => {
+            section.style.display = "none";
+          });
+
+          // Reset alphabet navigation
+          alphabetLetters.forEach((letter) => {
+            letter.classList.remove("text-primary", "font-bold");
+            letter.classList.add("text-gray-400");
+          });
+        }
+      });
+
+      // Region Filter Functionality
+      const filterButtons = document.querySelectorAll(".filter-btn");
+
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+          // Remove active class from all buttons
+          filterButtons.forEach((btn) =>
+            btn.classList.remove("active", "bg-white", "bg-opacity-20"),
+          );
+
+          // Add active class to clicked button
+          this.classList.add("active", "bg-white", "bg-opacity-20");
+
+          const filter = this.dataset.filter;
+
+          // Show all sections initially
+          allSections.forEach((section) => {
+            section.style.display = "block";
+          });
+
+          // Filter city cards
+          cityCards.forEach((card) => {
+            if (filter === "all") {
+              card.style.display = "block";
+            } else {
+              const region = card.dataset.region;
+              if (region === filter) {
+                card.style.display = "block";
+              } else {
+                card.style.display = "none";
+              }
+            }
+          });
+
+          // Hide sections with no visible cards
+          allSections.forEach((section) => {
+            const cardsInSection = section.querySelectorAll(".card-hover");
+            const hasVisibleCards = Array.from(cardsInSection).some(
+              (card) => card.style.display !== "none",
+            );
+
+            if (!hasVisibleCards) {
+              section.style.display = "none";
+            }
+          });
+
+          // Scroll to cities section
+          document
+            .getElementById("cities")
+            .scrollIntoView({ behavior: "smooth" });
+        });
+      });
+
+      // Smooth scroll for alphabet navigation
+      alphabetLetters.forEach((letter) => {
+        letter.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href").substring(1);
+          const targetElement = document.getElementById(targetId);
+
+          if (targetElement) {
+            // Highlight clicked letter
+            alphabetLetters.forEach((l) => l.classList.remove("active"));
+            this.classList.add("active");
+
+            // Smooth scroll to section
+            targetElement.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
             });
+          }
+        });
+      });
 
-            // Show/hide sections based on visible cards
-            allSections.forEach(section => {
-                const sectionLetter = section.id.charAt(0);
-                const cardsInSection = section.querySelectorAll('.card-hover');
-                const visibleCards = Array.from(cardsInSection).filter(card => card.style.display !== 'none');
-                
-                if (visibleCards.length > 0) {
-                    section.style.display = 'block';
-                    visibleSections.add(sectionLetter);
-                } else {
-                    section.style.display = 'none';
-                }
-            });
+      // Filter trigger from footer
+      document.querySelectorAll(".filter-trigger").forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          const filter = this.dataset.filter;
+
+          // Find and click corresponding filter button
+          const filterButton = document.querySelector(
+            `.filter-btn[data-filter="${filter}"]`,
+          );
+          if (filterButton) {
+            filterButton.click();
+          }
+        });
+      });
+
+      // Highlight current letter on scroll
+      const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const sectionId = entry.target.id;
+            const letter = sectionId.charAt(0);
 
             // Update alphabet navigation
-            alphabetLetters.forEach(letter => {
-                const letterChar = letter.textContent;
-                if (visibleSections.has(letterChar)) {
-                    letter.classList.add('text-primary', 'font-bold');
-                    letter.classList.remove('text-gray-400');
-                } else {
-                    letter.classList.remove('text-primary', 'font-bold');
-                    letter.classList.add('text-gray-400');
-                }
+            alphabetLetters.forEach((l) => {
+              if (l.textContent === letter) {
+                l.classList.add("active");
+              } else {
+                l.classList.remove("active");
+              }
             });
-
-            // Show/hide no results message
-            if (hasResults || searchTerm === '') {
-                noResults.classList.add('hidden');
-            } else {
-                noResults.classList.remove('hidden');
-                
-                // Hide all sections when no results
-                allSections.forEach(section => {
-                    section.style.display = 'none';
-                });
-                
-                // Reset alphabet navigation
-                alphabetLetters.forEach(letter => {
-                    letter.classList.remove('text-primary', 'font-bold');
-                    letter.classList.add('text-gray-400');
-                });
-            }
+          }
         });
+      }, observerOptions);
 
-        // Region Filter Functionality
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        
-        filterButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                // Remove active class from all buttons
-                filterButtons.forEach(btn => btn.classList.remove('active', 'bg-white', 'bg-opacity-20'));
-                
-                // Add active class to clicked button
-                this.classList.add('active', 'bg-white', 'bg-opacity-20');
-                
-                const filter = this.dataset.filter;
-                
-                // Show all sections initially
-                allSections.forEach(section => {
-                    section.style.display = 'block';
-                });
-                
-                // Filter city cards
-                cityCards.forEach(card => {
-                    if (filter === 'all') {
-                        card.style.display = 'block';
-                    } else {
-                        const region = card.dataset.region;
-                        if (region === filter) {
-                            card.style.display = 'block';
-                        } else {
-                            card.style.display = 'none';
-                        }
-                    }
-                });
-                
-                // Hide sections with no visible cards
-                allSections.forEach(section => {
-                    const cardsInSection = section.querySelectorAll('.card-hover');
-                    const hasVisibleCards = Array.from(cardsInSection).some(card => card.style.display !== 'none');
-                    
-                    if (!hasVisibleCards) {
-                        section.style.display = 'none';
-                    }
-                });
-                
-                // Scroll to cities section
-                document.getElementById('cities').scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-
-        // Smooth scroll for alphabet navigation
-        alphabetLetters.forEach(letter => {
-            letter.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-                
-                if (targetElement) {
-                    // Highlight clicked letter
-                    alphabetLetters.forEach(l => l.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    // Smooth scroll to section
-                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-
-        // Filter trigger from footer
-        document.querySelectorAll('.filter-trigger').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const filter = this.dataset.filter;
-                
-                // Find and click corresponding filter button
-                const filterButton = document.querySelector(`.filter-btn[data-filter="${filter}"]`);
-                if (filterButton) {
-                    filterButton.click();
-                }
-            });
-        });
-
-        // Highlight current letter on scroll
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.5
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const sectionId = entry.target.id;
-                    const letter = sectionId.charAt(0);
-                    
-                    // Update alphabet navigation
-                    alphabetLetters.forEach(l => {
-                        if (l.textContent === letter) {
-                            l.classList.add('active');
-                        } else {
-                            l.classList.remove('active');
-                        }
-                    });
-                }
-            });
-        }, observerOptions);
-
-        // Observe all alphabet sections
-        allSections.forEach(section => {
-            observer.observe(section);
-        });
+      // Observe all alphabet sections
+      allSections.forEach((section) => {
+        observer.observe(section);
+      });
     </script>
     <script src="js/layout.js" defer></script>
-</body>
+  </body>
 </html>

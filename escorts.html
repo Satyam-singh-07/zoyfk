@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -15,6 +15,7 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
 
     <!-- Custom Colors & Styling -->
     <script>
@@ -60,7 +61,8 @@
       .profile-card:hover {
         transform: translateY(-5px);
         border-color: #8b5cf6;
-        box-shadow: 0 20px 25px -5px rgba(139, 92, 246, 0.1),
+        box-shadow:
+          0 20px 25px -5px rgba(139, 92, 246, 0.1),
           0 10px 10px -5px rgba(139, 92, 246, 0.04);
       }
 
@@ -1031,16 +1033,14 @@
       function updateStats() {
         const cities = new Set(escortsData.map((e) => e.city));
         const vipEscorts = escortsData.filter(
-          (e) => e.isVip || e.category === "VIP"
+          (e) => e.isVip || e.category === "VIP",
         );
 
-        document.getElementById(
-          "totalEscortsCount"
-        ).textContent = `${escortsData.length}+`;
+        document.getElementById("totalEscortsCount").textContent =
+          `${escortsData.length}+`;
         document.getElementById("totalCitiesCount").textContent = cities.size;
-        document.getElementById(
-          "vipEscortsCount"
-        ).textContent = `${vipEscorts.length}+`;
+        document.getElementById("vipEscortsCount").textContent =
+          `${vipEscorts.length}+`;
       }
 
       /* ===============================
@@ -1199,7 +1199,7 @@
         switch (sortBy) {
           case "newest":
             filteredEscorts.sort(
-              (a, b) => new Date(b.joined || 0) - new Date(a.joined || 0)
+              (a, b) => new Date(b.joined || 0) - new Date(a.joined || 0),
             );
             break;
 
@@ -1270,7 +1270,7 @@
                         }"></div>
                         <div class="age-badge">${escort.age}</div>
                         <div class="price-tag">₹${formatPrice(
-                          escort.price
+                          escort.price,
                         )}/hr</div>
                         <div class="absolute bottom-4 left-4">
                             <span class="city-badge">${escort.city}</span>
@@ -1331,7 +1331,7 @@
                         </div>
                     </div>
                 </div>
-            `
+            `,
           )
           .join("");
       }
@@ -1365,8 +1365,8 @@
                                     }"></div>
                                 </div>
                                 <p class="text-gray-600">${escort.city} • ${
-              escort.age
-            } yrs • ${escort.category}</p>
+                                  escort.age
+                                } yrs • ${escort.category}</p>
                                 <div class="flex items-center gap-2 mt-1">
                                     <div class="flex rating-star text-sm">
                                         ${generateStars(escort.rating)}
@@ -1379,7 +1379,7 @@
                         </div>
                         <div class="flex flex-col items-end">
                             <div class="text-2xl font-bold text-primary mb-2">₹${formatPrice(
-                              escort.price
+                              escort.price,
                             )}/hr</div>
                             <div class="flex gap-3">
                                 <a href="profile.html?id=${
@@ -1410,7 +1410,7 @@
                       escort.description
                     }</p>
                 </div>
-            `
+            `,
           )
           .join("");
       }
@@ -1440,7 +1440,7 @@
                         }"></div>
                         <div class="age-badge">${escort.age}</div>
                         <div class="price-tag">₹${formatPrice(
-                          escort.price
+                          escort.price,
                         )}/hr</div>
                         <div class="absolute bottom-4 left-4">
                             <span class="city-badge">${escort.city}</span>
@@ -1484,7 +1484,7 @@
                         </div>
                     </div>
                 </div>
-            `
+            `,
           )
           .join("");
       }
@@ -1533,15 +1533,14 @@
       function updateResultsCount() {
         document.getElementById("showingCount").textContent = Math.min(
           currentPage * escortsPerPage,
-          filteredEscorts.length
+          filteredEscorts.length,
         );
         document.getElementById("totalCount").textContent =
           filteredEscorts.length;
 
         const resultsText = filteredEscorts.length === 1 ? "escort" : "escorts";
-        document.getElementById(
-          "resultsCount"
-        ).textContent = `${filteredEscorts.length} ${resultsText} found`;
+        document.getElementById("resultsCount").textContent =
+          `${filteredEscorts.length} ${resultsText} found`;
       }
 
       function updateLoadMoreButton() {
@@ -1550,9 +1549,8 @@
 
         if (remaining > 0) {
           loadMoreContainer.classList.remove("hidden");
-          document.getElementById(
-            "remainingCount"
-          ).textContent = `${remaining} more escorts remaining`;
+          document.getElementById("remainingCount").textContent =
+            `${remaining} more escorts remaining`;
         } else {
           loadMoreContainer.classList.add("hidden");
         }

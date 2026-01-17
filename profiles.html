@@ -1,620 +1,867 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>All Escort Profiles | Premium Call Girls in India | Zoyfk</title>
-    <meta name="description" content="Browse all premium escort and call girl profiles across India. Verified independent escorts in Delhi, Mumbai, Bangalore, Hyderabad and other cities.">
-    <meta name="keywords" content="escort profiles, call girls profiles, independent escorts, premium companions, Delhi escorts, Mumbai call girls">
-    
+    <meta
+      name="description"
+      content="Browse all premium escort and call girl profiles across India. Verified independent escorts in Delhi, Mumbai, Bangalore, Hyderabad and other cities."
+    />
+    <meta
+      name="keywords"
+      content="escort profiles, call girls profiles, independent escorts, premium companions, Delhi escorts, Mumbai call girls"
+    />
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+    <link rel="stylesheet" href="style.css" />
+
     <!-- Custom Colors & Styling -->
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#8B5CF6',
-                        secondary: '#EC4899',
-                        dark: '#1F2937',
-                        light: '#F8FAFC',
-                        accent: '#10B981'
-                    },
-                    fontFamily: {
-                        'sans': ['Inter', 'system-ui', 'sans-serif'],
-                        'display': ['Poppins', 'sans-serif']
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#8B5CF6",
+              secondary: "#EC4899",
+              dark: "#1F2937",
+              light: "#F8FAFC",
+              accent: "#10B981",
+            },
+            fontFamily: {
+              sans: ["Inter", "system-ui", "sans-serif"],
+              display: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
     </script>
-    
+
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
     <style>
-        /* Custom CSS for enhanced styling */
-        .gradient-bg {
-            background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+      /* Custom CSS for enhanced styling */
+      .gradient-bg {
+        background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+      }
+
+      .profile-card {
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+      }
+
+      .profile-card:hover {
+        transform: translateY(-5px);
+        border-color: #8b5cf6;
+        box-shadow:
+          0 20px 25px -5px rgba(139, 92, 246, 0.1),
+          0 10px 10px -5px rgba(139, 92, 246, 0.04);
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 25px -5px rgba(139, 92, 246, 0.4);
+      }
+
+      .profile-image {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 12px 12px 0 0;
+      }
+
+      .city-badge {
+        background: rgba(139, 92, 246, 0.1);
+        color: #8b5cf6;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.875rem;
+        font-weight: 500;
+      }
+
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Custom animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
         }
-        
-        .profile-card {
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
-        
-        .profile-card:hover {
-            transform: translateY(-5px);
-            border-color: #8B5CF6;
-            box-shadow: 0 20px 25px -5px rgba(139, 92, 246, 0.1), 0 10px 10px -5px rgba(139, 92, 246, 0.04);
+      }
+
+      .animate-fadeIn {
+        animation: fadeIn 0.6s ease-out;
+      }
+
+      /* Filter styles */
+      .filter-pill {
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .filter-pill.active {
+        background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+        color: white;
+        border-color: transparent;
+      }
+
+      /* Status indicators */
+      .status-online {
+        background-color: #10b981;
+        animation: pulse 2s infinite;
+      }
+
+      .status-offline {
+        background-color: #6b7280;
+      }
+
+      .status-busy {
+        background-color: #ef4444;
+      }
+
+      @keyframes pulse {
+        0% {
+          opacity: 1;
         }
-        
-        .btn-primary {
-            background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
-            transition: all 0.3s ease;
+        50% {
+          opacity: 0.5;
         }
-        
-        .btn-primary:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 25px -5px rgba(139, 92, 246, 0.4);
+        100% {
+          opacity: 1;
         }
-        
-        .profile-image {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            border-radius: 12px 12px 0 0;
+      }
+
+      /* Load more button animation */
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
         }
-        
-        .city-badge {
-            background: rgba(139, 92, 246, 0.1);
-            color: #8B5CF6;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.875rem;
-            font-weight: 500;
+        to {
+          transform: rotate(360deg);
         }
-        
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
+      }
+
+      .loading-spinner {
+        animation: spin 1s linear infinite;
+      }
+
+      /* Back to top button */
+      .back-to-top {
+        position: fixed;
+        bottom: 100px;
+        right: 24px;
+        background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+        transition: all 0.3s ease;
+        z-index: 40;
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      .back-to-top.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Custom scrollbar for filters */
+      .filter-scroll::-webkit-scrollbar {
+        height: 4px;
+      }
+
+      .filter-scroll::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 4px;
+      }
+
+      .filter-scroll::-webkit-scrollbar-thumb {
+        background: #8b5cf6;
+        border-radius: 4px;
+      }
+
+      /* Grid animation for cards */
+      .grid-item {
+        animation: fadeIn 0.5s ease-out;
+      }
+
+      /* Price tag styling */
+      .price-tag {
+        background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+        color: white;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 0.875rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Age badge */
+      .age-badge {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 0.875rem;
+      }
+
+      /* Rating stars */
+      .rating-star {
+        color: #fbbf24;
+      }
+
+      /* No results animation */
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
         }
-        
-        /* Custom animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        40% {
+          transform: translateY(-10px);
         }
-        
-        .animate-fadeIn {
-            animation: fadeIn 0.6s ease-out;
+        60% {
+          transform: translateY(-5px);
         }
-        
-        /* Filter styles */
-        .filter-pill {
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .filter-pill.active {
-            background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
-            color: white;
-            border-color: transparent;
-        }
-        
-        /* Status indicators */
-        .status-online {
-            background-color: #10B981;
-            animation: pulse 2s infinite;
-        }
-        
-        .status-offline {
-            background-color: #6B7280;
-        }
-        
-        .status-busy {
-            background-color: #EF4444;
-        }
-        
-        @keyframes pulse {
-            0% { opacity: 1; }
-            50% { opacity: 0.5; }
-            100% { opacity: 1; }
-        }
-        
-        /* Load more button animation */
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        
-        .loading-spinner {
-            animation: spin 1s linear infinite;
-        }
-        
-        /* Back to top button */
-        .back-to-top {
-            position: fixed;
-            bottom: 100px;
-            right: 24px;
-            background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
-            transition: all 0.3s ease;
-            z-index: 40;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        
-        .back-to-top.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* Custom scrollbar for filters */
-        .filter-scroll::-webkit-scrollbar {
-            height: 4px;
-        }
-        
-        .filter-scroll::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 4px;
-        }
-        
-        .filter-scroll::-webkit-scrollbar-thumb {
-            background: #8B5CF6;
-            border-radius: 4px;
-        }
-        
-        /* Grid animation for cards */
-        .grid-item {
-            animation: fadeIn 0.5s ease-out;
-        }
-        
-        /* Price tag styling */
-        .price-tag {
-            background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
-            color: white;
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 0.875rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        
-        /* Age badge */
-        .age-badge {
-            position: absolute;
-            top: 16px;
-            left: 16px;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-            font-size: 0.875rem;
-        }
-        
-        /* Rating stars */
-        .rating-star {
-            color: #FBBF24;
-        }
-        
-        /* No results animation */
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-            40% {transform: translateY(-10px);}
-            60% {transform: translateY(-5px);}
-        }
-        
-        .bounce-animation {
-            animation: bounce 2s infinite;
-        }
+      }
+
+      .bounce-animation {
+        animation: bounce 2s infinite;
+      }
     </style>
-</head>
-<body class="font-sans bg-light text-dark">
+  </head>
+  <body class="font-sans bg-light text-dark">
     <!-- Header -->
     <div id="header-container"></div>
 
     <!-- Hero Section for All Profiles -->
     <section class="gradient-bg text-white py-16 md:py-20">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto text-center">
-                <h1 class="text-4xl md:text-5xl font-display font-bold mb-6 animate-fadeIn">
-                    Browse All Profiles
-                </h1>
-                <p class="text-xl mb-8 opacity-90 animate-fadeIn" style="animation-delay: 0.2s">
-                    Discover premium independent escorts and call girls from across India
-                </p>
-                
-                <!-- Quick Stats -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 animate-fadeIn" style="animation-delay: 0.4s">
-                    <div class="bg-white bg-opacity-20 rounded-xl p-4">
-                        <div class="text-2xl font-bold mb-1">200+</div>
-                        <div class="text-sm opacity-90">Total Profiles</div>
-                    </div>
-                    <div class="bg-white bg-opacity-20 rounded-xl p-4">
-                        <div class="text-2xl font-bold mb-1">24</div>
-                        <div class="text-sm opacity-90">Cities</div>
-                    </div>
-                    <div class="bg-white bg-opacity-20 rounded-xl p-4">
-                        <div class="text-2xl font-bold mb-1">50+</div>
-                        <div class="text-sm opacity-90">VIP Escorts</div>
-                    </div>
-                    <div class="bg-white bg-opacity-20 rounded-xl p-4">
-                        <div class="text-2xl font-bold mb-1">4.8</div>
-                        <div class="text-sm opacity-90">Avg Rating</div>
-                    </div>
-                </div>
-                
-                <!-- Search Bar -->
-                <div class="max-w-2xl mx-auto mb-6 animate-fadeIn" style="animation-delay: 0.5s">
-                    <div class="relative">
-                        <input type="text" id="profileSearch" placeholder="Search profiles by name, city, or features..." 
-                               class="w-full bg-white bg-opacity-20 backdrop-blur-sm text-white placeholder-gray-300 rounded-full px-6 py-4 pl-14 focus:outline-none border border-white border-opacity-30">
-                        <svg class="absolute left-5 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-300" 
-                             fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                        </svg>
-                        <button id="clearSearch" class="absolute right-5 top-1/2 transform -translate-y-1/2 hidden">
-                            <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1
+            class="text-4xl md:text-5xl font-display font-bold mb-6 animate-fadeIn"
+          >
+            Browse All Profiles
+          </h1>
+          <p
+            class="text-xl mb-8 opacity-90 animate-fadeIn"
+            style="animation-delay: 0.2s"
+          >
+            Discover premium independent escorts and call girls from across
+            India
+          </p>
 
+          <!-- Quick Stats -->
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 animate-fadeIn"
+            style="animation-delay: 0.4s"
+          >
+            <div class="bg-white bg-opacity-20 rounded-xl p-4">
+              <div class="text-2xl font-bold mb-1">200+</div>
+              <div class="text-sm opacity-90">Total Profiles</div>
+            </div>
+            <div class="bg-white bg-opacity-20 rounded-xl p-4">
+              <div class="text-2xl font-bold mb-1">24</div>
+              <div class="text-sm opacity-90">Cities</div>
+            </div>
+            <div class="bg-white bg-opacity-20 rounded-xl p-4">
+              <div class="text-2xl font-bold mb-1">50+</div>
+              <div class="text-sm opacity-90">VIP Escorts</div>
+            </div>
+            <div class="bg-white bg-opacity-20 rounded-xl p-4">
+              <div class="text-2xl font-bold mb-1">4.8</div>
+              <div class="text-sm opacity-90">Avg Rating</div>
+            </div>
+          </div>
+
+          <!-- Search Bar -->
+          <div
+            class="max-w-2xl mx-auto mb-6 animate-fadeIn"
+            style="animation-delay: 0.5s"
+          >
+            <div class="relative">
+              <input
+                type="text"
+                id="profileSearch"
+                placeholder="Search profiles by name, city, or features..."
+                class="w-full bg-white bg-opacity-20 backdrop-blur-sm text-white placeholder-gray-300 rounded-full px-6 py-4 pl-14 focus:outline-none border border-white border-opacity-30"
+              />
+              <svg
+                class="absolute left-5 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-300"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                ></path>
+              </svg>
+              <button
+                id="clearSearch"
+                class="absolute right-5 top-1/2 transform -translate-y-1/2 hidden"
+              >
+                <svg
+                  class="w-5 h-5 text-gray-300"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- All Profiles Grid -->
     <section class="py-12 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <!-- Results Count -->
-            <div class="flex justify-between items-center mb-8">
-                <div>
-                    <h2 id="resultsCount" class="text-2xl font-display font-bold">All Profiles</h2>
-                    <p id="resultsSubtitle" class="text-gray-600">Showing <span id="showingCount">0</span> of <span id="totalCount">200+</span> profiles</p>
-                </div>
-                <div class="flex items-center gap-3">
-                    <button id="gridView" class="p-2 rounded-lg bg-white border border-gray-200 text-gray-600 hover:text-primary">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
-                        </svg>
-                    </button>
-                    <button id="listView" class="p-2 rounded-lg bg-primary text-white">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Grid View -->
-            <div id="gridViewContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                <!-- Profile cards will be loaded here -->
-            </div>
-            
-            <!-- List View (Hidden by default) -->
-            <div id="listViewContainer" class="hidden space-y-4">
-                <!-- List items will be loaded here -->
-            </div>
-            
-            <!-- Loading State -->
-            <div id="loadingState" class="text-center py-12">
-                <div class="inline-block">
-                    <svg class="w-8 h-8 text-primary loading-spinner" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
-                    </svg>
-                    <p class="mt-2 text-gray-600">Loading profiles...</p>
-                </div>
-            </div>
-            
-            <!-- No Results State -->
-            <div id="noResults" class="text-center py-16 hidden">
-                <div class="inline-block bounce-animation">
-                    <svg class="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    </svg>
-                </div>
-                <h3 class="text-xl font-semibold mb-2">No Profiles Found</h3>
-                <p class="text-gray-600 mb-6">Try adjusting your filters or search terms</p>
-                <button id="resetAll" class="btn-primary text-white px-6 py-3 rounded-full font-medium">
-                    Reset All Filters
-                </button>
-            </div>
-            
-            <!-- Load More Button -->
-            <div id="loadMoreContainer" class="text-center mt-12 hidden">
-                <button id="loadMoreBtn" class="btn-primary text-white px-8 py-3 rounded-full font-medium">
-                    Load More Profiles
-                </button>
-                <p class="text-gray-600 text-sm mt-2" id="remainingCount">0 profiles remaining</p>
-            </div>
-            
-            <!-- Pagination (Alternative to Load More) -->
-            <div id="pagination" class="flex justify-center items-center gap-2 mt-12 hidden">
-                <button class="p-2 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-                    </svg>
-                </button>
-                <button class="w-10 h-10 rounded-lg bg-primary text-white font-medium">1</button>
-                <button class="w-10 h-10 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 font-medium">2</button>
-                <button class="w-10 h-10 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 font-medium">3</button>
-                <span class="px-2 text-gray-500">...</span>
-                <button class="w-10 h-10 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 font-medium">10</button>
-                <button class="p-2 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                    </svg>
-                </button>
-            </div>
+      <div class="container mx-auto px-4">
+        <!-- Results Count -->
+        <div class="flex justify-between items-center mb-8">
+          <div>
+            <h2 id="resultsCount" class="text-2xl font-display font-bold">
+              All Profiles
+            </h2>
+            <p id="resultsSubtitle" class="text-gray-600">
+              Showing <span id="showingCount">0</span> of
+              <span id="totalCount">200+</span> profiles
+            </p>
+          </div>
+          <div class="flex items-center gap-3">
+            <button
+              id="gridView"
+              class="p-2 rounded-lg bg-white border border-gray-200 text-gray-600 hover:text-primary"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+                />
+              </svg>
+            </button>
+            <button id="listView" class="p-2 rounded-lg bg-primary text-white">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h7"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
+
+        <!-- Grid View -->
+        <div
+          id="gridViewContainer"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+        >
+          <!-- Profile cards will be loaded here -->
+        </div>
+
+        <!-- List View (Hidden by default) -->
+        <div id="listViewContainer" class="hidden space-y-4">
+          <!-- List items will be loaded here -->
+        </div>
+
+        <!-- Loading State -->
+        <div id="loadingState" class="text-center py-12">
+          <div class="inline-block">
+            <svg
+              class="w-8 h-8 text-primary loading-spinner"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+              />
+            </svg>
+            <p class="mt-2 text-gray-600">Loading profiles...</p>
+          </div>
+        </div>
+
+        <!-- No Results State -->
+        <div id="noResults" class="text-center py-16 hidden">
+          <div class="inline-block bounce-animation">
+            <svg
+              class="w-16 h-16 text-gray-400 mx-auto mb-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">No Profiles Found</h3>
+          <p class="text-gray-600 mb-6">
+            Try adjusting your filters or search terms
+          </p>
+          <button
+            id="resetAll"
+            class="btn-primary text-white px-6 py-3 rounded-full font-medium"
+          >
+            Reset All Filters
+          </button>
+        </div>
+
+        <!-- Load More Button -->
+        <div id="loadMoreContainer" class="text-center mt-12 hidden">
+          <button
+            id="loadMoreBtn"
+            class="btn-primary text-white px-8 py-3 rounded-full font-medium"
+          >
+            Load More Profiles
+          </button>
+          <p class="text-gray-600 text-sm mt-2" id="remainingCount">
+            0 profiles remaining
+          </p>
+        </div>
+
+        <!-- Pagination (Alternative to Load More) -->
+        <div
+          id="pagination"
+          class="flex justify-center items-center gap-2 mt-12 hidden"
+        >
+          <button
+            class="p-2 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+          <button
+            class="w-10 h-10 rounded-lg bg-primary text-white font-medium"
+          >
+            1
+          </button>
+          <button
+            class="w-10 h-10 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 font-medium"
+          >
+            2
+          </button>
+          <button
+            class="w-10 h-10 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 font-medium"
+          >
+            3
+          </button>
+          <span class="px-2 text-gray-500">...</span>
+          <button
+            class="w-10 h-10 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 font-medium"
+          >
+            10
+          </button>
+          <button
+            class="p-2 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
     </section>
 
     <!-- Featured Profiles Section -->
     <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-display font-bold mb-8 text-center">Featured VIP Escorts</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Featured Profile 1 -->
-                <div class="profile-card bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div class="relative">
-                        <div class="profile-image bg-gradient-to-r from-purple-400 to-pink-400"></div>
-                        <div class="age-badge">24</div>
-                        <div class="price-tag">₹8,000/hr</div>
-                        <div class="absolute bottom-4 left-4">
-                            <span class="city-badge">Delhi</span>
-                        </div>
-                        <div class="absolute top-4 right-12">
-                            <div class="w-3 h-3 rounded-full status-online"></div>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-4">
-                            <div>
-                                <h3 class="text-xl font-semibold">Riya</h3>
-                                <p class="text-gray-500 text-sm">Independent Call Girl</p>
-                            </div>
-                            <span class="bg-accent text-white text-xs px-3 py-1 rounded-full font-semibold">VIP</span>
-                        </div>
-                        <div class="flex items-center gap-2 mb-4">
-                            <div class="flex rating-star">
-                                ★★★★★
-                            </div>
-                            <span class="text-gray-600 text-sm">4.8 (24)</span>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-6">Premium independent escort offering discreet and personalized companionship services in Delhi.</p>
-                        <div class="flex justify-between items-center">
-                            <a href="profile.html?id=delhi-riya-24" class="btn-primary text-white px-6 py-2 rounded-full text-sm font-medium">
-                                View Profile
-                            </a>
-                            <div class="flex items-center gap-3">
-                                <a href="" data-whatsapp
-                                class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform">
-                                    <img
-                                        src="assets/icons/whatsapp-icon.svg"
-                                        alt="WhatsApp"
-                                        class="w-6 h-6"
-                                        loading="lazy"
-                                    />
-                                </a>
-
-                                <!-- Call -->
-                                <a href="" data-call
-                                class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform">
-                                    <img
-                                        src="assets/icons/phone.svg"
-                                        alt="Call"
-                                        class="w-6 h-6"
-                                        loading="lazy"
-                                    />
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Featured Profile 2 -->
-                <div class="profile-card bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div class="relative">
-                        <div class="profile-image bg-gradient-to-r from-blue-400 to-cyan-400"></div>
-                        <div class="age-badge">26</div>
-                        <div class="price-tag">₹10,000/hr</div>
-                        <div class="absolute bottom-4 left-4">
-                            <span class="city-badge">Mumbai</span>
-                        </div>
-                        <div class="absolute top-4 right-12">
-                            <div class="w-3 h-3 rounded-full status-online"></div>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-4">
-                            <div>
-                                <h3 class="text-xl font-semibold">Sophia</h3>
-                                <p class="text-gray-500 text-sm">Luxury Escort</p>
-                            </div>
-                            <span class="bg-yellow-100 text-yellow-600 text-xs px-3 py-1 rounded-full font-semibold">Elite</span>
-                        </div>
-                        <div class="flex items-center gap-2 mb-4">
-                            <div class="flex rating-star">
-                                ★★★★★
-                            </div>
-                            <span class="text-gray-600 text-sm">4.9 (18)</span>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-6">High-class companion offering luxury escort services in Mumbai for discerning clients.</p>
-                        <div class="flex justify-between items-center">
-                            <a href="profile.html?id=mumbai-sophia-26" class="btn-primary text-white px-6 py-2 rounded-full text-sm font-medium">
-                                View Profile
-                            </a>
-                            <div class="flex items-center gap-3">
-                                <!-- WhatsApp -->
-                                <a href="" data-whatsapp
-                                class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform">
-                                    <img
-                                        src="assets/icons/whatsapp-icon.svg"
-                                        alt="WhatsApp"
-                                        class="w-6 h-6"
-                                        loading="lazy"
-                                    />
-                                </a>
-
-                                <!-- Call -->
-                                <a href="" data-call
-                                class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform">
-                                    <img
-                                        src="assets/icons/phone.svg"
-                                        alt="Call"
-                                        class="w-6 h-6"
-                                        loading="lazy"
-                                    />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Featured Profile 3 -->
-                <div class="profile-card bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div class="relative">
-                        <div class="profile-image bg-gradient-to-r from-green-400 to-emerald-400"></div>
-                        <div class="age-badge">23</div>
-                        <div class="price-tag">₹7,000/hr</div>
-                        <div class="absolute bottom-4 left-4">
-                            <span class="city-badge">Bangalore</span>
-                        </div>
-                        <div class="absolute top-4 right-12">
-                            <div class="w-3 h-3 rounded-full status-offline"></div>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-4">
-                            <div>
-                                <h3 class="text-xl font-semibold">Ananya</h3>
-                                <p class="text-gray-500 text-sm">Independent Escort</p>
-                            </div>
-                            <span class="bg-blue-100 text-blue-600 text-xs px-3 py-1 rounded-full font-semibold">New</span>
-                        </div>
-                        <div class="flex items-center gap-2 mb-4">
-                            <div class="flex rating-star">
-                                ★★★★☆
-                            </div>
-                            <span class="text-gray-600 text-sm">4.5 (12)</span>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-6">Young and vibrant independent escort providing companionship services in Bangalore.</p>
-                        <div class="flex justify-between items-center">
-                            <a href="profile.html?id=bangalore-ananya-23" class="btn-primary text-white px-6 py-2 rounded-full text-sm font-medium">
-                                View Profile
-                            </a>
-                            <div class="flex items-center gap-3">
-                                <!-- WhatsApp -->
-                                <a href="" data-whatsapp
-                                class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform">
-                                    <img
-                                        src="assets/icons/whatsapp-icon.svg"
-                                        alt="WhatsApp"
-                                        class="w-6 h-6"
-                                        loading="lazy"
-                                    />
-                                </a>
-
-                                <!-- Call -->
-                                <a href="" data-call
-                                class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform">
-                                    <img
-                                        src="assets/icons/phone.svg"
-                                        alt="Call"
-                                        class="w-6 h-6"
-                                        loading="lazy"
-                                    />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Featured Profile 4 -->
-                <div class="profile-card bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div class="relative">
-                        <div class="profile-image bg-gradient-to-r from-orange-400 to-red-400"></div>
-                        <div class="age-badge">25</div>
-                        <div class="price-tag">₹9,000/hr</div>
-                        <div class="absolute bottom-4 left-4">
-                            <span class="city-badge">Hyderabad</span>
-                        </div>
-                        <div class="absolute top-4 right-12">
-                            <div class="w-3 h-3 rounded-full status-busy"></div>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-4">
-                            <div>
-                                <h3 class="text-xl font-semibold">Priya</h3>
-                                <p class="text-gray-500 text-sm">Premium Companion</p>
-                            </div>
-                            <span class="bg-pink-100 text-pink-600 text-xs px-3 py-1 rounded-full font-semibold">VIP</span>
-                        </div>
-                        <div class="flex items-center gap-2 mb-4">
-                            <div class="flex rating-star">
-                                ★★★★★
-                            </div>
-                            <span class="text-gray-600 text-sm">4.7 (16)</span>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-6">Sophisticated companion offering premium services in Hyderabad. Experienced and professional.</p>
-                        <div class="flex justify-between items-center">
-                            <a href="profile.html?id=hyderabad-priya-25" class="btn-primary text-white px-6 py-2 rounded-full text-sm font-medium">
-                                View Profile
-                            </a>
-                            <div class="flex items-center gap-3">
-                                <!-- WhatsApp -->
-                                <a href="" data-whatsapp
-                                class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform">
-                                    <img
-                                        src="assets/icons/whatsapp-icon.svg"
-                                        alt="WhatsApp"
-                                        class="w-6 h-6"
-                                        loading="lazy"
-                                    />
-                                </a>
-
-                                <!-- Call -->
-                                <a href="" data-call
-                                class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform">
-                                    <img
-                                        src="assets/icons/phone.svg"
-                                        alt="Call"
-                                        class="w-6 h-6"
-                                        loading="lazy"
-                                    />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-display font-bold mb-8 text-center">
+          Featured VIP Escorts
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Featured Profile 1 -->
+          <div
+            class="profile-card bg-white rounded-xl shadow-lg overflow-hidden"
+          >
+            <div class="relative">
+              <div
+                class="profile-image bg-gradient-to-r from-purple-400 to-pink-400"
+              ></div>
+              <div class="age-badge">24</div>
+              <div class="price-tag">₹8,000/hr</div>
+              <div class="absolute bottom-4 left-4">
+                <span class="city-badge">Delhi</span>
+              </div>
+              <div class="absolute top-4 right-12">
+                <div class="w-3 h-3 rounded-full status-online"></div>
+              </div>
             </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <div>
+                  <h3 class="text-xl font-semibold">Riya</h3>
+                  <p class="text-gray-500 text-sm">Independent Call Girl</p>
+                </div>
+                <span
+                  class="bg-accent text-white text-xs px-3 py-1 rounded-full font-semibold"
+                  >VIP</span
+                >
+              </div>
+              <div class="flex items-center gap-2 mb-4">
+                <div class="flex rating-star">★★★★★</div>
+                <span class="text-gray-600 text-sm">4.8 (24)</span>
+              </div>
+              <p class="text-gray-600 text-sm mb-6">
+                Premium independent escort offering discreet and personalized
+                companionship services in Delhi.
+              </p>
+              <div class="flex justify-between items-center">
+                <a
+                  href="profile.html?id=delhi-riya-24"
+                  class="btn-primary text-white px-6 py-2 rounded-full text-sm font-medium"
+                >
+                  View Profile
+                </a>
+                <div class="flex items-center gap-3">
+                  <a
+                    href=""
+                    data-whatsapp
+                    class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform"
+                  >
+                    <img
+                      src="assets/icons/whatsapp-icon.svg"
+                      alt="WhatsApp"
+                      class="w-6 h-6"
+                      loading="lazy"
+                    />
+                  </a>
+
+                  <!-- Call -->
+                  <a
+                    href=""
+                    data-call
+                    class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform"
+                  >
+                    <img
+                      src="assets/icons/phone.svg"
+                      alt="Call"
+                      class="w-6 h-6"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured Profile 2 -->
+          <div
+            class="profile-card bg-white rounded-xl shadow-lg overflow-hidden"
+          >
+            <div class="relative">
+              <div
+                class="profile-image bg-gradient-to-r from-blue-400 to-cyan-400"
+              ></div>
+              <div class="age-badge">26</div>
+              <div class="price-tag">₹10,000/hr</div>
+              <div class="absolute bottom-4 left-4">
+                <span class="city-badge">Mumbai</span>
+              </div>
+              <div class="absolute top-4 right-12">
+                <div class="w-3 h-3 rounded-full status-online"></div>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <div>
+                  <h3 class="text-xl font-semibold">Sophia</h3>
+                  <p class="text-gray-500 text-sm">Luxury Escort</p>
+                </div>
+                <span
+                  class="bg-yellow-100 text-yellow-600 text-xs px-3 py-1 rounded-full font-semibold"
+                  >Elite</span
+                >
+              </div>
+              <div class="flex items-center gap-2 mb-4">
+                <div class="flex rating-star">★★★★★</div>
+                <span class="text-gray-600 text-sm">4.9 (18)</span>
+              </div>
+              <p class="text-gray-600 text-sm mb-6">
+                High-class companion offering luxury escort services in Mumbai
+                for discerning clients.
+              </p>
+              <div class="flex justify-between items-center">
+                <a
+                  href="profile.html?id=mumbai-sophia-26"
+                  class="btn-primary text-white px-6 py-2 rounded-full text-sm font-medium"
+                >
+                  View Profile
+                </a>
+                <div class="flex items-center gap-3">
+                  <!-- WhatsApp -->
+                  <a
+                    href=""
+                    data-whatsapp
+                    class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform"
+                  >
+                    <img
+                      src="assets/icons/whatsapp-icon.svg"
+                      alt="WhatsApp"
+                      class="w-6 h-6"
+                      loading="lazy"
+                    />
+                  </a>
+
+                  <!-- Call -->
+                  <a
+                    href=""
+                    data-call
+                    class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform"
+                  >
+                    <img
+                      src="assets/icons/phone.svg"
+                      alt="Call"
+                      class="w-6 h-6"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured Profile 3 -->
+          <div
+            class="profile-card bg-white rounded-xl shadow-lg overflow-hidden"
+          >
+            <div class="relative">
+              <div
+                class="profile-image bg-gradient-to-r from-green-400 to-emerald-400"
+              ></div>
+              <div class="age-badge">23</div>
+              <div class="price-tag">₹7,000/hr</div>
+              <div class="absolute bottom-4 left-4">
+                <span class="city-badge">Bangalore</span>
+              </div>
+              <div class="absolute top-4 right-12">
+                <div class="w-3 h-3 rounded-full status-offline"></div>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <div>
+                  <h3 class="text-xl font-semibold">Ananya</h3>
+                  <p class="text-gray-500 text-sm">Independent Escort</p>
+                </div>
+                <span
+                  class="bg-blue-100 text-blue-600 text-xs px-3 py-1 rounded-full font-semibold"
+                  >New</span
+                >
+              </div>
+              <div class="flex items-center gap-2 mb-4">
+                <div class="flex rating-star">★★★★☆</div>
+                <span class="text-gray-600 text-sm">4.5 (12)</span>
+              </div>
+              <p class="text-gray-600 text-sm mb-6">
+                Young and vibrant independent escort providing companionship
+                services in Bangalore.
+              </p>
+              <div class="flex justify-between items-center">
+                <a
+                  href="profile.html?id=bangalore-ananya-23"
+                  class="btn-primary text-white px-6 py-2 rounded-full text-sm font-medium"
+                >
+                  View Profile
+                </a>
+                <div class="flex items-center gap-3">
+                  <!-- WhatsApp -->
+                  <a
+                    href=""
+                    data-whatsapp
+                    class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform"
+                  >
+                    <img
+                      src="assets/icons/whatsapp-icon.svg"
+                      alt="WhatsApp"
+                      class="w-6 h-6"
+                      loading="lazy"
+                    />
+                  </a>
+
+                  <!-- Call -->
+                  <a
+                    href=""
+                    data-call
+                    class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform"
+                  >
+                    <img
+                      src="assets/icons/phone.svg"
+                      alt="Call"
+                      class="w-6 h-6"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured Profile 4 -->
+          <div
+            class="profile-card bg-white rounded-xl shadow-lg overflow-hidden"
+          >
+            <div class="relative">
+              <div
+                class="profile-image bg-gradient-to-r from-orange-400 to-red-400"
+              ></div>
+              <div class="age-badge">25</div>
+              <div class="price-tag">₹9,000/hr</div>
+              <div class="absolute bottom-4 left-4">
+                <span class="city-badge">Hyderabad</span>
+              </div>
+              <div class="absolute top-4 right-12">
+                <div class="w-3 h-3 rounded-full status-busy"></div>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <div>
+                  <h3 class="text-xl font-semibold">Priya</h3>
+                  <p class="text-gray-500 text-sm">Premium Companion</p>
+                </div>
+                <span
+                  class="bg-pink-100 text-pink-600 text-xs px-3 py-1 rounded-full font-semibold"
+                  >VIP</span
+                >
+              </div>
+              <div class="flex items-center gap-2 mb-4">
+                <div class="flex rating-star">★★★★★</div>
+                <span class="text-gray-600 text-sm">4.7 (16)</span>
+              </div>
+              <p class="text-gray-600 text-sm mb-6">
+                Sophisticated companion offering premium services in Hyderabad.
+                Experienced and professional.
+              </p>
+              <div class="flex justify-between items-center">
+                <a
+                  href="profile.html?id=hyderabad-priya-25"
+                  class="btn-primary text-white px-6 py-2 rounded-full text-sm font-medium"
+                >
+                  View Profile
+                </a>
+                <div class="flex items-center gap-3">
+                  <!-- WhatsApp -->
+                  <a
+                    href=""
+                    data-whatsapp
+                    class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform"
+                  >
+                    <img
+                      src="assets/icons/whatsapp-icon.svg"
+                      alt="WhatsApp"
+                      class="w-6 h-6"
+                      loading="lazy"
+                    />
+                  </a>
+
+                  <!-- Call -->
+                  <a
+                    href=""
+                    data-call
+                    class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform"
+                  >
+                    <img
+                      src="assets/icons/phone.svg"
+                      alt="Call"
+                      class="w-6 h-6"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Back to Top Button -->
@@ -628,135 +875,154 @@
     <div id="footer-container"></div>
 
     <script src="js/layout.js" defer></script>
-    
+
     <script>
-/* ===============================
+      /* ===============================
    STATE
 ================================ */
-let profilesData = [];
-let filteredProfiles = [];
-let currentView = 'grid';
-let currentPage = 1;
-const profilesPerPage = 12;
+      let profilesData = [];
+      let filteredProfiles = [];
+      let currentView = "grid";
+      let currentPage = 1;
+      const profilesPerPage = 12;
 
-/* ===============================
+      /* ===============================
    INIT
 ================================ */
-fetch('data/profiles.json')
-    .then(res => res.json())
-    .then(data => {
-        profilesData = data;
-        filteredProfiles = [...profilesData];
+      fetch("data/profiles.json")
+        .then((res) => res.json())
+        .then((data) => {
+          profilesData = data;
+          filteredProfiles = [...profilesData];
 
-        renderProfiles();
-        setupSearch();
-        setupViewSwitch();
-        setupBackToTop();
-    })
-    .catch(err => {
-        console.error('Failed to load profiles.json', err);
-    });
+          renderProfiles();
+          setupSearch();
+          setupViewSwitch();
+          setupBackToTop();
+        })
+        .catch((err) => {
+          console.error("Failed to load profiles.json", err);
+        });
 
-/* ===============================
+      /* ===============================
    SEARCH
 ================================ */
-function setupSearch() {
-    const searchInput = document.getElementById('profileSearch');
-    const clearBtn = document.getElementById('clearSearch');
+      function setupSearch() {
+        const searchInput = document.getElementById("profileSearch");
+        const clearBtn = document.getElementById("clearSearch");
 
-    searchInput.addEventListener('input', e => {
-        const q = e.target.value.toLowerCase();
+        searchInput.addEventListener("input", (e) => {
+          const q = e.target.value.toLowerCase();
 
-        filteredProfiles = profilesData.filter(p =>
-            p.name.toLowerCase().includes(q) ||
-            p.city.toLowerCase().includes(q) ||
-            p.description.toLowerCase().includes(q)
-        );
+          filteredProfiles = profilesData.filter(
+            (p) =>
+              p.name.toLowerCase().includes(q) ||
+              p.city.toLowerCase().includes(q) ||
+              p.description.toLowerCase().includes(q),
+          );
 
-        clearBtn.classList.toggle('hidden', q.length === 0);
-        currentPage = 1;
-        renderProfiles();
-    });
+          clearBtn.classList.toggle("hidden", q.length === 0);
+          currentPage = 1;
+          renderProfiles();
+        });
 
-    clearBtn.addEventListener('click', () => {
-        searchInput.value = '';
-        clearBtn.classList.add('hidden');
-        filteredProfiles = [...profilesData];
-        currentPage = 1;
-        renderProfiles();
-    });
-}
+        clearBtn.addEventListener("click", () => {
+          searchInput.value = "";
+          clearBtn.classList.add("hidden");
+          filteredProfiles = [...profilesData];
+          currentPage = 1;
+          renderProfiles();
+        });
+      }
 
-/* ===============================
+      /* ===============================
    VIEW SWITCH
 ================================ */
-function setupViewSwitch() {
-    document.getElementById('gridView').onclick = () => switchView('grid');
-    document.getElementById('listView').onclick = () => switchView('list');
-}
+      function setupViewSwitch() {
+        document.getElementById("gridView").onclick = () => switchView("grid");
+        document.getElementById("listView").onclick = () => switchView("list");
+      }
 
-function switchView(view) {
-    currentView = view;
+      function switchView(view) {
+        currentView = view;
 
-    document.getElementById('gridView').classList.toggle('bg-primary', view === 'grid');
-    document.getElementById('gridView').classList.toggle('text-white', view === 'grid');
+        document
+          .getElementById("gridView")
+          .classList.toggle("bg-primary", view === "grid");
+        document
+          .getElementById("gridView")
+          .classList.toggle("text-white", view === "grid");
 
-    document.getElementById('listView').classList.toggle('bg-primary', view === 'list');
-    document.getElementById('listView').classList.toggle('text-white', view === 'list');
+        document
+          .getElementById("listView")
+          .classList.toggle("bg-primary", view === "list");
+        document
+          .getElementById("listView")
+          .classList.toggle("text-white", view === "list");
 
-    renderProfiles();
-}
+        renderProfiles();
+      }
 
-/* ===============================
+      /* ===============================
    RENDER
 ================================ */
-function renderProfiles() {
-    const start = (currentPage - 1) * profilesPerPage;
-    const end = start + profilesPerPage;
-    const currentProfiles = filteredProfiles.slice(start, end);
+      function renderProfiles() {
+        const start = (currentPage - 1) * profilesPerPage;
+        const end = start + profilesPerPage;
+        const currentProfiles = filteredProfiles.slice(start, end);
 
-    document.getElementById('showingCount').textContent = Math.min(end, filteredProfiles.length);
-    document.getElementById('totalCount').textContent = filteredProfiles.length;
+        document.getElementById("showingCount").textContent = Math.min(
+          end,
+          filteredProfiles.length,
+        );
+        document.getElementById("totalCount").textContent =
+          filteredProfiles.length;
 
-    document.getElementById('loadingState').classList.add('hidden');
+        document.getElementById("loadingState").classList.add("hidden");
 
-    if (!currentProfiles.length) {
-        document.getElementById('noResults').classList.remove('hidden');
-        document.getElementById('gridViewContainer').classList.add('hidden');
-        document.getElementById('listViewContainer').classList.add('hidden');
-        return;
-    }
+        if (!currentProfiles.length) {
+          document.getElementById("noResults").classList.remove("hidden");
+          document.getElementById("gridViewContainer").classList.add("hidden");
+          document.getElementById("listViewContainer").classList.add("hidden");
+          return;
+        }
 
-    document.getElementById('noResults').classList.add('hidden');
+        document.getElementById("noResults").classList.add("hidden");
 
-    currentView === 'grid'
-        ? renderGridView(currentProfiles)
-        : renderListView(currentProfiles);
+        currentView === "grid"
+          ? renderGridView(currentProfiles)
+          : renderListView(currentProfiles);
 
-    applyContactLinks();
-}
+        applyContactLinks();
+      }
 
-/* ===============================
+      /* ===============================
    GRID VIEW
 ================================ */
-function renderGridView(profiles) {
-    const container = document.getElementById('gridViewContainer');
-    container.classList.remove('hidden');
-    document.getElementById('listViewContainer').classList.add('hidden');
+      function renderGridView(profiles) {
+        const container = document.getElementById("gridViewContainer");
+        container.classList.remove("hidden");
+        document.getElementById("listViewContainer").classList.add("hidden");
 
-    container.innerHTML = profiles.map(p => {
-        const status =
-            p.status === 'online' ? 'status-online' :
-            p.status === 'busy' ? 'status-busy' : 'status-offline';
+        container.innerHTML = profiles
+          .map((p) => {
+            const status =
+              p.status === "online"
+                ? "status-online"
+                : p.status === "busy"
+                  ? "status-busy"
+                  : "status-offline";
 
-        const price =
-            p.price >= 10000 ? `₹${p.price / 1000}K/hr` : `₹${p.price.toLocaleString()}/hr`;
+            const price =
+              p.price >= 10000
+                ? `₹${p.price / 1000}K/hr`
+                : `₹${p.price.toLocaleString()}/hr`;
 
-        const stars =
-            '★'.repeat(Math.floor(p.rating)) +
-            '☆'.repeat(5 - Math.floor(p.rating));
+            const stars =
+              "★".repeat(Math.floor(p.rating)) +
+              "☆".repeat(5 - Math.floor(p.rating));
 
-        return `
+            return `
         <div class="profile-card bg-white rounded-xl shadow-lg overflow-hidden">
             <div class="relative">
                 <div class="profile-image bg-${p.image}"></div>
@@ -806,22 +1072,26 @@ function renderGridView(profiles) {
                 </div>
             </div>
         </div>`;
-    }).join('');
-}
+          })
+          .join("");
+      }
 
-/* ===============================
+      /* ===============================
    LIST VIEW
 ================================ */
-function renderListView(profiles) {
-    const container = document.getElementById('listViewContainer');
-    container.classList.remove('hidden');
-    document.getElementById('gridViewContainer').classList.add('hidden');
+      function renderListView(profiles) {
+        const container = document.getElementById("listViewContainer");
+        container.classList.remove("hidden");
+        document.getElementById("gridViewContainer").classList.add("hidden");
 
-    container.innerHTML = profiles.map(p => {
-        const price =
-            p.price >= 10000 ? `₹${p.price / 1000}K/hr` : `₹${p.price.toLocaleString()}/hr`;
+        container.innerHTML = profiles
+          .map((p) => {
+            const price =
+              p.price >= 10000
+                ? `₹${p.price / 1000}K/hr`
+                : `₹${p.price.toLocaleString()}/hr`;
 
-        return `
+            return `
         <div class="profile-card bg-white rounded-xl shadow-lg p-6">
             <div class="flex justify-between">
                 <div>
@@ -837,23 +1107,22 @@ function renderListView(profiles) {
                 </div>
             </div>
         </div>`;
-    }).join('');
-}
+          })
+          .join("");
+      }
 
-/* ===============================
+      /* ===============================
    BACK TO TOP
 ================================ */
-function setupBackToTop() {
-    const btn = document.getElementById('backToTop');
+      function setupBackToTop() {
+        const btn = document.getElementById("backToTop");
 
-    window.addEventListener('scroll', () => {
-        btn.classList.toggle('visible', window.scrollY > 300);
-    });
+        window.addEventListener("scroll", () => {
+          btn.classList.toggle("visible", window.scrollY > 300);
+        });
 
-    btn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-</script>
-
-</body>
+        btn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    </script>
+  </body>
 </html>
