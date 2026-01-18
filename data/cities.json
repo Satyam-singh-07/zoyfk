@@ -1,120 +1,169 @@
 {
   "Delhi": {
-    "call": "+919999999999",
-    "whatsapp": "+919999999999",
+    "slug": "delhi",
+    "enabled": true,
+    "call": "+919999999994",
+    "whatsapp": "+919999999994",
     "whatsapp_message": "Hi, I am looking for Delhi escort services."
   },
   "Mumbai": {
+    "slug": "mumbai",
+    "enabled": true,
     "call": "+918888888888",
     "whatsapp": "+918888888888",
     "whatsapp_message": "Hi, I am looking for Mumbai escort services."
   },
   "Bangalore": {
+    "slug": "bangalore",
+    "enabled": true,
     "call": "+917777777777",
     "whatsapp": "+917777777777",
     "whatsapp_message": "Hi, I am looking for Bangalore escort services."
   },
   "Hyderabad": {
+    "slug": "hyderabad",
+    "enabled": true,
     "call": "+916666666666",
     "whatsapp": "+916666666666",
     "whatsapp_message": "Hi, I am looking for Hyderabad escort services."
   },
   "Pune": {
+    "slug": "pune",
+    "enabled": true,
     "call": "+915555555555",
     "whatsapp": "+915555555555",
     "whatsapp_message": "Hi, I am looking for Pune escort services."
   },
   "Chennai": {
+    "slug": "chennai",
+    "enabled": true,
     "call": "+914444444444",
     "whatsapp": "+914444444444",
     "whatsapp_message": "Hi, I am looking for Chennai escort services."
   },
   "Kolkata": {
+    "slug": "kolkata",
+    "enabled": true,
     "call": "+913333333333",
     "whatsapp": "+913333333333",
     "whatsapp_message": "Hi, I am looking for Kolkata escort services."
   },
+
   "Ahmedabad": {
+    "slug": "ahmedabad",
+    "enabled": true,
     "call": "+912222222222",
     "whatsapp": "+912222222222",
     "whatsapp_message": "Hi, I am looking for Ahmedabad escort services."
   },
   "Jaipur": {
+    "slug": "jaipur",
+    "enabled": true,
     "call": "+911111111111",
     "whatsapp": "+911111111111",
     "whatsapp_message": "Hi, I am looking for Jaipur escort services."
   },
   "Lucknow": {
+    "slug": "lucknow",
+    "enabled": true,
     "call": "+910000000000",
     "whatsapp": "+910000000000",
     "whatsapp_message": "Hi, I am looking for Lucknow escort services."
   },
   "Noida": {
+    "slug": "noida",
+    "enabled": true,
     "call": "+919999999998",
     "whatsapp": "+919999999998",
     "whatsapp_message": "Hi, I am looking for Noida escort services."
   },
   "Gurgaon": {
+    "slug": "gurgaon",
+    "enabled": true,
     "call": "+919999999997",
     "whatsapp": "+919999999997",
     "whatsapp_message": "Hi, I am looking for Gurgaon escort services."
   },
   "Goa": {
+    "slug": "goa",
+    "enabled": true,
     "call": "+919999999996",
     "whatsapp": "+919999999996",
     "whatsapp_message": "Hi, I am looking for Goa escort services."
   },
   "Chandigarh": {
+    "slug": "chandigarh",
+    "enabled": true,
     "call": "+919999999995",
     "whatsapp": "+919999999995",
     "whatsapp_message": "Hi, I am looking for Chandigarh escort services."
   },
   "Indore": {
+    "slug": "indore",
+    "enabled": true,
     "call": "+919999999994",
     "whatsapp": "+919999999994",
     "whatsapp_message": "Hi, I am looking for Indore escort services."
   },
   "Bhopal": {
+    "slug": "bhopal",
+    "enabled": true,
     "call": "+919999999993",
     "whatsapp": "+919999999993",
     "whatsapp_message": "Hi, I am looking for Bhopal escort services."
   },
   "Nagpur": {
+    "slug": "nagpur",
+    "enabled": true,
     "call": "+919999999992",
     "whatsapp": "+919999999992",
     "whatsapp_message": "Hi, I am looking for Nagpur escort services."
   },
   "Patna": {
+    "slug": "patna",
+    "enabled": true,
     "call": "+919999999991",
     "whatsapp": "+919999999991",
     "whatsapp_message": "Hi, I am looking for Patna escort services."
   },
   "Kochi": {
+    "slug": "kochi",
+    "enabled": true,
     "call": "+919999999990",
     "whatsapp": "+919999999990",
     "whatsapp_message": "Hi, I am looking for Kochi escort services."
   },
   "Coimbatore": {
+    "slug": "coimbatore",
+    "enabled": true,
     "call": "+919999999989",
     "whatsapp": "+919999999989",
     "whatsapp_message": "Hi, I am looking for Coimbatore escort services."
   },
   "Mysore": {
+    "slug": "mysore",
+    "enabled": true,
     "call": "+919999999988",
     "whatsapp": "+919999999988",
     "whatsapp_message": "Hi, I am looking for Mysore escort services."
   },
   "Dehradun": {
+    "slug": "dehradun",
+    "enabled": true,
     "call": "+919999999987",
     "whatsapp": "+919999999987",
     "whatsapp_message": "Hi, I am looking for Dehradun escort services."
   },
   "Haridwar": {
+    "slug": "haridwar",
+    "enabled": true,
     "call": "+919999999986",
     "whatsapp": "+919999999986",
     "whatsapp_message": "Hi, I am looking for Haridwar escort services."
   },
   "Agra": {
+    "slug": "agra",
+    "enabled": true,
     "call": "+919999999985",
     "whatsapp": "+919999999985",
     "whatsapp_message": "Hi, I am looking for Agra escort services."

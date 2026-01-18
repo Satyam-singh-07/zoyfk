@@ -640,14 +640,6 @@
 
     <script src="js/layout.js" defer></script>
     <script>
-      window.CONTACT_CONFIG = {
-        whatsapp: "9198111679222",
-        call: "919811112222",
-        whatsappMessage:
-          "Hi, I am looking for Mumbai escort services. Please share details.",
-      };
-    </script>
-    <script>
       document.addEventListener("DOMContentLoaded", async () => {
         const params = new URLSearchParams(window.location.search);
         const profileId = params.get("id");
@@ -659,10 +651,15 @@
 
         try {
           /* ===============================
-       FETCH PROFILE DATA
+       FETCH PROFILE + CITIES
     ================================ */
-          const res = await fetch("data/profiles.json");
-          const profiles = await res.json();
+          const [profilesRes, citiesRes] = await Promise.all([
+            fetch("data/profiles.json"),
+            fetch("data/cities.json"),
+          ]);
+
+          const profiles = await profilesRes.json();
+          const cities = await citiesRes.json();
 
           const profile = profiles.find((p) => p.id === profileId);
           if (!profile) {
@@ -689,46 +686,33 @@
             `(${profile.rating}/5.0)`;
 
           /* ===============================
-       PROFILE IMAGE WITH FALLBACK
+       PROFILE IMAGE
     ================================ */
           const img = document.getElementById("profileImage");
           const FALLBACK_IMAGE = "assets/images/fallback-profile.png";
 
-          img.src =
-            profile.imageUrl && profile.imageUrl.trim()
-              ? profile.imageUrl
-              : FALLBACK_IMAGE;
-
+          img.src = profile.imageUrl?.trim() || FALLBACK_IMAGE;
           img.alt = `${profile.name} - ${profile.city} Escort`;
-          img.onerror = () => {
-            img.src = FALLBACK_IMAGE;
-          };
+          img.onerror = () => (img.src = FALLBACK_IMAGE);
 
           /* ===============================
-       STATUS DOT
+       STATUS
     ================================ */
           const statusDot = document.querySelector(".status-dot");
-          statusDot.classList.remove(
-            "status-online",
-            "status-offline",
-            "status-busy",
-          );
-          statusDot.classList.add(`status-${profile.status}`);
+          statusDot.className = `status-dot status-${profile.status}`;
 
           /* ===============================
-       ABOUT SECTION
+       ABOUT
     ================================ */
           document.getElementById("aboutName").textContent = profile.name;
           const aboutContainer = document.getElementById("profileAbout");
           aboutContainer.innerHTML = "";
 
-          if (Array.isArray(profile.about)) {
-            profile.about.forEach((text) => {
-              const p = document.createElement("p");
-              p.textContent = text;
-              aboutContainer.appendChild(p);
-            });
-          }
+          profile.about?.forEach((text) => {
+            const p = document.createElement("p");
+            p.textContent = text;
+            aboutContainer.appendChild(p);
+          });
 
           /* ===============================
        PHYSICAL ATTRIBUTES
@@ -745,18 +729,16 @@
             document.getElementById("physicalAttributes");
           physicalContainer.innerHTML = "";
 
-          if (profile.physical) {
-            Object.entries(physicalMap).forEach(([key, label]) => {
-              if (!profile.physical[key]) return;
+          Object.entries(physicalMap).forEach(([key, label]) => {
+            if (!profile.physical?.[key]) return;
 
-              physicalContainer.innerHTML += `
-          <div>
-            <p class="text-sm text-gray-500 mb-1">${label}</p>
-            <p class="font-medium">${profile.physical[key]}</p>
-          </div>
-        `;
-            });
-          }
+            physicalContainer.innerHTML += `
+        <div>
+          <p class="text-sm text-gray-500 mb-1">${label}</p>
+          <p class="font-medium">${profile.physical[key]}</p>
+        </div>
+      `;
+          });
 
           /* ===============================
        FEATURES
@@ -764,24 +746,45 @@
           const featuresContainer = document.getElementById("profileFeatures");
           featuresContainer.innerHTML = "";
 
-          if (Array.isArray(profile.features)) {
-            profile.features.forEach((feature) => {
-              featuresContainer.innerHTML += `
-          <div class="feature-badge">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8
-                a1 1 0 01-1.414 0l-4-4
-                a1 1 0 011.414-1.414L8 12.586l7.293-7.293z"
-                clip-rule="evenodd" />
-            </svg>
-            ${feature}
-          </div>
-        `;
-            });
+          profile.features?.forEach((feature) => {
+            featuresContainer.innerHTML += `
+        <div class="feature-badge">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd"
+              d="M16.707 5.293a1 1 0 010 1.414l-8 8
+              a1 1 0 01-1.414 0l-4-4
+              a1 1 0 011.414-1.414L8 12.586l7.293-7.293z"
+              clip-rule="evenodd" />
+          </svg>
+          ${feature}
+        </div>
+      `;
+          });
+
+          /* ===============================
+       🔥 CONTACT OVERRIDE (IMPORTANT)
+    ================================ */
+          const cityConfig = cities[profile.city];
+          if (!cityConfig) {
+            console.warn("No city config found for", profile.city);
+            return;
           }
+
+          const encodedMessage = encodeURIComponent(
+            cityConfig.whatsapp_message,
+          );
+
+          document.querySelectorAll("[data-whatsapp]").forEach((el) => {
+            el.href = `https://wa.me/${cityConfig.whatsapp}?text=${encodedMessage}`;
+            el.target = "_blank";
+            el.rel = "noopener noreferrer";
+          });
+
+          document.querySelectorAll("[data-call]").forEach((el) => {
+            el.href = `tel:${cityConfig.call}`;
+          });
         } catch (err) {
-          console.error("Failed to load profile:", err);
+          console.error("Failed to load profile page:", err);
         }
       });
     </script>

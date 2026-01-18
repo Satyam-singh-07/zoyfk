@@ -882,6 +882,8 @@
 ================================ */
       let profilesData = [];
       let filteredProfiles = [];
+      let citiesData = {};
+
       let currentView = "grid";
       let currentPage = 1;
       const profilesPerPage = 12;
@@ -889,11 +891,14 @@
       /* ===============================
    INIT
 ================================ */
-      fetch("data/profiles.json")
-        .then((res) => res.json())
-        .then((data) => {
-          profilesData = data;
+      Promise.all([
+        fetch("data/profiles.json").then((res) => res.json()),
+        fetch("data/cities.json").then((res) => res.json()),
+      ])
+        .then(([profiles, cities]) => {
+          profilesData = profiles;
           filteredProfiles = [...profilesData];
+          citiesData = cities;
 
           renderProfiles();
           setupSearch();
@@ -901,7 +906,7 @@
           setupBackToTop();
         })
         .catch((err) => {
-          console.error("Failed to load profiles.json", err);
+          console.error("Failed to load profiles or cities JSON", err);
         });
 
       /* ===============================
@@ -1006,7 +1011,7 @@
 
         container.innerHTML = profiles
           .map((p) => {
-            const status =
+            const statusClass =
               p.status === "online"
                 ? "status-online"
                 : p.status === "busy"
@@ -1023,55 +1028,43 @@
               "☆".repeat(5 - Math.floor(p.rating));
 
             return `
-        <div class="profile-card bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="relative">
-                <div class="profile-image bg-${p.image}"></div>
-                <div class="age-badge">${p.age}</div>
-                <div class="price-tag">${price}</div>
-                <div class="absolute bottom-4 left-4">
-                    <span class="city-badge">${p.city}</span>
-                </div>
-                <div class="absolute top-4 right-12">
-                    <div class="w-3 h-3 rounded-full ${status}"></div>
-                </div>
-            </div>
-            <div class="p-6">
-                <h3 class="text-xl font-semibold">${p.name}</h3>
-                <p class="text-gray-500 text-sm">${p.category}</p>
+    <div class="profile-card bg-white rounded-xl shadow-lg overflow-hidden">
+      <div class="relative">
+        <div class="profile-image bg-${p.image}"></div>
+        <div class="age-badge">${p.age}</div>
+        <div class="price-tag">${price}</div>
+        <div class="absolute bottom-4 left-4">
+          <span class="city-badge">${p.city}</span>
+        </div>
+        <div class="absolute top-4 right-12">
+          <div class="w-3 h-3 rounded-full ${statusClass}"></div>
+        </div>
+      </div>
 
-                <div class="rating-star my-2">${stars}</div>
-                <p class="text-gray-600 text-sm mb-4">${p.description}</p>
+      <div class="p-6">
+        <h3 class="text-xl font-semibold">${p.name}</h3>
+        <p class="text-gray-500 text-sm">${p.category}</p>
 
-                <div class="flex justify-between items-center">
-                    <a href="profile.html?id=${p.id}" class="btn-primary text-white px-6 py-2 rounded-full text-sm">
-                        View Profile
-                    </a>
-                    <div class="flex gap-3">
-                        <!-- WhatsApp -->
-                        <a href="" data-whatsapp
-                        class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform">
-                            <img
-                                src="assets/icons/whatsapp-icon.svg"
-                                alt="WhatsApp"
-                                class="w-6 h-6"
-                                loading="lazy"
-                            />
-                        </a>
+        <div class="rating-star my-2">${stars}</div>
+        <p class="text-gray-600 text-sm mb-4">${p.description}</p>
 
-                        <!-- Call -->
-                        <a href="" data-call
-                        class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform">
-                            <img
-                                src="assets/icons/phone.svg"
-                                alt="Call"
-                                class="w-6 h-6"
-                                loading="lazy"
-                            />
-                        </a>
-                </div>
-                </div>
-            </div>
-        </div>`;
+        <div class="flex justify-between items-center">
+          <a href="profile.html?id=${p.id}" class="btn-primary text-white px-6 py-2 rounded-full text-sm">
+            View Profile
+          </a>
+
+          <div class="flex gap-3">
+            <a data-whatsapp class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform">
+              <img src="assets/icons/whatsapp-icon.svg" class="w-6 h-6" />
+            </a>
+
+            <a data-call class="inline-flex items-center justify-center w-8 h-8 hover:scale-110 transition-transform">
+              <img src="assets/icons/phone.svg" class="w-6 h-6" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>`;
           })
           .join("");
       }
@@ -1092,23 +1085,55 @@
                 : `₹${p.price.toLocaleString()}/hr`;
 
             return `
-        <div class="profile-card bg-white rounded-xl shadow-lg p-6">
-            <div class="flex justify-between">
-                <div>
-                    <h3 class="text-xl font-semibold">${p.name}</h3>
-                    <p class="text-gray-500">${p.city} • ${p.age} yrs</p>
-                    <p class="text-gray-600 mt-2">${p.description}</p>
-                </div>
-                <div class="text-right">
-                    <div class="text-2xl font-bold text-primary">${price}</div>
-                    <a href="profile.html?id=${p.id}" class="text-primary block mt-2">
-                        View Profile →
-                    </a>
-                </div>
-            </div>
-        </div>`;
+    <div class="profile-card bg-white rounded-xl shadow-lg p-6">
+      <div class="flex justify-between">
+        <div>
+          <h3 class="text-xl font-semibold">${p.name}</h3>
+          <p class="text-gray-500">${p.city} • ${p.age} yrs</p>
+          <p class="text-gray-600 mt-2">${p.description}</p>
+        </div>
+        <div class="text-right">
+          <div class="text-2xl font-bold text-primary">${price}</div>
+          <a href="profile.html?id=${p.id}" class="text-primary block mt-2">
+            View Profile →
+          </a>
+        </div>
+      </div>
+    </div>`;
           })
           .join("");
+      }
+
+      /* ===============================
+   CONTACT LINKS (CITY-BASED)
+================================ */
+      function applyContactLinks() {
+        document
+          .querySelectorAll("[data-whatsapp], [data-call]")
+          .forEach((el) => {
+            const card = el.closest(".profile-card");
+            if (!card) return;
+
+            const cityBadge = card.querySelector(".city-badge");
+            if (!cityBadge) return;
+
+            const city = cityBadge.textContent.trim();
+            const cityConfig = citiesData[city];
+
+            if (!cityConfig || cityConfig.enabled === false) {
+              el.style.display = "none";
+              console.warn(`Contact disabled or missing for city: ${city}`);
+              return;
+            }
+
+            if (el.hasAttribute("data-whatsapp")) {
+              el.href = `https://wa.me/${cityConfig.whatsapp}?text=${encodeURIComponent(cityConfig.whatsapp_message)}`;
+            }
+
+            if (el.hasAttribute("data-call")) {
+              el.href = `tel:${cityConfig.call}`;
+            }
+          });
       }
 
       /* ===============================
@@ -1116,6 +1141,7 @@
 ================================ */
       function setupBackToTop() {
         const btn = document.getElementById("backToTop");
+        if (!btn) return;
 
         window.addEventListener("scroll", () => {
           btn.classList.toggle("visible", window.scrollY > 300);
