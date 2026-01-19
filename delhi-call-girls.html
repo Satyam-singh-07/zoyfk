@@ -607,13 +607,12 @@
           grid.innerHTML = delhiCallGirls
             .map(
               (p) => `
-      <div class="profile-card bg-white rounded-xl shadow-lg overflow-hidden">
+      <div class="profile-card bg-white rounded-xl shadow-lg overflow-hidden flex flex-col h-full">
         <div class="relative">
-        <img
-        src="${p.image || "assets/images/fallback-profile.png"}"
-        alt="${p.name}"
-        onerror="this.src='assets/images/fallback-profile.png'"
-        class="w-full h-64 object-cover"
+        <img 
+          src="${p.image}" 
+          alt="${p.name}" 
+          class="profile-image w-full h-[280px] object-cover"
         />
           <div class="age-badge">${p.age}</div>
           <div class="price-tag">₹${p.price}/hr</div>
@@ -633,7 +632,7 @@
           </div>
         </div>
 
-        <div class="p-6">
+        <div class="p-6 flex flex-col h-full">
           <div class="flex justify-between items-start mb-4">
             <div>
               <h3 class="text-xl font-semibold">${p.name}</h3>
@@ -654,7 +653,7 @@
             ${p.description}
           </p>
 
-          <div class="flex justify-between items-center">
+          <div class="flex justify-between items-center mt-auto">
             <a
               href="profile.html?id=${p.id}"
               class="btn-primary text-white px-6 py-2 rounded-full text-sm font-medium"
