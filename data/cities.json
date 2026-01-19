@@ -2,8 +2,8 @@
   "Delhi": {
     "slug": "delhi",
     "enabled": true,
-    "call": "+919999999994",
-    "whatsapp": "+919999999994",
+    "call": "+919999999894",
+    "whatsapp": "+919999799994",
     "whatsapp_message": "Hi, I am looking for Delhi escort services."
   },
   "Mumbai": {
@@ -48,7 +48,6 @@
     "whatsapp": "+913333333333",
     "whatsapp_message": "Hi, I am looking for Kolkata escort services."
   },
-
   "Ahmedabad": {
     "slug": "ahmedabad",
     "enabled": true,
