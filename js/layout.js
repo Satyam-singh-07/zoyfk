@@ -83,10 +83,10 @@ function loadLayout() {
                 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="/index.html" class="text-gray-600 hover:text-primary font-medium transition">Home</a>
-                    <a href="/cities.html" class="text-gray-600 hover:text-primary font-medium transition">Cities</a>
-                    <a href="/services.html" class="text-gray-600 hover:text-primary font-medium transition">Services</a>
-                    <a href="/profiles.html" class="text-gray-600 hover:text-primary font-medium transition">Profiles</a>
+                    <a href="index.html" class="text-gray-600 hover:text-primary font-medium transition">Home</a>
+                    <a href="cities.html" class="text-gray-600 hover:text-primary font-medium transition">Cities</a>
+                    <a href="services.html" class="text-gray-600 hover:text-primary font-medium transition">Services</a>
+                    <a href="profiles.html" class="text-gray-600 hover:text-primary font-medium transition">Profiles</a>
                     <a href="#" data-call class="btn-primary text-white px-6 py-2 rounded-full font-medium">Contact</a>
                 </div>
                 
@@ -100,10 +100,10 @@ function loadLayout() {
             
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="md:hidden hidden mt-4 space-y-4">
-                <a href="/index.html" class="block text-gray-600 hover:text-primary font-medium">Home</a>
-                <a href="/cities.html" class="block text-gray-600 hover:text-primary font-medium">Cities</a>
-                <a href="/services.html" class="block text-gray-600 hover:text-primary font-medium">Services</a>
-                <a href="/profiles.html" class="block text-gray-600 hover:text-primary font-medium">Profiles</a>
+                <a href="index.html" class="block text-gray-600 hover:text-primary font-medium">Home</a>
+                <a href="cities.html" class="block text-gray-600 hover:text-primary font-medium">Cities</a>
+                <a href="services.html" class="block text-gray-600 hover:text-primary font-medium">Services</a>
+                <a href="profiles.html" class="block text-gray-600 hover:text-primary font-medium">Profiles</a>
                 <a href="#" data-call class="block btn-primary text-white px-6 py-2 rounded-full font-medium text-center">Contact</a>
             </div>
         </div>
@@ -152,9 +152,9 @@ function loadLayout() {
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="/cities.html" class="text-gray-400 hover:text-white transition">All Cities</a></li>
-                        <li><a href="/profiles.html" class="text-gray-400 hover:text-white transition">Featured Profiles</a></li>
-                        <li><a href="/services.html" class="text-gray-400 hover:text-white transition">Our Services</a></li>
+                        <li><a href="cities.html" class="text-gray-400 hover:text-white transition">All Cities</a></li>
+                        <li><a href="profiles.html" class="text-gray-400 hover:text-white transition">Featured Profiles</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Our Services</a></li>
                         <li><a href="#" data-call class="text-gray-400 hover:text-white transition">Contact</a></li>
                     </ul>
                 </div>
