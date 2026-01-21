@@ -1,38 +1,49 @@
-/* ===============================
-   CONTACT LINKS (CITY-BASED)
-================================ */
-
 async function applyContactLinks() {
   let cities = {};
 
   try {
-    const res = await fetch("data/cities.json");
+    const res = await fetch("../data/cities.json");
     cities = await res.json();
   } catch (err) {
     console.error("Failed to load cities.json", err);
     return;
   }
 
-  // Detect city from URL
-  let detectedCity = null;
+  // 🔹 1. Extract city slug from URL
+  // /call-girls/delhi-call-girls.html → delhi
   const path = window.location.pathname.toLowerCase();
+  const match = path.match(/\/([a-z-]+)-call-girls\.html/);
 
-  Object.keys(cities).forEach((city) => {
-    if (path.includes(city.toLowerCase())) {
-      detectedCity = city;
+  let detectedSlug = match ? match[1] : null;
+
+  // 🔹 2. Match slug with cities.json
+  let detectedCityKey = null;
+
+  Object.keys(cities).forEach((cityKey) => {
+    const city = cities[cityKey];
+
+    if (
+      city.slug === detectedSlug || // preferred
+      cityKey.toLowerCase() === detectedSlug // fallback
+    ) {
+      detectedCityKey = cityKey;
     }
   });
 
-  // Fallback city
-  if (!detectedCity) detectedCity = "Delhi";
+  // 🔹 3. Fallback city
+  if (!detectedCityKey) {
+    detectedCityKey = "Delhi";
+  }
 
-  const config = cities[detectedCity];
-  if (!config) return;
+  const config = cities[detectedCityKey];
+  if (!config || !config.enabled) return;
 
+  // 🔹 4. Build links safely
+  const cleanWhatsapp = config.whatsapp.replace(/\D/g, "");
   const encodedMessage = encodeURIComponent(config.whatsapp_message);
 
   document.querySelectorAll("[data-whatsapp]").forEach((el) => {
-    el.href = `https://wa.me/${config.whatsapp}?text=${encodedMessage}`;
+    el.href = `https://wa.me/${cleanWhatsapp}?text=${encodedMessage}`;
     el.target = "_blank";
     el.rel = "noopener noreferrer";
   });
@@ -41,6 +52,7 @@ async function applyContactLinks() {
     el.href = `tel:${config.call}`;
   });
 }
+
 
 document.addEventListener("DOMContentLoaded", () => {
   loadLayout();
@@ -71,10 +83,10 @@ function loadLayout() {
                 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-gray-600 hover:text-primary font-medium transition">Home</a>
-                    <a href="cities.html" class="text-gray-600 hover:text-primary font-medium transition">Cities</a>
-                    <a href="services.html" class="text-gray-600 hover:text-primary font-medium transition">Services</a>
-                    <a href="profiles.html" class="text-gray-600 hover:text-primary font-medium transition">Profiles</a>
+                    <a href="/index.html" class="text-gray-600 hover:text-primary font-medium transition">Home</a>
+                    <a href="/cities.html" class="text-gray-600 hover:text-primary font-medium transition">Cities</a>
+                    <a href="/services.html" class="text-gray-600 hover:text-primary font-medium transition">Services</a>
+                    <a href="/profiles.html" class="text-gray-600 hover:text-primary font-medium transition">Profiles</a>
                     <a href="#" data-call class="btn-primary text-white px-6 py-2 rounded-full font-medium">Contact</a>
                 </div>
                 
@@ -88,10 +100,10 @@ function loadLayout() {
             
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="md:hidden hidden mt-4 space-y-4">
-                <a href="index.html" class="block text-gray-600 hover:text-primary font-medium">Home</a>
-                <a href="cities.html" class="block text-gray-600 hover:text-primary font-medium">Cities</a>
-                <a href="services.html" class="block text-gray-600 hover:text-primary font-medium">Services</a>
-                <a href="profiles.html" class="block text-gray-600 hover:text-primary font-medium">Profiles</a>
+                <a href="/index.html" class="block text-gray-600 hover:text-primary font-medium">Home</a>
+                <a href="/cities.html" class="block text-gray-600 hover:text-primary font-medium">Cities</a>
+                <a href="/services.html" class="block text-gray-600 hover:text-primary font-medium">Services</a>
+                <a href="/profiles.html" class="block text-gray-600 hover:text-primary font-medium">Profiles</a>
                 <a href="#" data-call class="block btn-primary text-white px-6 py-2 rounded-full font-medium text-center">Contact</a>
             </div>
         </div>
@@ -133,16 +145,16 @@ function loadLayout() {
                         <li><a href="delhi-escorts.html" class="text-gray-400 hover:text-white transition">Delhi Escorts</a></li>
                         <li><a href="mumbai-escorts.html" class="text-gray-400 hover:text-white transition">Mumbai Call Girls</a></li>
                         <li><a href="bangalore-escorts.html" class="text-gray-400 hover:text-white transition">Bangalore Escorts</a></li>
-                        <li><a href="hyderabad-escorts.html" class="text-gray-400 hover:text-white transition">Hyderabad Call Girls</a></li>
+                        <li><a href="hyderabad-call-girls.html" class="text-gray-400 hover:text-white transition">Hyderabad Call Girls</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="cities.html" class="text-gray-400 hover:text-white transition">All Cities</a></li>
-                        <li><a href="profiles.html" class="text-gray-400 hover:text-white transition">Featured Profiles</a></li>
-                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Our Services</a></li>
+                        <li><a href="/cities.html" class="text-gray-400 hover:text-white transition">All Cities</a></li>
+                        <li><a href="/profiles.html" class="text-gray-400 hover:text-white transition">Featured Profiles</a></li>
+                        <li><a href="/services.html" class="text-gray-400 hover:text-white transition">Our Services</a></li>
                         <li><a href="#" data-call class="text-gray-400 hover:text-white transition">Contact</a></li>
                     </ul>
                 </div>
