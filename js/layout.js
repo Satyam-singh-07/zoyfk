@@ -83,7 +83,7 @@ function loadLayout() {
                 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-gray-600 hover:text-primary font-medium transition">Home</a>
+                    <a href="https://satyam-singh-07.github.io/zoyfk/index.html" class="text-gray-600 hover:text-primary font-medium transition">Home</a>
                     <a href="cities.html" class="text-gray-600 hover:text-primary font-medium transition">Cities</a>
                     <a href="services.html" class="text-gray-600 hover:text-primary font-medium transition">Services</a>
                     <a href="profiles.html" class="text-gray-600 hover:text-primary font-medium transition">Profiles</a>
@@ -100,7 +100,7 @@ function loadLayout() {
             
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="md:hidden hidden mt-4 space-y-4">
-                <a href="index.html" class="block text-gray-600 hover:text-primary font-medium">Home</a>
+                <a href="https://satyam-singh-07.github.io/zoyfk/index.html" class="block text-gray-600 hover:text-primary font-medium">Home</a>
                 <a href="cities.html" class="block text-gray-600 hover:text-primary font-medium">Cities</a>
                 <a href="services.html" class="block text-gray-600 hover:text-primary font-medium">Services</a>
                 <a href="profiles.html" class="block text-gray-600 hover:text-primary font-medium">Profiles</a>
