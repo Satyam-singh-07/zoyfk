@@ -12,9 +12,9 @@ async function applyContactLinks() {
   // 🔹 1. Extract city slug from URL
   // /call-girls/delhi-call-girls.html → delhi
   const path = window.location.pathname.toLowerCase();
-  const match = path.match(/\/([a-z-]+)-call-girls\.html/);
 
-  let detectedSlug = match ? match[1] : null;
+  const fileName = path.split("/").pop(); // mumbai.html
+  let detectedSlug = fileName ? fileName.replace(".html", "") : null;
 
   // 🔹 2. Match slug with cities.json
   let detectedCityKey = null;
@@ -52,7 +52,6 @@ async function applyContactLinks() {
     el.href = `tel:${config.call}`;
   });
 }
-
 
 document.addEventListener("DOMContentLoaded", () => {
   loadLayout();
