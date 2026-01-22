@@ -384,6 +384,19 @@
       .bounce-animation {
         animation: bounce 2s infinite;
       }
+      .watermark-container {
+        position: relative;
+      }
+
+      .watermark-logo {
+        position: absolute;
+        bottom: 12px;
+        right: 12px;
+        width: 60px;
+        opacity: 0.25;
+        pointer-events: none;
+        user-select: none;
+      }
     </style>
   </head>
   <body class="font-sans bg-light text-dark">
@@ -817,11 +830,17 @@
             .map(
               (p) => `
       <div class="profile-card bg-white rounded-xl shadow-lg overflow-hidden flex flex-col h-full">
-        <div class="relative">
+        <div class="relative watermark-container">
         <img 
           src="${p.image}" 
           alt="${p.name}" 
           class="profile-image w-full h-[290px] object-contain bg-gray-100"
+        />
+
+        <img
+          src="../assets/icons/logo.svg"
+          class="watermark-logo"
+          alt="Watermark"
         />
           <div class="age-badge">${p.age}</div>
           <div class="price-tag">₹${p.price}/hr</div>

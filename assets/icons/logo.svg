@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Zoyfk logo">
+  <defs>
+    <linearGradient id="zoyfkGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#EC4899" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="100" height="100" rx="18" fill="url(#zoyfkGradient)" />
+  
+  <!-- Z Letter -->
+  <text x="50%" y="62%" text-anchor="middle" font-size="56" font-weight="700" fill="#ffffff" font-family="Poppins, Inter, system-ui, sans-serif">
+    Z
+  </text>
+</svg>
