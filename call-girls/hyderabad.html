@@ -441,6 +441,100 @@
               <div class="text-sm opacity-90">Premium Services</div>
             </div>
           </div>
+
+          <!-- Cities Dropdown (Anchor Based) -->
+          <div class="mt-8 animate-fadeIn" style="animation-delay: 0.6s">
+            <p class="text-lg font-medium mb-3 text-white">
+              View Services in Other Cities:
+            </p>
+
+            <div class="relative inline-block w-full md:w-64">
+              <!-- Button -->
+              <button
+                id="cityToggle"
+                class="w-full bg-black/20 backdrop-blur-sm border border-white/30 rounded-lg px-4 py-3 text-white text-left cursor-pointer"
+              >
+                Select a city
+              </button>
+
+              <!-- Dropdown -->
+              <div
+                id="cityMenu"
+                class="hidden absolute z-20 mt-2 w-full bg-black/90 backdrop-blur-md border border-white/20 rounded-lg overflow-hidden"
+              >
+                <a
+                  href="delhi.html"
+                  class="block px-4 py-3 text-white hover:bg-white/10"
+                  >Delhi Call Girls</a
+                >
+                <a
+                  href="mumbai.html"
+                  class="block px-4 py-3 text-white hover:bg-white/10"
+                  >Mumbai Call Girls</a
+                >
+                <a
+                  href="bangalore.html"
+                  class="block px-4 py-3 text-white hover:bg-white/10"
+                  >Bangalore Call Girls</a
+                >
+                <a
+                  href="hyderabad.html"
+                  class="block px-4 py-3 text-white hover:bg-white/10"
+                  >Hyderabad Call Girls</a
+                >
+                <a
+                  href="chennai.html"
+                  class="block px-4 py-3 text-white hover:bg-white/10"
+                  >Chennai Call Girls</a
+                >
+                <a
+                  href="kolkata.html"
+                  class="block px-4 py-3 text-white hover:bg-white/10"
+                  >Kolkata Call Girls</a
+                >
+                <a
+                  href="pune.html"
+                  class="block px-4 py-3 text-white hover:bg-white/10"
+                  >Pune Call Girls</a
+                >
+                <a
+                  href="goa.html"
+                  class="block px-4 py-3 text-white hover:bg-white/10"
+                  >Goa Call Girls</a
+                >
+                <a
+                  href="jaipur.html"
+                  class="block px-4 py-3 text-white hover:bg-white/10"
+                  >Jaipur Call Girls</a
+                >
+                <a
+                  href="noida.html"
+                  class="block px-4 py-3 text-white hover:bg-white/10"
+                  >Noida Call Girls</a
+                >
+                <a
+                  href="gurgaon.html"
+                  class="block px-4 py-3 text-white hover:bg-white/10"
+                  >Gurgaon Call Girls</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <script>
+            const toggle = document.getElementById("cityToggle");
+            const menu = document.getElementById("cityMenu");
+
+            toggle.addEventListener("click", () => {
+              menu.classList.toggle("hidden");
+            });
+
+            document.addEventListener("click", (e) => {
+              if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+                menu.classList.add("hidden");
+              }
+            });
+          </script>
         </div>
       </div>
     </section>
