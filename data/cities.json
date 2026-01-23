@@ -166,5 +166,40 @@
     "call": "+919999999985",
     "whatsapp": "+919999999985",
     "whatsapp_message": "Hi, I am looking for Agra escort services."
+  },
+  "Nashik": {
+    "slug": "nashik",
+    "enabled": true,
+    "call": "+919949999984",
+    "whatsapp": "+919949999984",
+    "whatsapp_message": "Hi, I am looking for Nashik escort services."
+  },
+  "Aligarh": {
+    "slug": "aligarh",
+    "enabled": true,
+    "call": "+919996999983",
+    "whatsapp": "+919996999983",
+    "whatsapp_message": "Hi, I am looking for Aligarh escort services."
+  },
+  "Prayagraj": {
+    "slug": "prayagraj",
+    "enabled": true,
+    "call": "+919999999982",
+    "whatsapp": "+919999999982",
+    "whatsapp_message": "Hi, I am looking for Prayagraj escort services."
+  },
+  "Udaipur": {
+    "slug": "udaipur",
+    "enabled": true,
+    "call": "+919999999981",
+    "whatsapp": "+919999999981",
+    "whatsapp_message": "Hi, I am looking for Udaipur escort services."
+  },
+  "Jodhpur": {
+    "slug": "jodhpur",
+    "enabled": true,
+    "call": "+919999999980",
+    "whatsapp": "+919999999980",
+    "whatsapp_message": "Hi, I am looking for Jodhpur escort services."
   }
 }
