@@ -201,5 +201,40 @@
     "call": "+919999999980",
     "whatsapp": "+919999999980",
     "whatsapp_message": "Hi, I am looking for Jodhpur escort services."
+  },
+  "Ludhiana": {
+    "slug": "ludhiana",
+    "enabled": true,
+    "call": "+919999999979",
+    "whatsapp": "+919999999979",
+    "whatsapp_message": "Hi, I am looking for Ludhiana escort services."
+  },
+  "Rishikesh": {
+    "slug": "rishikesh",
+    "enabled": true,
+    "call": "+919999999978",
+    "whatsapp": "+919999999978",
+    "whatsapp_message": "Hi, I am looking for Rishikesh escort services."
+  },
+  "Ghaziabad": {
+    "slug": "ghaziabad",
+    "enabled": true,
+    "call": "+919999999977",
+    "whatsapp": "+919999999977",
+    "whatsapp_message": "Hi, I am looking for Ghaziabad escort services."
+  },
+  "Kanpur": {
+    "slug": "kanpur",
+    "enabled": true,
+    "call": "+919999999976",
+    "whatsapp": "+919999999976",
+    "whatsapp_message": "Hi, I am looking for Kanpur escort services."
+  },
+  "Guwahati": {
+    "slug": "guwahati",
+    "enabled": true,
+    "call": "+919999999975",
+    "whatsapp": "+919999999975",
+    "whatsapp_message": "Hi, I am looking for Guwahati escort services."
   }
 }
