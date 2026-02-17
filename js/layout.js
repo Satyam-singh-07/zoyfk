@@ -82,9 +82,9 @@ function loadLayout() {
                 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="https://satyam-singh-07.github.io/zoyfk/index.html" class="text-gray-600 hover:text-primary font-medium transition">Home</a>
-                    <a href="https://satyam-singh-07.github.io/zoyfk/cities.html" class="text-gray-600 hover:text-primary font-medium transition">Cities</a>
-                    <a href="https://satyam-singh-07.github.io/zoyfk/services.html" class="text-gray-600 hover:text-primary font-medium transition">Services</a>
+                    <a href="https://zoyfk.co.in/index.html" class="text-gray-600 hover:text-primary font-medium transition">Home</a>
+                    <a href="https://zoyfk.co.in/cities.html" class="text-gray-600 hover:text-primary font-medium transition">Cities</a>
+                    <a href="https://zoyfk.co.in/services.html" class="text-gray-600 hover:text-primary font-medium transition">Services</a>
                     <a href="#" data-call class="btn-primary text-white px-6 py-2 rounded-full font-medium">Contact</a>
                 </div>
                 
@@ -98,9 +98,9 @@ function loadLayout() {
             
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="md:hidden hidden mt-4 space-y-4">
-                <a href="https://satyam-singh-07.github.io/zoyfk/index.html" class="block text-gray-600 hover:text-primary font-medium">Home</a>
-                <a href="https://satyam-singh-07.github.io/zoyfk/cities.html" class="block text-gray-600 hover:text-primary font-medium">Cities</a>
-                <a href="https://satyam-singh-07.github.io/zoyfk/services.html" class="block text-gray-600 hover:text-primary font-medium">Services</a>
+                <a href="https://zoyfk.co.in/index.html" class="block text-gray-600 hover:text-primary font-medium">Home</a>
+                <a href="https://zoyfk.co.in/cities.html" class="block text-gray-600 hover:text-primary font-medium">Cities</a>
+                <a href="https://zoyfk.co.in/services.html" class="block text-gray-600 hover:text-primary font-medium">Services</a>
                 <a href="#" data-call class="block btn-primary text-white px-6 py-2 rounded-full font-medium text-center">Contact</a>
             </div>
         </div>
@@ -139,18 +139,18 @@ function loadLayout() {
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Top Cities</h4>
                     <ul class="space-y-2">
-                        <li><a href="https://satyam-singh-07.github.io/zoyfk/escorts/delhi.html" class="text-gray-400 hover:text-white transition">Delhi Escorts</a></li>
-                        <li><a href="https://satyam-singh-07.github.io/zoyfk/escorts/mumbai.html" class="text-gray-400 hover:text-white transition">Mumbai Call Girls</a></li>
-                        <li><a href="https://satyam-singh-07.github.io/zoyfk/escorts/bangalore.html" class="text-gray-400 hover:text-white transition">Bangalore Escorts</a></li>
-                        <li><a href="https://satyam-singh-07.github.io/zoyfk/call-girls/hyderabad.html" class="text-gray-400 hover:text-white transition">Hyderabad Call Girls</a></li>
+                        <li><a href="https://zoyfk.co.in/escorts/delhi.html" class="text-gray-400 hover:text-white transition">Delhi Escorts</a></li>
+                        <li><a href="https://zoyfk.co.in/call-girls/mumbai.html" class="text-gray-400 hover:text-white transition">Mumbai Call Girls</a></li>
+                        <li><a href="https://zoyfk.co.in/escorts/bangalore.html" class="text-gray-400 hover:text-white transition">Bangalore Escorts</a></li>
+                        <li><a href="https://zoyfk.co.in/call-girls/hyderabad.html" class="text-gray-400 hover:text-white transition">Hyderabad Call Girls</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="https://satyam-singh-07.github.io/zoyfk/cities.html" class="text-gray-400 hover:text-white transition">All Cities</a></li>
-                        <li><a href="https://satyam-singh-07.github.io/zoyfk/services.html" class="text-gray-400 hover:text-white transition">Our Services</a></li>
+                        <li><a href="https://zoyfk.co.in/cities.html" class="text-gray-400 hover:text-white transition">All Cities</a></li>
+                        <li><a href="https://zoyfk.co.in/services.html" class="text-gray-400 hover:text-white transition">Our Services</a></li>
                         <li><a href="#" data-call class="text-gray-400 hover:text-white transition">Contact</a></li>
                     </ul>
                 </div>
